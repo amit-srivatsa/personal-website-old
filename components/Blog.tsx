@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Calendar, Clock, ArrowRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 
 interface BlogPost {
   id: string;
@@ -244,10 +243,6 @@ export const Blog: React.FC = () => {
   if (selectedPost) {
     return (
       <article className="min-h-screen pt-32 pb-24 bg-white">
-        <Helmet>
-            <title>{selectedPost.title} | Amit Srivatsa</title>
-            <meta name="description" content={selectedPost.excerpt} />
-        </Helmet>
         <div className="max-w-3xl mx-auto px-6">
           <button 
             onClick={() => setSelectedPostId(null)}
@@ -306,10 +301,6 @@ export const Blog: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-32 pb-24 bg-white">
-      <Helmet>
-        <title>Writing | Amit Srivatsa</title>
-        <meta name="description" content="Thoughts on the intersection of Marketing, AI, and the future of work." />
-      </Helmet>
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="mb-16">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-6">
