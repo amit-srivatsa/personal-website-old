@@ -1,101 +1,111 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ResourcesModal } from './ResourcesModal';
 
 export const Services: React.FC = () => {
+  const [isResourcesModalOpen, setIsResourcesModalOpen] = useState(false);
+
   return (
-    <div className="min-h-screen pt-32 pb-24 bg-[#f5f5f7]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        
-        {/* Dashboard Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-3 tracking-tight">
-              My services
-            </h1>
-            <p className="text-lg text-gray-500 font-medium mb-2">
-              My services are designed to create clarity. Not dependency. Not long-term lock-in.
-            </p>
-            <p className="text-base text-gray-500">
-              Each service exists for a specific stage. And a specific kind of problem.
-            </p>
-          </div>
+    <>
+      <div className="min-h-screen pt-32 pb-24 bg-[#f5f5f7]">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
           
-          <div className="flex items-center gap-3">
-            <div className="bg-white px-4 py-2 rounded-full text-sm font-semibold text-gray-600 shadow-sm border border-gray-100">
-              {new Date().toLocaleString('default', { month: 'long', year: 'numeric' })}
+          {/* Dashboard Header */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div className="max-w-3xl">
+              <h1 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-3 tracking-tight">
+                My services
+              </h1>
+              <p className="text-lg text-gray-500 font-medium mb-2">
+                My services are designed to create clarity. Not dependency. Not long-term lock-in.
+              </p>
+              <p className="text-base text-gray-500">
+                Each service exists for a specific stage. And a specific kind of problem.
+              </p>
             </div>
-            <button className="bg-[#1A1A1A] text-white p-2 rounded-full hover:bg-black transition-colors">
-              <ArrowRight size={20} />
-            </button>
+            
+            <div className="flex items-center gap-3">
+              <div className="bg-white px-4 py-2 rounded-full text-sm font-semibold text-gray-600 shadow-sm border border-gray-100">
+                {new Date().toLocaleString('default', { month: 'long', year: 'numeric' })}
+              </div>
+              <button className="bg-[#1A1A1A] text-white p-2 rounded-full hover:bg-black transition-colors">
+                <ArrowRight size={20} />
+              </button>
+            </div>
           </div>
-        </div>
 
-        {/* Dashboard Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Dashboard Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            {/* Business Card - Sage Green Theme */}
+            <DashboardCard 
+              emoji="💼"
+              category="For Businesses"
+              title="Strategic consulting"
+              description="Best for founders and small B2B teams. Especially when decisions feel heavy or unclear. This is a short, focused engagement. We work through one real problem together."
+              details={[
+                "A clear point of view",
+                "A written strategy outline",
+                "Concrete next steps"
+              ]}
+              extraText="This is not ongoing execution. It’s high-leverage thinking."
+              tags={["Strategy", "Clarity"]}
+              buttonText="Book Consultation"
+              link="/contact"
+              theme="sage"
+            />
+
+            {/* Hustlers Card - Peach/Beige Theme */}
+            <DashboardCard 
+              emoji="💪"
+              category="For Builders"
+              title="Tools & community"
+              description="Best for independents and early-stage builders. People who want leverage, not hustle. This is access, not hand-holding. Tools, templates, and shared learning."
+              details={[
+                "No-code Tools",
+                "Templates",
+                "Shared Learning"
+              ]}
+              extraText="Designed to compound over time. And save you months of trial and error."
+              tags={["Leverage", "Tools"]}
+              buttonText="View resources"
+              onClick={() => setIsResourcesModalOpen(true)}
+              theme="peach"
+            />
+
+            {/* Students Card - Slate/Blue Theme */}
+            <DashboardCard 
+              emoji="🎓"
+              category="For Students"
+              title="Career guidance"
+              description="Best for students and early-career marketers. Especially those worried about relevance. This is not CV polishing. It’s career direction."
+              details={[
+                "Future-proof skills",
+                "Reframing your profile",
+                "Making smart career bets"
+              ]}
+              extraText="If you’re unsure where you fit. Start with a conversation."
+              tags={["Direction", "Mentorship"]}
+              buttonText="Start conversation"
+              link="/contact"
+              theme="slate"
+            />
+
+          </div>
           
-          {/* Business Card - Sage Green Theme */}
-          <DashboardCard 
-            emoji="💼"
-            category="For Businesses"
-            title="Strategic consulting"
-            description="Best for founders and small B2B teams. Especially when decisions feel heavy or unclear. This is a short, focused engagement. We work through one real problem together."
-            details={[
-              "A clear point of view",
-              "A written strategy outline",
-              "Concrete next steps"
-            ]}
-            extraText="This is not ongoing execution. It’s high-leverage thinking."
-            tags={["Strategy", "Clarity"]}
-            buttonText="Book Consultation"
-            link="/contact"
-            theme="sage"
-          />
-
-          {/* Hustlers Card - Peach/Beige Theme */}
-          <DashboardCard 
-            emoji="💪"
-            category="For Builders"
-            title="Tools & community"
-            description="Best for independents and early-stage builders. People who want leverage, not hustle. This is access, not hand-holding. Tools, templates, and shared learning."
-            details={[
-              "No-code Tools",
-              "Templates",
-              "Shared Learning"
-            ]}
-            extraText="Designed to compound over time. And save you months of trial and error."
-            tags={["Leverage", "Tools"]}
-            buttonText="View resources"
-            link="#" 
-            theme="peach"
-          />
-
-          {/* Students Card - Slate/Blue Theme */}
-          <DashboardCard 
-            emoji="🎓"
-            category="For Students"
-            title="Career guidance"
-            description="Best for students and early-career marketers. Especially those worried about relevance. This is not CV polishing. It’s career direction."
-            details={[
-              "Future-proof skills",
-              "Reframing your profile",
-              "Making smart career bets"
-            ]}
-            extraText="If you’re unsure where you fit. Start with a conversation."
-            tags={["Direction", "Mentorship"]}
-            buttonText="Start conversation"
-            link="/contact"
-            theme="slate"
-          />
+          <div className="mt-16 text-center">
+              <p className="text-gray-500 font-medium">If you’re unsure where you fit. Start with a conversation.</p>
+          </div>
 
         </div>
-        
-        <div className="mt-16 text-center">
-            <p className="text-gray-500 font-medium">If you’re unsure where you fit. Start with a conversation.</p>
-        </div>
-
       </div>
-    </div>
+
+      <ResourcesModal 
+        isOpen={isResourcesModalOpen} 
+        onClose={() => setIsResourcesModalOpen(false)} 
+      />
+    </>
   );
 };
 
@@ -108,12 +118,13 @@ interface DashboardCardProps {
   extraText?: string;
   tags: string[];
   buttonText: string;
-  link: string;
+  link?: string;
+  onClick?: () => void;
   theme: 'sage' | 'peach' | 'slate';
 }
 
 const DashboardCard: React.FC<DashboardCardProps> = ({ 
-  emoji, category, title, description, details, extraText, tags, buttonText, link, theme 
+  emoji, category, title, description, details, extraText, tags, buttonText, link, onClick, theme 
 }) => {
   
   // Theme map
@@ -185,12 +196,21 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
 
       {/* Footer with Button only */}
       <div className="mt-auto pt-6 border-t border-gray-100">
-        <Link 
-          to={link}
-          className={`block w-full text-center py-4 rounded-xl font-bold transition-all hover:brightness-110 active:scale-95 shadow-sm ${t.buttonBg} ${t.buttonText}`}
-        >
-          {buttonText}
-        </Link>
+        {onClick ? (
+          <button 
+            onClick={onClick}
+            className={`block w-full text-center py-4 rounded-xl font-bold transition-all hover:brightness-110 active:scale-95 shadow-sm ${t.buttonBg} ${t.buttonText}`}
+          >
+            {buttonText}
+          </button>
+        ) : (
+          <Link 
+            to={link!}
+            className={`block w-full text-center py-4 rounded-xl font-bold transition-all hover:brightness-110 active:scale-95 shadow-sm ${t.buttonBg} ${t.buttonText}`}
+          >
+            {buttonText}
+          </Link>
+        )}
       </div>
 
     </div>

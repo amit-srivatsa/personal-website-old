@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun, Mail, Linkedin, MapPin, ExternalLink, Zap, Download, ArrowUpRight, Share2, Briefcase, Rocket, GraduationCap, ScrollText } from 'lucide-react';
+import { Mail, Linkedin, MapPin, ExternalLink, Download, ArrowUpRight, Share2, Briefcase, Rocket, GraduationCap, ScrollText } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-/* 
-  Universal Instruction: 
-  Ensure specific content requested by the user is maintained exactly. 
-  Double-check text changes and layout adjustments before finalizing.
-*/
 
 interface TabItem {
   id: string;
@@ -21,7 +15,6 @@ interface TabItem {
 }
 
 export const CV: React.FC = () => {
-  const [darkMode, setDarkMode] = useState(false);
   const [greeting, setGreeting] = useState('About Me 👋');
   
   const [activeExp, setActiveExp] = useState('solid');
@@ -36,8 +29,6 @@ export const CV: React.FC = () => {
     else text = 'Good Evening! 👋';
     setGreeting(text);
   }, []);
-
-  const toggleTheme = () => setDarkMode(!darkMode);
 
   const handleShare = async () => {
     const url = window.location.href;
@@ -57,9 +48,11 @@ export const CV: React.FC = () => {
     }
   };
 
-  const cardBaseStyle = darkMode 
-    ? 'bg-[#1c1c1e] border-white/10 shadow-black/40 text-gray-200' 
-    : 'bg-white border-black/5 shadow-sm text-gray-700';
+  const handleDownload = () => {
+    window.print();
+  };
+
+  const cardBaseStyle = 'bg-white border-black/5 shadow-sm text-gray-700 dark:bg-[#1c1c1e] dark:border-white/10 dark:shadow-black/40 dark:text-gray-200';
 
   /* --- DATA: EXPERIENCE --- */
   const experiences: Record<string, TabItem> = {
@@ -68,7 +61,6 @@ export const CV: React.FC = () => {
       label: 'Solid Optics EU NV',
       company: 'Solid Optics EU NV',
       role: 'Marketing Coordinator',
-      // Lowercase start to flow with "is an..."
       summary: 'expert in custom fiber optic solutions for data centers.',
       icon: '🇳🇱',
       period: '2025 ← 2024',
@@ -182,7 +174,7 @@ export const CV: React.FC = () => {
       summary: 'Awarded Scholarship for Future Leaders.',
       icon: '🇳🇱',
       period: '2023 - 2024',
-      content: ["International MBA focused on change management and strategy.", "Strategic project on AI integration for retail optimization."]
+      content: ['Awarded Scholarship for Future Leaders.']
     },
     tse: {
       id: 'tse',
@@ -192,7 +184,7 @@ export const CV: React.FC = () => {
       summary: 'Founding member of the TSEconomist Student Magazine.',
       icon: '🇫🇷',
       period: '2013 - 2015',
-      content: ["Advanced Economics with emphasis on market structures.", "Specialization in Game Theory and Strategic Management."]
+      content: ['Founding member of the TSEconomist Student Magazine.']
     },
     sssihl: {
       id: 'sssihl',
@@ -202,42 +194,39 @@ export const CV: React.FC = () => {
       summary: 'Graduated with Distinction and Honors.',
       icon: '🇮🇳',
       period: '2008 - 2011',
-      content: ["Gold Medalist for academic excellence.", "Specialized in econometrics and development theory."]
+      content: ['Graduated with Distinction and Honors.']
     }
   };
 
   return (
-    <div className={`min-h-screen pt-20 pb-8 transition-colors duration-300 ${darkMode ? 'bg-black text-gray-100' : 'bg-[#f5f5f7] text-[#1d1d1f]'}`}>
+    <div className="min-h-screen pt-20 pb-8 transition-colors duration-300 bg-[#f5f5f7] text-[#1d1d1f] dark:bg-black dark:text-gray-100">
       
-      {/* Container to unify header and body backgrounds */}
       <div className="max-w-5xl mx-auto">
-        {/* Header - Unified Background */}
+
         <div className="px-5 py-8 md:py-12 flex flex-col items-center text-center relative">
           <div className="absolute right-0 top-2 flex gap-2">
              <button 
                onClick={handleShare}
-               className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${darkMode ? 'bg-white text-black hover:bg-gray-200' : 'bg-black text-white hover:bg-gray-800'}`}
+               className="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
                title="Share"
              >
                <Share2 size={14} />
             </button>
              <button 
-               className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${darkMode ? 'bg-white text-black hover:bg-gray-200' : 'bg-black text-white hover:bg-gray-800'}`}
+                onClick={handleDownload}
+               className="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
                title="Download CV"
              >
               <Download size={14} />
             </button>
-            <button onClick={toggleTheme} className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${darkMode ? 'bg-[#2c2c2e] text-yellow-400 hover:bg-[#3a3a3c]' : 'bg-[#e8e8ed] text-gray-900 hover:bg-[#d8d8dd]'}`}>
-              {darkMode ? <Sun size={14} /> : <Moon size={14} />}
-            </button>
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-2 leading-tight">Amit Srivatsa Gorti</h1>
           <div className="text-lg md:text-xl text-gray-500 font-normal mb-6">Strategist. Creator. AI Enthusiast.</div>
-          <div className={`inline-flex flex-wrap items-center justify-center gap-4 px-6 py-2 rounded-2xl border shadow-sm ${darkMode ? 'bg-[#1c1c1e] border-white/10' : 'bg-white border-black/5'}`}>
+          <div className="inline-flex flex-wrap items-center justify-center gap-4 px-6 py-2 rounded-2xl border shadow-sm bg-white border-black/5 dark:bg-[#1c1c1e] dark:border-white/10">
             <div className="flex items-center gap-2 text-sm font-medium"><MapPin size={14} className="text-purple-600" /> Almere, NL</div>
-            <div className={`w-px h-3 ${darkMode ? 'bg-gray-700' : 'bg-gray-300'}`} />
+            <div className="w-px h-3 bg-gray-300 dark:bg-gray-700" />
             <a href="mailto:amitsrivatsa@outlook.com" className="flex items-center gap-2 text-sm font-medium hover:text-purple-600 transition-colors"><Mail size={14} className="text-purple-600" /> Email</a>
-            <div className={`w-px h-3 ${darkMode ? 'bg-gray-700' : 'bg-gray-300'}`} />
+            <div className="w-px h-3 bg-gray-300 dark:bg-gray-700" />
             <a href="https://www.linkedin.com/in/amit-srivatsa/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium hover:text-purple-600 transition-colors"><Linkedin size={14} className="text-purple-600" /> LinkedIn</a>
           </div>
         </div>
@@ -245,7 +234,6 @@ export const CV: React.FC = () => {
         <div className="px-5 mt-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
 
-            {/* Intro Bio - Updated */}
             <div className={`col-span-1 md:col-span-8 p-6 md:p-8 rounded-[32px] border ${cardBaseStyle}`}>
               <h2 className="text-xl font-bold mb-3">{greeting}</h2>
               <p className="text-base mb-3 leading-relaxed">
@@ -259,9 +247,7 @@ export const CV: React.FC = () => {
               <div className="inline-flex px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-gradient-to-r from-[#0071e3] to-[#4facfe] text-white shadow-sm">Focus: GenAI Strategy</div>
             </div>
 
-            {/* Quick Specs */}
             <div className="col-span-1 md:col-span-4 p-6 md:p-8 rounded-[32px] bg-gradient-to-br from-[#0071e3] to-[#4facfe] text-white flex flex-col">
-              {/* Divider stays between Title and content as requested (border-b on title) */}
               <h2 className="text-xl font-bold mb-6 pb-6 border-b border-white/20">Quick Specs ⚡️</h2>
               <div className="flex flex-col justify-between flex-grow">
                 <div className="mb-6">
@@ -275,14 +261,11 @@ export const CV: React.FC = () => {
               </div>
             </div>
 
-            {/* --- EXPERIENCE SECTION --- */}
             <div className="col-span-1 md:col-span-12 mt-14">
               <h2 className="text-3xl font-bold tracking-tight mb-5 px-1 flex items-center gap-3">Experience <Briefcase size={28} className="text-blue-600" /></h2>
               <div className={`rounded-[32px] border p-6 md:p-8 ${cardBaseStyle}`}>
                 
-                {/* Timeline Layout */}
                 <div className="relative mb-8 pt-2">
-                   {/* Horizontal Line connecting years */}
                    <div className="hidden md:block absolute bottom-3 left-0 w-full h-px bg-gray-200 dark:bg-white/10 z-0"></div>
 
                    <div className="flex justify-between items-end w-full overflow-x-auto md:overflow-visible gap-4 no-scrollbar relative z-10">
@@ -292,7 +275,6 @@ export const CV: React.FC = () => {
                            onClick={() => setActiveExp(exp.id)}
                            className="flex flex-col items-center group min-w-[140px] md:min-w-0 flex-1"
                         >
-                           {/* Chip / Button */}
                            <div className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all border shadow-sm mb-4 whitespace-nowrap ${
                               activeExp === exp.id 
                                 ? 'bg-black text-white dark:bg-white dark:text-black border-transparent scale-105'
@@ -301,7 +283,6 @@ export const CV: React.FC = () => {
                               {exp.label}
                            </div>
                            
-                           {/* Year/Icon on line */}
                            <div className={`flex items-center gap-2 px-2 py-1 bg-white dark:bg-[#1c1c1e] rounded-md transition-opacity border border-gray-100 dark:border-white/5 ${activeExp === exp.id ? 'opacity-100 ring-2 ring-blue-100 dark:ring-blue-900' : 'opacity-60 grayscale'}`}>
                               <span className="text-base">{exp.icon}</span>
                               <span className="text-xs font-semibold text-gray-500">{exp.period}</span>
@@ -316,7 +297,6 @@ export const CV: React.FC = () => {
                         {experiences[activeExp].role}
                     </h3>
                     
-                    {/* Company Line: [Company Blue] is a [summary] - Single Line */}
                     <div className="text-lg mb-6 leading-relaxed text-gray-600 dark:text-gray-300">
                       <span className="font-bold text-[#0071e3]">{experiences[activeExp].company}</span> is a {experiences[activeExp].summary}
                     </div>
@@ -335,7 +315,6 @@ export const CV: React.FC = () => {
               </div>
             </div>
 
-            {/* --- ENTREPRENEURSHIP SECTION --- */}
             <div className="col-span-1 md:col-span-12 mt-14">
                <div className="flex justify-between items-end mb-5 px-1">
                   <h2 className="text-3xl font-bold tracking-tight flex items-center gap-3">Entrepreneurship <Rocket size={28} className="text-purple-600" /></h2>
@@ -343,8 +322,8 @@ export const CV: React.FC = () => {
                
                <div className={`rounded-[32px] border overflow-hidden ${cardBaseStyle}`}>
                   <div className="grid grid-cols-1 lg:grid-cols-12 h-full">
-                    {/* Left Sidebar Tabs */}
-                    <div className={`lg:col-span-4 p-6 md:p-8 border-r ${darkMode ? 'bg-black/20 border-white/5' : 'bg-purple-50/20 border-gray-100'} flex flex-col`}>
+
+                    <div className={`lg:col-span-4 p-6 md:p-8 border-r flex flex-col bg-purple-50/20 border-gray-100 dark:bg-black/20 dark:border-white/5`}>
                       <div className="flex flex-col gap-3">
                         {Object.values(entrepreneurship).map((ent) => (
                           <button
@@ -373,7 +352,6 @@ export const CV: React.FC = () => {
                         ))}
                       </div>
 
-                      {/* Partner Link in Sidebar with proper spacing */}
                       <div className="mt-8 pt-6 border-t border-purple-100 dark:border-white/5">
                            <Link to="/contact" className="flex items-center gap-2 text-sm font-bold text-purple-600 hover:text-purple-700 group transition-colors px-4">
                              Partner with me <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -381,7 +359,6 @@ export const CV: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Right Content Area */}
                     <div className="lg:col-span-8 p-6 md:p-10 flex flex-col justify-center">
                       <div className="mb-6">
                          <h3 className="text-3xl font-bold mb-3 tracking-tight">{entrepreneurship[activeEnt].company}</h3>
@@ -401,7 +378,6 @@ export const CV: React.FC = () => {
                </div>
             </div>
 
-            {/* Education Card */}
             <div className="col-span-1 md:col-span-8 mt-14">
               <h2 className="text-3xl font-bold tracking-tight mb-5 px-1 flex items-center gap-3">Education <GraduationCap size={28} className="text-purple-600" /></h2>
               <div className={`p-6 md:p-8 rounded-[32px] border ${cardBaseStyle}`}>
@@ -443,7 +419,6 @@ export const CV: React.FC = () => {
               </div>
             </div>
 
-            {/* Certifications Card - Compact */}
             <div className="col-span-1 md:col-span-4 flex flex-col mt-14">
               <div className="h-[60px] hidden md:block" /> 
               <div className={`p-6 md:p-8 rounded-[32px] border flex-grow ${cardBaseStyle}`}>
@@ -464,23 +439,22 @@ export const CV: React.FC = () => {
               </div>
             </div>
 
-            {/* Interests & Languages - Compact */}
             <div className={`col-span-1 md:col-span-12 p-6 md:p-8 rounded-[32px] border mb-4 mt-4 ${cardBaseStyle}`}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                 <div>
                   <h3 className="text-xl font-bold mb-5 flex items-center gap-2">Languages 🗣️</h3>
                   <div className="flex flex-wrap gap-2">
-                    <Chip text="English (C2)" darkMode={darkMode} />
-                    <Chip text="Hindi (Native)" darkMode={darkMode} />
-                    <Chip text="Telugu (Fluent)" darkMode={darkMode} />
-                    <Chip text="Dutch (Learning)" darkMode={darkMode} />
+                    <Chip text="English (C2)" />
+                    <Chip text="Hindi (Native)" />
+                    <Chip text="Telugu (Fluent)" />
+                    <Chip text="Dutch (Learning)" />
                   </div>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-5 flex items-center gap-2">Interests 🧘‍♂️</h3>
                   <div className="flex flex-wrap gap-2">
                     {["Card Magic ♠️", "Chess ♟️", "Chai ☕", "Cricket 🏏"].map((interest, i) => (
-                      <Chip key={i} text={interest} darkMode={darkMode} />
+                      <Chip key={i} text={interest} />
                     ))}
                   </div>
                 </div>
@@ -494,10 +468,8 @@ export const CV: React.FC = () => {
   );
 };
 
-const Chip: React.FC<{ text: string; darkMode: boolean }> = ({ text, darkMode }) => (
-  <span className={`px-4 py-2 rounded-full text-sm font-semibold transition-all shadow-sm border ${
-       darkMode ? 'bg-[#2c2c2e] text-gray-200 border-white/5' : 'bg-[#e8e8ed] text-[#1d1d1f] border-black/5 hover:bg-[#d8d8dd]'
-  }`}>
+const Chip: React.FC<{ text: string; }> = ({ text }) => (
+  <span className="px-4 py-2 rounded-full text-sm font-semibold transition-all shadow-sm border bg-[#e8e8ed] text-[#1d1d1f] border-black/5 hover:bg-[#d8d8dd] dark:bg-[#2c2c2e] dark:text-gray-200 dark:border-white/5">
     {text}
   </span>
 );

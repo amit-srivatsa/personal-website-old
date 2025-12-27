@@ -16,7 +16,8 @@ export const Footer: React.FC = () => {
               Amit Srivatsa
             </span>
             <p className="mt-4 text-base text-gray-500 max-w-sm leading-relaxed">
-              Enterprise-level thinking. Built for small, focused teams.
+              <b>Enterprise-level thinking. <br></br>Built for small, focused teams.</b><br></br>
+              <br></br>
               I help founders and B2B teams replace noise with clarity. Using AI, strategy, and systems that scale without bloat.
             </p>
           </div>

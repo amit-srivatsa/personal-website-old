@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, Mail, Calendar, Linkedin, MapPin, Clock, Info } from 'lucide-react';
+import { Mail, Calendar, Linkedin, MapPin, Info } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Contact: React.FC = () => {
@@ -10,11 +10,6 @@ export const Contact: React.FC = () => {
         
         {/* Header Section */}
         <div className="mb-16">
-          <Link to="/" className="group inline-flex items-center text-sm font-semibold text-gray-500 hover:text-black mb-8 transition-colors">
-              <ArrowLeft size={16} className="mr-2 transition-transform group-hover:-translate-x-1" />
-              Back Home
-          </Link>
-
           <div className="inline-flex items-center gap-2 mb-6">
               <span className="w-8 h-[2px] bg-black"></span>
               <span className="text-sm font-semibold text-gray-500 uppercase tracking-widest">let’s connect</span>
