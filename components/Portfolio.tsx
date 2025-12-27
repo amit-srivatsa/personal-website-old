@@ -1,15 +1,10 @@
 import React from 'react';
 import { ArrowRight, Layers, PenTool, Zap, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 
 export const Portfolio: React.FC = () => {
   return (
     <div className="min-h-screen pt-32 pb-24 bg-[#f5f5f7]">
-      <Helmet>
-        <title>Portfolio | Amit Srivatsa</title>
-        <meta name="description" content="Selected work organized by theme: AI strategy, content systems, and strategic frameworks." />
-      </Helmet>
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Header */}

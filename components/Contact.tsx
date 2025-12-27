@@ -1,15 +1,10 @@
 import React from 'react';
 import { ArrowLeft, Mail, Calendar, Linkedin, MapPin, Clock, Info } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 
 export const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#f5f5f7] pt-24 md:pt-32 pb-24">
-      <Helmet>
-        <title>Contact | Amit Srivatsa</title>
-        <meta name="description" content="Book a 30-min strategy session. No sales pitch, just clarity." />
-      </Helmet>
       
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         

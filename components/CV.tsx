@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Moon, Sun, Mail, Linkedin, MapPin, ExternalLink, Zap, Download, ArrowUpRight, Share2, Briefcase, Rocket, GraduationCap, ScrollText } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 
 /* 
   Universal Instruction: 
@@ -209,10 +208,6 @@ export const CV: React.FC = () => {
 
   return (
     <div className={`min-h-screen pt-20 pb-8 transition-colors duration-300 ${darkMode ? 'bg-black text-gray-100' : 'bg-[#f5f5f7] text-[#1d1d1f]'}`}>
-      <Helmet>
-        <title>CV | Amit Srivatsa</title>
-        <meta name="description" content="Resume of Amit Srivatsa. 8+ years experience in Marketing Strategy and AI. 3x Founder." />
-      </Helmet>
       
       {/* Container to unify header and body backgrounds */}
       <div className="max-w-5xl mx-auto">

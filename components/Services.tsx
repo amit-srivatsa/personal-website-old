@@ -1,15 +1,10 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 
 export const Services: React.FC = () => {
   return (
     <div className="min-h-screen pt-32 pb-24 bg-[#f5f5f7]">
-      <Helmet>
-        <title>Services | Amit Srivatsa</title>
-        <meta name="description" content="Strategic consulting, tools, and career guidance for builders and businesses." />
-      </Helmet>
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Dashboard Header */}
