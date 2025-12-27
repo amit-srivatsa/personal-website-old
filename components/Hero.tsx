@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative bg-[#F5F5F7] overflow-hidden">
+    <section className="relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 pt-32 pb-16 lg:pt-48 lg:pb-24">
         
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
@@ -23,7 +23,7 @@ export const Hero: React.FC = () => {
             </h1>
             
             <p className="text-xl text-gray-600 font-medium leading-relaxed max-w-xl mb-6">
-              I build practical AI, content, and marketing systems for B2B teams who want results, not buzzwords. Enterprise-grade thinking. SME-friendly execution. 🏢 → 🚀
+              I build practical AI, content, and marketing systems for B2B teams. 🚀
             </p>
 
             <p className="text-base text-gray-500 leading-relaxed max-w-xl mb-10">
@@ -73,8 +73,8 @@ export const Hero: React.FC = () => {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-12 transition-all duration-500">
              {/* Logos */}
-             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Adobe_Corporate_Logo.png/800px-Adobe_Corporate_Logo.png" alt="Adobe" className="h-10 w-auto object-contain hover:scale-105 transition-transform" />
-             <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/NetApp_logo.svg" alt="NetApp" className="h-10 w-auto object-contain hover:scale-105 transition-transform" />
+             <img src="/adobe.png" alt="Adobe" className="h-10 w-auto object-contain hover:scale-105 transition-transform" />
+             <img src="/netapp.png" alt="NetApp" className="h-10 w-auto object-contain hover:scale-105 transition-transform" />
           </div>
         </div>
 
