@@ -33,7 +33,11 @@ export const Hero: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="inline-block">
-                <BookButton color="#000000" label="Book a free consultation" />
+                <BookButton
+                  color="#000000"
+                  label="Book a free consultation"
+                  className="px-8 py-4 text-base"
+                />
               </div>
               <Link to="/services" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-gray-900 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-200 hover:scale-105 shadow-sm group">
                 See how this works

@@ -1,51 +1,27 @@
-import React, { useEffect, useRef } from 'react';
-
-declare global {
-    interface Window {
-        calendar?: {
-            schedulingButton: {
-                load: (config: any) => void;
-            };
-        };
-    }
-}
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
 interface BookButtonProps {
     label?: string;
-    color?: string;
+    color?: string; // Kept for interface compatibility but unused
+    className?: string;
 }
 
 export const BookButton: React.FC<BookButtonProps> = ({
     label = 'Book Consultation',
-    color = '#000000'
+    className
 }) => {
-    const targetRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const loadButton = () => {
-            if (window.calendar?.schedulingButton && targetRef.current) {
-                targetRef.current.innerHTML = '';
-
-                window.calendar.schedulingButton.load({
-                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2K1CMy371cWhEF3NcjANXoOv4dBxeoPniNU99iYFI0qrF2NbpjYPg_cabhGphs05n1sPiCHnPa?gv=true',
-                    color: color,
-                    label: label,
-                    target: targetRef.current,
-                });
-                return true;
-            }
-            return false;
-        };
-
-        if (!loadButton()) {
-            const interval = setInterval(() => {
-                if (loadButton()) {
-                    clearInterval(interval);
-                }
-            }, 100);
-            return () => clearInterval(interval);
-        }
-    }, [label, color]);
-
-    return <div ref={targetRef} className="inline-block" />;
+    return (
+        <a
+            href="https://calendar.app.google/jcY3JgK9YACJ3SA5A"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={twMerge(
+                "inline-flex items-center justify-center font-bold text-white bg-black rounded-full border border-transparent hover:bg-gray-800 transition-all duration-200 hover:scale-105 shadow-sm group px-6 py-3 text-sm",
+                className
+            )}
+        >
+            {label}
+        </a>
+    );
 };
