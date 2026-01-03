@@ -13,6 +13,8 @@ import { Portfolio } from './components/Portfolio';
 import { Blog } from './components/Blog';
 import { Contact } from './components/Contact';
 import { Resources } from './components/Resources';
+import { Book } from './components/Book';
+import { Subscribers } from './components/Subscribers';
 import { Meta } from './components/Meta';
 
 const App: React.FC = () => {
@@ -69,6 +71,12 @@ const App: React.FC = () => {
                 <>
                   <Meta title="Contact - Amit Srivatsa" description="Get in touch with Amit Srivatsa for collaborations, inquiries, or to say hello." keywords="contact, email, LinkedIn, Amit Srivatsa" />
                   <Contact />
+                </>
+              } />
+              <Route path="/book" element={
+                <>
+                  <Meta title="Book Consultation - Amit Srivatsa" description="Schedule a consultation with Amit Srivatsa." keywords="consultation, booking, schedule, AI strategy" />
+                  <Book />
                 </>
               } />
             </Routes>

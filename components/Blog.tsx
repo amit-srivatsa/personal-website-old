@@ -17,21 +17,45 @@ export const Blog: React.FC = () => {
   const [selectedPostId, setSelectedPostId] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/blogs.json')
-      .then(response => response.json())
-      .then(data => {
-        const formattedPosts = data.map((blog: any) => ({
-          id: blog.link,
-          title: blog.title,
-          excerpt: blog.content.substring(0, 150) + '...',
-          date: new Date(blog.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
-          readTime: '5 min read',
-          image: blog.image || 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
-          category: blog.categories[0] || 'Uncategorized',
-          content: <div dangerouslySetInnerHTML={{ __html: blog.content }} />
-        }));
-        setPosts(formattedPosts);
+    // Fetch markdown files from src/content/blog
+    const modules = import.meta.glob('../../src/content/blog/*.md', { query: '?raw', eager: true });
+
+    const formattedPosts = Object.entries(modules).map(([filepath, content]: [string, any]) => {
+      // Basic Frontmatter parser
+      const str = content.default || content; // Handle potential default export or raw string
+      const match = /---\n([\s\S]*?)\n---/.exec(str);
+      const frontmatter = match ? match[1] : '';
+      const body = str.replace(/---\n[\s\S]*?\n---/, '').trim();
+
+      const metadata: any = {};
+      frontmatter.split('\n').forEach(line => {
+        const parts = line.split(':');
+        if (parts.length >= 2) {
+          const key = parts[0].trim();
+          let value = parts.slice(1).join(':').trim();
+          if (value.startsWith('"') && value.endsWith('"')) {
+            value = value.slice(1, -1);
+          }
+          metadata[key] = value;
+        }
       });
+
+      return {
+        id: filepath,
+        title: metadata.title || 'Untitled',
+        excerpt: body.substring(0, 150).replace(/<[^>]*>?/gm, '') + '...', // Strip HTML for excerpt
+        date: new Date(metadata.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
+        readTime: '5 min read',
+        image: metadata.image || 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
+        category: metadata.category || 'Uncategorized',
+        content: <div dangerouslySetInnerHTML={{ __html: body }} />
+      };
+    });
+
+    // Sort by date desc
+    formattedPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    setPosts(formattedPosts);
   }, []);
 
   const selectedPost = posts.find(p => p.id === selectedPostId);
@@ -45,7 +69,7 @@ export const Blog: React.FC = () => {
     return (
       <article className="min-h-screen pt-32 pb-24 bg-white">
         <div className="max-w-3xl mx-auto px-6">
-          <button 
+          <button
             onClick={() => setSelectedPostId(null)}
             className="group flex items-center text-sm font-semibold text-gray-500 hover:text-black mb-8 transition-colors"
           >
@@ -70,9 +94,9 @@ export const Blog: React.FC = () => {
           </h1>
 
           <div className="w-full h-64 md:h-96 rounded-3xl overflow-hidden mb-12">
-            <img 
-              src={selectedPost.image} 
-              alt={selectedPost.title} 
+            <img
+              src={selectedPost.image}
+              alt={selectedPost.title}
               className="w-full h-full object-cover"
             />
           </div>
@@ -88,11 +112,11 @@ export const Blog: React.FC = () => {
           {/* Author Block */}
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
-                <img src="https://ui-avatars.com/api/?name=Amit+Srivatsa&background=000&color=fff" alt="Amit" />
+              <img src="https://ui-avatars.com/api/?name=Amit+Srivatsa&background=000&color=fff" alt="Amit" />
             </div>
             <div>
-                <p className="font-bold text-gray-900">Written by Amit Srivatsa</p>
-                <p className="text-sm text-gray-500">Marketing Strategist & AI Consultant</p>
+              <p className="font-bold text-gray-900">Written by Amit Srivatsa</p>
+              <p className="text-sm text-gray-500">Marketing Strategist & AI Consultant</p>
             </div>
           </div>
         </div>
@@ -114,33 +138,33 @@ export const Blog: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <div 
-              key={post.id} 
+            <div
+              key={post.id}
               onClick={() => setSelectedPostId(post.id)}
               className="group cursor-pointer flex flex-col h-full"
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-6 bg-gray-100">
-                <img 
-                  src={post.image} 
-                  alt={post.title} 
+                <img
+                  src={post.image}
+                  alt={post.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-900 uppercase tracking-wide">
                   {post.category}
                 </div>
               </div>
-              
+
               <div className="flex-1">
                 <div className="flex items-center gap-3 text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">
                   <span>{post.date}</span>
                   <span>•</span>
                   <span>{post.readTime}</span>
                 </div>
-                
+
                 <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors leading-tight">
                   {post.title}
                 </h2>
-                
+
                 <p className="text-gray-500 leading-relaxed line-clamp-3">
                   {post.excerpt}
                 </p>

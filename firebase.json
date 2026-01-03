@@ -12,6 +12,10 @@
         "function": "subscribe"
       },
       {
+        "source": "/api/subscribers",
+        "function": "getSubscribers"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
