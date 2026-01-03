@@ -66,7 +66,7 @@ export default function PillMorphTabs({
     measure();
     const ro = new ResizeObserver(measure);
     if (listRef.current) ro.observe(listRef.current);
-    Object.values(triggerRefs.current).forEach((el) => el && ro.observe(el));
+    Object.values(triggerRefs.current).forEach((el) => el && ro.observe(el as Element));
     window.addEventListener("resize", measure);
     return () => {
       ro.disconnect();

@@ -57,3 +57,4 @@ export const getSubscribers = functions.https.onRequest(async (req, res) => {
     }
   });
 });
+export * from "./oauth";

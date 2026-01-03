@@ -2,6 +2,8 @@ backend:
   name: github
   repo: amit-srivatsa/personal-website
   branch: main
+  base_url: https://personal-website-8845792-670e3.web.app
+  auth_endpoint: auth
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"

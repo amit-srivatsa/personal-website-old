@@ -79,6 +79,12 @@ const App: React.FC = () => {
                   <Book />
                 </>
               } />
+              <Route path="/dashboard/subscribers" element={
+                <>
+                  <Meta title="Subscribers - Amit Srivatsa" description="Manage newsletter subscribers." keywords="admin, subscribers" />
+                  <Subscribers />
+                </>
+              } />
             </Routes>
           </main>
 

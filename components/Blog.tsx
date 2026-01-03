@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Calendar, Clock, ArrowRight } from 'lucide-react';
+import Markdown from 'react-markdown';
 
 interface BlogPost {
   id: string;
@@ -9,7 +10,7 @@ interface BlogPost {
   readTime: string;
   image: string;
   category: string;
-  content?: React.ReactNode;
+  content?: string;
 }
 
 export const Blog: React.FC = () => {
@@ -18,7 +19,7 @@ export const Blog: React.FC = () => {
 
   useEffect(() => {
     // Fetch markdown files from src/content/blog
-    const modules = import.meta.glob('../../src/content/blog/*.md', { query: '?raw', eager: true });
+    const modules = import.meta.glob('../src/content/blog/*.md', { query: '?raw', eager: true });
 
     const formattedPosts = Object.entries(modules).map(([filepath, content]: [string, any]) => {
       // Basic Frontmatter parser
@@ -48,7 +49,7 @@ export const Blog: React.FC = () => {
         readTime: '5 min read',
         image: metadata.image || 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
         category: metadata.category || 'Uncategorized',
-        content: <div dangerouslySetInnerHTML={{ __html: body }} />
+        content: body // Store raw markdown string
       };
     });
 
@@ -101,9 +102,22 @@ export const Blog: React.FC = () => {
             />
           </div>
 
-          {selectedPost.content || (
+          {selectedPost.content ? (
+            <div className="
+              prose prose-lg prose-slate max-w-none
+              prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-gray-900
+              prose-p:text-gray-600 prose-p:leading-relaxed
+              prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+              prose-img:rounded-2xl prose-img:shadow-lg
+              prose-blockquote:border-l-4 prose-blockquote:border-gray-200 prose-blockquote:pl-4 prose-blockquote:italic
+              prose-li:text-gray-600
+              marker:text-gray-400
+            ">
+              <Markdown>{selectedPost.content}</Markdown>
+            </div>
+          ) : (
             <div className="text-gray-500 italic">
-              Content for this post is not available in the preview.
+              Content for this post is not available.
             </div>
           )}
 

@@ -2,6 +2,37 @@ import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ResourcesModal } from './ResourcesModal';
+import { BookButton } from './BookButton';
+
+// ... (existing code)
+
+// Theme map
+const themes = {
+  sage: {
+    bg: "bg-[#E5F0DB]", // Light Green
+    text: "text-[#3F6212]", // Dark Green
+    tagBg: "bg-[#F2F7ED]",
+    buttonBg: "bg-[#3F6212]",
+    buttonColorHex: "#3F6212",
+    buttonText: "text-white"
+  },
+  peach: {
+    bg: "bg-[#F3E8D6]", // Light Beige/Peach
+    text: "text-[#78350F]", // Dark Brown/Orange
+    tagBg: "bg-[#FAF5ED]",
+    buttonBg: "bg-[#78350F]",
+    buttonColorHex: "#78350F",
+    buttonText: "text-white"
+  },
+  slate: {
+    bg: "bg-[#DDE5E9]", // Light Blue/Grey
+    text: "text-[#334155]", // Dark Slate
+    tagBg: "bg-[#F1F5F9]",
+    buttonBg: "bg-[#334155]",
+    buttonColorHex: "#334155",
+    buttonText: "text-white"
+  }
+};
 
 export const Services: React.FC = () => {
   const [isResourcesModalOpen, setIsResourcesModalOpen] = useState(false);
@@ -10,7 +41,7 @@ export const Services: React.FC = () => {
     <>
       <div className="min-h-screen pt-32 pb-24 bg-[#f5f5f7]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          
+
           {/* Dashboard Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div className="max-w-3xl">
@@ -24,7 +55,7 @@ export const Services: React.FC = () => {
                 Each service exists for a specific stage. And a specific kind of problem.
               </p>
             </div>
-            
+
             <div className="flex items-center gap-3">
               <div className="bg-white px-4 py-2 rounded-full text-sm font-semibold text-gray-600 shadow-sm border border-gray-100">
                 {new Date().toLocaleString('default', { month: 'long', year: 'numeric' })}
@@ -37,9 +68,9 @@ export const Services: React.FC = () => {
 
           {/* Dashboard Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
+
             {/* Business Card - Sage Green Theme */}
-            <DashboardCard 
+            <DashboardCard
               emoji="💼"
               category="For Businesses"
               title="Strategic consulting"
@@ -52,12 +83,12 @@ export const Services: React.FC = () => {
               extraText="This is not ongoing execution. It’s high-leverage thinking."
               tags={["Strategy", "Clarity"]}
               buttonText="Book Consultation"
-              link="/contact"
+              link="/book"
               theme="sage"
             />
 
             {/* Hustlers Card - Peach/Beige Theme */}
-            <DashboardCard 
+            <DashboardCard
               emoji="💪"
               category="For Builders"
               title="Tools & community"
@@ -75,7 +106,7 @@ export const Services: React.FC = () => {
             />
 
             {/* Students Card - Slate/Blue Theme */}
-            <DashboardCard 
+            <DashboardCard
               emoji="🎓"
               category="For Students"
               title="Career guidance"
@@ -93,17 +124,17 @@ export const Services: React.FC = () => {
             />
 
           </div>
-          
+
           <div className="mt-16 text-center">
-              <p className="text-gray-500 font-medium">If you’re unsure where you fit. Start with a conversation.</p>
+            <p className="text-gray-500 font-medium">If you’re unsure where you fit. Start with a conversation.</p>
           </div>
 
         </div>
       </div>
 
-      <ResourcesModal 
-        isOpen={isResourcesModalOpen} 
-        onClose={() => setIsResourcesModalOpen(false)} 
+      <ResourcesModal
+        isOpen={isResourcesModalOpen}
+        onClose={() => setIsResourcesModalOpen(false)}
       />
     </>
   );
@@ -123,10 +154,10 @@ interface DashboardCardProps {
   theme: 'sage' | 'peach' | 'slate';
 }
 
-const DashboardCard: React.FC<DashboardCardProps> = ({ 
-  emoji, category, title, description, details, extraText, tags, buttonText, link, onClick, theme 
+const DashboardCard: React.FC<DashboardCardProps> = ({
+  emoji, category, title, description, details, extraText, tags, buttonText, link, onClick, theme
 }) => {
-  
+
   // Theme map
   const themes = {
     sage: {
@@ -134,6 +165,7 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
       text: "text-[#3F6212]", // Dark Green
       tagBg: "bg-[#F2F7ED]",
       buttonBg: "bg-[#3F6212]",
+      buttonColorHex: "#3F6212",
       buttonText: "text-white"
     },
     peach: {
@@ -141,6 +173,7 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
       text: "text-[#78350F]", // Dark Brown/Orange
       tagBg: "bg-[#FAF5ED]",
       buttonBg: "bg-[#78350F]",
+      buttonColorHex: "#78350F",
       buttonText: "text-white"
     },
     slate: {
@@ -148,6 +181,7 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
       text: "text-[#334155]", // Dark Slate
       tagBg: "bg-[#F1F5F9]",
       buttonBg: "bg-[#334155]",
+      buttonColorHex: "#334155",
       buttonText: "text-white"
     }
   };
@@ -156,7 +190,7 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
 
   return (
     <div className="bg-white rounded-[32px] p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full relative border border-gray-100">
-      
+
       <div className="flex justify-between items-start mb-6">
         {/* Emoji Container */}
         <div className={`h-16 w-16 rounded-2xl ${t.bg} flex items-center justify-center text-3xl shadow-inner`}>
@@ -183,28 +217,32 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
 
       {/* Bullet points area */}
       <ul className="mb-6 space-y-2">
-         {details.map((detail, i) => (
-             <li key={i} className="text-sm font-bold text-gray-800 flex items-center gap-2">
-                 <span className={`w-1.5 h-1.5 rounded-full ${t.buttonBg}`}></span> {detail}
-             </li>
-         ))}
+        {details.map((detail, i) => (
+          <li key={i} className="text-sm font-bold text-gray-800 flex items-center gap-2">
+            <span className={`w-1.5 h-1.5 rounded-full ${t.buttonBg}`}></span> {detail}
+          </li>
+        ))}
       </ul>
-      
+
       {extraText && (
-          <p className="text-xs text-gray-400 italic mb-8 flex-grow">{extraText}</p>
+        <p className="text-xs text-gray-400 italic mb-8 flex-grow">{extraText}</p>
       )}
 
       {/* Footer with Button only */}
       <div className="mt-auto pt-6 border-t border-gray-100">
         {onClick ? (
-          <button 
+          <button
             onClick={onClick}
             className={`block w-full text-center py-4 rounded-xl font-bold transition-all hover:brightness-110 active:scale-95 shadow-sm ${t.buttonBg} ${t.buttonText}`}
           >
             {buttonText}
           </button>
+        ) : link === '/book' ? (
+          <div className="flex justify-center w-full">
+            <BookButton color={t.buttonColorHex} label={buttonText} />
+          </div>
         ) : (
-          <Link 
+          <Link
             to={link!}
             className={`block w-full text-center py-4 rounded-xl font-bold transition-all hover:brightness-110 active:scale-95 shadow-sm ${t.buttonBg} ${t.buttonText}`}
           >

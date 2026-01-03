@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { NavLink } from '../types';
+import { BookButton } from './BookButton';
 
 const navLinks: NavLink[] = [
   { label: 'Overview', path: '/' },
@@ -71,12 +72,7 @@ export const Header: React.FC = () => {
 
             {/* CTA Button (Desktop) */}
             <div className="hidden md:block">
-              <Link
-                to="/book"
-                className="px-5 py-2 text-xs font-semibold text-white bg-black rounded-full hover:bg-gray-800 transition-transform transform hover:scale-105 active:scale-95"
-              >
-                Book Consultation
-              </Link>
+              <BookButton color="#000000" />
             </div>
 
             {/* Mobile Menu Button */}
@@ -112,12 +108,9 @@ export const Header: React.FC = () => {
             );
           })}
           <div className="pt-8">
-            <Link
-              to="/book"
-              className="inline-block w-full py-4 text-center text-sm font-bold text-white bg-black rounded-xl"
-            >
-              Book Consultation
-            </Link>
+            <div className="pt-8 flex justify-center">
+              <BookButton color="#000000" label="Book Consultation" />
+            </div>
           </div>
         </nav>
       </div>
