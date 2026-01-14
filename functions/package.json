@@ -15,8 +15,8 @@
   "dependencies": {
     "@types/cors": "^2.8.19",
     "cors": "^2.8.5",
-    "firebase-admin": "^11.8.0",
-    "firebase-functions": "^4.3.1",
+    "firebase-admin": "^11.11.1",
+    "firebase-functions": "^4.9.0",
     "node-fetch": "^2.7.0"
   },
   "devDependencies": {

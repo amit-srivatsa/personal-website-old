@@ -1,6 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import * as cors from "cors";
+const cors = require('cors');
 
 admin.initializeApp();
 
@@ -57,4 +57,4 @@ export const getSubscribers = functions.https.onRequest(async (req, res) => {
     }
   });
 });
-export * from "./oauth";
+
