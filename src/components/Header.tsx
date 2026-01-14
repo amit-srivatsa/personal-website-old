@@ -72,7 +72,7 @@ export const Header: React.FC = () => {
 
             {/* CTA Button (Desktop) */}
             <div className="hidden md:block">
-              <BookButton color="#000000" />
+              <BookButton />
             </div>
 
             {/* Mobile Menu Button */}
@@ -109,7 +109,7 @@ export const Header: React.FC = () => {
           })}
           <div className="pt-8">
             <div className="pt-8 flex justify-center">
-              <BookButton color="#000000" label="Book Consultation" />
+              <BookButton label="Book Consultation" />
             </div>
           </div>
         </nav>

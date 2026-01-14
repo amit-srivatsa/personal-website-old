@@ -1,8 +1,12 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+
+// Layout Components
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+
+// Page Components
 import { Hero } from './components/Hero';
 import { AboutPreview } from './components/AboutPreview';
 import { BentoGrid } from './components/BentoGrid';
@@ -106,7 +110,6 @@ const App: React.FC = () => {
                     <Subscribers />
                   </>
                 } />
-
               </Routes>
             </Layout>
           } />

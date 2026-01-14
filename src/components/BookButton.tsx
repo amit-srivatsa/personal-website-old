@@ -3,7 +3,6 @@ import { twMerge } from 'tailwind-merge';
 
 interface BookButtonProps {
     label?: string;
-    color?: string; // Kept for interface compatibility but unused
     className?: string;
 }
 

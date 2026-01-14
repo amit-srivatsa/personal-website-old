@@ -23,7 +23,7 @@ export const Contact: React.FC = () => {
                 <div className="space-y-6">
                     {/* Booking Button Container */}
                     <div className="flex justify-center w-full">
-                        <BookButton color="#000000" label="Book Consultation" />
+                        <BookButton label="Book Consultation" />
                     </div>
 
                     <div className="relative flex py-2 items-center">

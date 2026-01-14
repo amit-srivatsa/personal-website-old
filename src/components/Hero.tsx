@@ -34,7 +34,6 @@ export const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="inline-block">
                 <BookButton
-                  color="#000000"
                   label="Book a free consultation"
                   className="px-8 py-4 text-base"
                 />

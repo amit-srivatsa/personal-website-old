@@ -19,7 +19,7 @@ export const Blog: React.FC = () => {
 
   useEffect(() => {
     // Fetch markdown files from src/content/blog
-    const modules = import.meta.glob('../src/content/blog/*.md', { query: '?raw', eager: true });
+    const modules = import.meta.glob('../content/blog/*.md', { query: '?raw', eager: true });
 
     const formattedPosts = Object.entries(modules).map(([filepath, content]: [string, any]) => {
       // Basic Frontmatter parser
