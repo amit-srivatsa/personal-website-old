@@ -80,6 +80,11 @@ a:hover {
   color: var(--color-link-hover);
 }
 
+/* Buttons inside links should not look like links */
+a:has(button) {
+  text-decoration: none;
+}
+
 strong { font-weight: 700; }
 em { font-style: italic; }
 
@@ -246,6 +251,11 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+/* Sections */
+section {
+  margin-bottom: 1rem;
+}
+
 /* Details / Summary */
 details {
   margin-bottom: var(--spacing);
@@ -265,11 +275,25 @@ details[open] summary {
 
 /* Navigation */
 nav {
-  margin-bottom: var(--spacing);
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5em;
 }
 
 nav a {
-  margin-right: 1em;
+  margin-right: 0.75em;
+  font-size: 0.9em;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+nav span {
+  float: none !important;
 }
 
 /* Header / Footer */
@@ -287,6 +311,23 @@ footer {
   color: #888;
 }
 
+/* Articles in blog listing */
+article {
+  margin-bottom: 0.5rem;
+}
+
+article h2 {
+  margin-top: 0;
+}
+
+article h2 a {
+  text-decoration: none;
+}
+
+article h2 a:hover {
+  text-decoration: underline;
+}
+
 /* Media queries */
 @media (max-width: 600px) {
   :root {
@@ -299,6 +340,15 @@ footer {
 
   body {
     padding: 1.5rem 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav span {
+    margin-top: 0.5em;
   }
 }
 
@@ -314,4 +364,5 @@ footer {
 
   a { color: #000; text-decoration: underline; }
   button { display: none; }
+  header, footer { display: none; }
 }
