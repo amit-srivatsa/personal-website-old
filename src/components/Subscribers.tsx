@@ -20,9 +20,12 @@ export const Subscribers: React.FC = () => {
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
-        // Basic client-side check. Ideally this would be server-side or auth-based.
-        // Password is "admin123" for this iteration as requested.
-        if (password === 'admin123') {
+        const adminKey = import.meta.env.VITE_ADMIN_KEY;
+        if (!adminKey) {
+            setError('Admin key not configured. Set VITE_ADMIN_KEY in your .env file.');
+            return;
+        }
+        if (password === adminKey) {
             setIsAuthenticated(true);
             fetchSubscribers();
         } else {

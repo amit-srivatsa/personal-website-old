@@ -39,8 +39,8 @@ export const CV: React.FC = () => {
           text: 'Check out this CV.',
           url: url,
         });
-      } catch (error) {
-        console.log('Error sharing', error);
+      } catch {
+        // User cancelled share dialog
       }
     } else {
       navigator.clipboard.writeText(url);

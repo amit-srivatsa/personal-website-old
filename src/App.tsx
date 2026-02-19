@@ -20,8 +20,6 @@ import { Resources } from './components/Resources';
 import { Book } from './components/Book';
 import { Subscribers } from './components/Subscribers';
 import { Meta } from './components/Meta';
-import { AdminDashboard } from './components/Admin/AdminDashboard';
-
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div className="min-h-screen flex flex-col bg-white selection:bg-orange-200 selection:text-orange-900">
     <div className="print:hidden">
@@ -41,14 +39,6 @@ const App: React.FC = () => {
     <HelmetProvider>
       <Router>
         <Routes>
-          {/* Admin Route - No Header/Footer */}
-          <Route path="/admin" element={
-            <>
-              <Meta title="Admin - Amit Srivatsa" description="Content Management" keywords="" />
-              <AdminDashboard />
-            </>
-          } />
-
           {/* Public Routes - Wrapped in Layout */}
           <Route path="/*" element={
             <Layout>

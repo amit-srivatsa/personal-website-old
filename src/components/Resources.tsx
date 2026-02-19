@@ -31,8 +31,8 @@ export const Resources: React.FC = () => {
             <p className="text-gray-500 mb-6 flex-grow">
               A slide deck template to help you pitch AI initiatives to stakeholders. Focuses on ROI and risk mitigation.
             </p>
-            <button className="w-full py-3 rounded-xl bg-black text-white font-bold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
-              <Download size={18} /> Download Deck
+            <button disabled className="w-full py-3 rounded-xl bg-gray-300 text-gray-500 font-bold cursor-not-allowed flex items-center justify-center gap-2" title="Coming soon">
+              <Download size={18} /> Coming Soon
             </button>
           </div>
 
@@ -45,8 +45,8 @@ export const Resources: React.FC = () => {
             <p className="text-gray-500 mb-6 flex-grow">
               A one-page reference guide for writing effective prompts across GPT-4, Claude, and Midjourney.
             </p>
-            <button className="w-full py-3 rounded-xl bg-gray-100 text-gray-900 font-bold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
-              <ExternalLink size={18} /> View Notion Page
+            <button disabled className="w-full py-3 rounded-xl bg-gray-100 text-gray-400 font-bold cursor-not-allowed flex items-center justify-center gap-2" title="Coming soon">
+              <ExternalLink size={18} /> Coming Soon
             </button>
           </div>
 

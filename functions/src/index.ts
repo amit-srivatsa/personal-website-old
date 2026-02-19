@@ -4,7 +4,11 @@ const cors = require('cors');
 
 admin.initializeApp();
 
-const corsHandler = cors({ origin: true });
+const allowedOrigins = [
+  'https://amitsrivatsa.com',
+  'http://localhost:3000',
+];
+const corsHandler = cors({ origin: allowedOrigins });
 
 export const subscribe = functions.https.onRequest(async (req, res) => {
   corsHandler(req, res, async () => {
@@ -43,7 +47,11 @@ export const getSubscribers = functions.https.onRequest(async (req, res) => {
       return;
     }
 
-    // specific key check can be added here if needed, but relying on client-side gate for now per instructions
+    const apiKey = req.headers['x-admin-key'];
+    if (!apiKey || apiKey !== functions.config().admin?.key) {
+      res.status(401).json({ message: "Unauthorized" });
+      return;
+    }
 
     try {
       const db = admin.firestore();
