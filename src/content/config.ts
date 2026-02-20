@@ -6,9 +6,11 @@ const blogCollection = defineCollection({
     title: z.string(),
     date: z.coerce.date(),
     category: z.string().default('Uncategorized'),
-    image: z.string().url(),
+    image: z.string().optional(),
     excerpt: z.string().optional(),
     draft: z.boolean().default(false),
+    featured: z.boolean().default(false),
+    tags: z.array(z.string()).default([]),
   }),
 });
 

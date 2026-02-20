@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "build": "node --env-file=.env scripts/sync-notion.mjs && astro build",
+    "preview": "astro preview",
+    "notion:setup": "node --env-file=.env scripts/setup-notion.mjs",
+    "notion:sync": "node --env-file=.env scripts/sync-notion.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
