@@ -1,0 +1,38 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="bg-gray-50 border-t border-gray-200 mt-24">
+  <div class="max-w-7xl mx-auto px-6 py-12 sm:px-8 lg:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div class="col-span-1 md:col-span-2">
+        <span class="text-lg font-bold tracking-tight text-gray-900">Amit Srivatsa</span>
+        <p class="mt-4 text-base text-gray-500 max-w-sm leading-relaxed">
+          <b>Enterprise-level thinking. <br />Built for small, focused teams.</b><br /><br />
+          I help founders and B2B teams replace noise with clarity. Using AI, strategy, and systems that scale without bloat.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Directory</h3>
+        <ul class="mt-4 space-y-3">
+          <li><a href="/" class="text-base text-gray-500 hover:text-black transition-colors">Overview</a></li>
+          <li><a href="/services" class="text-base text-gray-500 hover:text-black transition-colors">Services</a></li>
+          <li><a href="/portfolio" class="text-base text-gray-500 hover:text-black transition-colors">Portfolio</a></li>
+          <li><a href="/cv" class="text-base text-gray-500 hover:text-black transition-colors">CV</a></li>
+          <li><a href="/blog" class="text-base text-gray-500 hover:text-black transition-colors">Writing</a></li>
+          <li><a href="/contact" class="text-base text-gray-500 hover:text-black transition-colors">Book a consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Connect</h3>
+        <div class="mt-4 flex flex-col space-y-3">
+          <a href="https://www.linkedin.com/in/amit-srivatsa/" target="_blank" rel="noreferrer" class="text-gray-500 hover:text-black transition-colors text-sm">LinkedIn</a>
+          <a href="/rss.xml" class="text-gray-500 hover:text-black transition-colors text-sm">RSS Feed</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-sm text-gray-400">&copy; {currentYear} Amit Srivatsa. All rights reserved.</p>
+      <p class="text-sm text-gray-400 mt-2 md:mt-0">Designed with <span class="text-black">Precision</span>.</p>
+    </div>
+  </div>
+</footer>

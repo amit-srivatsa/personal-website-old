@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Resources - Amit Srivatsa" description="Tools, templates, and frameworks to help you move faster. The Builder's Vault by Amit Srivatsa." keywords="resources, templates, frameworks, AI tools, Amit Srivatsa">
+  <div class="min-h-screen pt-32 pb-24 bg-[#f5f5f7]">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8">
+
+      <a href="/services" class="inline-flex items-center text-sm font-bold text-gray-500 hover:text-black transition-colors mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        Back to Services
+      </a>
+
+      <div class="mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-4 tracking-tight">
+          The Builder's Vault
+        </h1>
+        <p class="text-xl text-gray-500 font-medium">
+          Tools, templates, and frameworks to help you move faster.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Resource Card 1 -->
+        <div class="bg-white p-8 rounded-[24px] border border-gray-100 shadow-sm flex flex-col">
+          <div class="mb-4">
+            <span class="inline-block px-3 py-1 rounded-lg bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wide">Template</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">GenAI Strategy Framework</h3>
+          <p class="text-gray-500 mb-6 flex-grow">
+            A slide deck template to help you pitch AI initiatives to stakeholders. Focuses on ROI and risk mitigation.
+          </p>
+          <button disabled class="w-full py-3 rounded-xl bg-gray-300 text-gray-500 font-bold cursor-not-allowed flex items-center justify-center gap-2" title="Coming soon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- Resource Card 2 -->
+        <div class="bg-white p-8 rounded-[24px] border border-gray-100 shadow-sm flex flex-col">
+          <div class="mb-4">
+            <span class="inline-block px-3 py-1 rounded-lg bg-purple-50 text-purple-700 text-xs font-bold uppercase tracking-wide">Tool</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Prompt Engineering Cheatsheet</h3>
+          <p class="text-gray-500 mb-6 flex-grow">
+            A one-page reference guide for writing effective prompts across GPT-4, Claude, and Midjourney.
+          </p>
+          <button disabled class="w-full py-3 rounded-xl bg-gray-100 text-gray-400 font-bold cursor-not-allowed flex items-center justify-center gap-2" title="Coming soon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- Locked/Coming Soon Card -->
+        <div class="bg-gray-50 p-8 rounded-[24px] border border-gray-200 border-dashed flex flex-col items-center justify-center text-center opacity-75">
+          <h3 class="text-xl font-bold text-gray-400 mb-2">Content Calendar System</h3>
+          <p class="text-gray-400 text-sm">Coming next week</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>

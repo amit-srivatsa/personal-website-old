@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Linkedin, MapPin, ExternalLink, Download, ArrowUpRight, Share2, Briefcase, Rocket, GraduationCap, ScrollText } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface TabItem {
   id: string;
@@ -353,9 +352,9 @@ export const CV: React.FC = () => {
                       </div>
 
                       <div className="mt-8 pt-6 border-t border-purple-100 dark:border-white/5">
-                           <Link to="/contact" className="flex items-center gap-2 text-sm font-bold text-purple-600 hover:text-purple-700 group transition-colors px-4">
+                           <a href="/contact" className="flex items-center gap-2 text-sm font-bold text-purple-600 hover:text-purple-700 group transition-colors px-4">
                              Partner with me <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                           </Link>
+                           </a>
                       </div>
                     </div>
 

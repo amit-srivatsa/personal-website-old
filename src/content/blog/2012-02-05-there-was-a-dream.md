@@ -1,8 +1,9 @@
 ---
 title: "There was a Dream"
-date: "Sun, 05 Feb 2012 05:32:26 +0000"
+date: 2012-02-05
 category: "Poetry"
 image: "https://images.unsplash.com/photo-1478737270239-2f02b77ac6d5?auto=format&fit=crop&q=80&w=1000"
+excerpt: "A poem about growth, struggle, and finding your way through the overwhelming cultural shock of life."
 ---
 
 There was a dream\

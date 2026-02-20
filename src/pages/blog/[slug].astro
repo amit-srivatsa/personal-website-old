@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const words = (post.body || '').split(/\s+/).length;
+const readTime = `${Math.max(1, Math.ceil(words / 200))} min read`;
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+<BaseLayout
+  title={`${post.data.title} - Amit Srivatsa`}
+  description={post.data.excerpt || (post.body || '').substring(0, 150)}
+  ogImage={post.data.image}
+  ogType="article"
+>
+  <article class="min-h-screen pt-32 pb-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <a href="/blog/" class="group flex items-center text-sm font-semibold text-gray-500 hover:text-black mb-8 transition-colors">
+        &larr; Back to Writing
+      </a>
+
+      <div class="flex items-center gap-4 text-sm text-gray-500 mb-6">
+        <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-medium">{post.data.category}</span>
+        <span>{formatDate(post.data.date)}</span>
+        <span>{readTime}</span>
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+        {post.data.title}
+      </h1>
+
+      <div class="w-full h-64 md:h-96 rounded-3xl overflow-hidden mb-12">
+        <img src={post.data.image} alt={post.data.title} class="w-full h-full object-cover" />
+      </div>
+
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-img:rounded-2xl prose-img:shadow-lg prose-blockquote:border-l-4 prose-blockquote:border-gray-200 prose-blockquote:pl-4 prose-blockquote:italic prose-li:text-gray-600 marker:text-gray-400">
+        <Content />
+      </div>
+
+      <hr class="my-12 border-gray-100" />
+
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+          <img src="https://ui-avatars.com/api/?name=Amit+Srivatsa&background=000&color=fff" alt="Amit" />
+        </div>
+        <div>
+          <p class="font-bold text-gray-900">Written by Amit Srivatsa</p>
+          <p class="text-sm text-gray-500">Marketing Strategist & AI Consultant</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.data.title,
+    "datePublished": post.data.date.toISOString(),
+    "author": { "@type": "Person", "name": "Amit Srivatsa" },
+    "image": post.data.image,
+    "description": post.data.excerpt || ""
+  })} />
+</BaseLayout>
