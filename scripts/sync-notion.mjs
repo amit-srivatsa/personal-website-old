@@ -31,7 +31,7 @@ await Promise.all(
 );
 
 // 2. Query published posts
-const { results } = await notion.databases.query({
+const response = await notion.databases.query({
   database_id: DATABASE_ID,
   filter: {
     property: 'Status',
@@ -39,6 +39,7 @@ const { results } = await notion.databases.query({
   },
   sorts: [{ property: 'Published Date', direction: 'descending' }],
 });
+const results = response.results;
 
 if (results.length === 0) {
   console.log('ℹ️   No published posts found in Notion. Blog will be empty.');
@@ -62,12 +63,12 @@ for (const page of results) {
     continue;
   }
 
-  const excerpt  = props['Excerpt']?.rich_text?.[0]?.plain_text ?? '';
-  const dateStr  = props['Published Date']?.date?.start ?? new Date().toISOString().split('T')[0];
+  const excerpt = props['Excerpt']?.rich_text?.[0]?.plain_text ?? '';
+  const dateStr = props['Published Date']?.date?.start ?? new Date().toISOString().split('T')[0];
   const category = props['Category']?.select?.name ?? 'Uncategorized';
-  const image    = props['Cover Image']?.url ?? '';
+  const image = props['Cover Image']?.url ?? '';
   const featured = props['Featured']?.checkbox ?? false;
-  const tags     = (props['Tags']?.multi_select ?? []).map(t => t.name);
+  const tags = (props['Tags']?.multi_select ?? []).map(t => t.name);
 
   // Fetch body as markdown
   const mdBlocks = await n2m.pageToMarkdown(page.id);
@@ -81,7 +82,7 @@ for (const page of results) {
     `category: "${category}"`,
   ];
   if (excerpt) lines.push(`excerpt: "${excerpt.replace(/"/g, '\\"')}"`);
-  if (image)   lines.push(`image: "${image}"`);
+  if (image) lines.push(`image: "${image}"`);
   if (featured) lines.push(`featured: true`);
   if (tags.length) lines.push(`tags: [${tags.map(t => `"${t}"`).join(', ')}]`);
   lines.push('---');
