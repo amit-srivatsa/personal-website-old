@@ -46,7 +46,7 @@ export const Blog: React.FC = () => {
         title: metadata.title || 'Untitled',
         excerpt: body.substring(0, 150).replace(/<[^>]*>?/gm, '') + '...', // Strip HTML for excerpt
         date: new Date(metadata.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
-        readTime: '5 min read',
+        readTime: `${Math.max(1, Math.ceil(body.split(/\s+/).length / 200))} min read`,
         image: metadata.image || 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
         category: metadata.category || 'Uncategorized',
         content: body // Store raw markdown string

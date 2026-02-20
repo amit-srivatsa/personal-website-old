@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, Clock, Users } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const AboutPreview: React.FC = () => {

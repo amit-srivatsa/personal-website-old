@@ -33,11 +33,11 @@ export const Contact: React.FC = () => {
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
-                        <a href="mailto:hello@amit.com" className="flex flex-col items-center justify-center p-4 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors group border border-transparent hover:border-gray-200">
+                        <a href="mailto:amitsrivatsa@outlook.com" className="flex flex-col items-center justify-center p-4 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors group border border-transparent hover:border-gray-200">
                             <Mail size={20} className="text-gray-400 group-hover:text-black mb-2 transition-colors" />
                             <span className="text-xs font-bold text-gray-900">Email</span>
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center p-4 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors group border border-transparent hover:border-gray-200">
+                        <a href="https://www.linkedin.com/in/amit-srivatsa/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center p-4 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors group border border-transparent hover:border-gray-200">
                             <Linkedin size={20} className="text-gray-400 group-hover:text-[#0077b5] mb-2 transition-colors" />
                             <span className="text-xs font-bold text-gray-900">LinkedIn</span>
                         </a>

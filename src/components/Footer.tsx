@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Twitter, Linkedin, Github } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -71,14 +71,7 @@ export const Footer: React.FC = () => {
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-black transition-colors">
-                <span className="sr-only">Twitter</span>
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-black transition-colors">
-                <span className="sr-only">GitHub</span>
-                <Github size={20} />
-              </a>
+              {/* TODO: Add real Twitter/GitHub URLs when available */}
             </div>
           </div>
         </div>

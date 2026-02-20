@@ -1,8 +1,9 @@
 ---
 title: "Love Outlet"
-date: "Tue, 14 Feb 2012 14:23:10 +0000"
+date: 2012-02-14
 category: "Society"
 image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&q=80&w=1000"
+excerpt: "A reflection on Valentine's Day and why we celebrate 'days' for things that should matter every day."
 ---
 
 Well, with all the talk about Valentine's Day going around, I thought I would write a blog about it too! I mean, why not? What are blogs for if not for writing about random stuff and posting it on the Internet?
