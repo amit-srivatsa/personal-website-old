@@ -28,8 +28,7 @@
           "default": "Uncategorized"
         },
         "image": {
-          "type": "string",
-          "format": "uri"
+          "type": "string"
         },
         "excerpt": {
           "type": "string"
@@ -38,14 +37,24 @@
           "type": "boolean",
           "default": false
         },
+        "featured": {
+          "type": "boolean",
+          "default": false
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
         "$schema": {
           "type": "string"
         }
       },
       "required": [
         "title",
-        "date",
-        "image"
+        "date"
       ],
       "additionalProperties": false
     }
