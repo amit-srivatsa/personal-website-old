@@ -22,10 +22,11 @@ working on this codebase. Read this file before making any changes.
 
 ### How it works
 1. Author writes in the **Notion database** ("Claude Blogs (Website)")
-2. Locally run `npm run notion:sync` (or `npm run build` which runs sync first)
+2. On push to `main`, GitHub Actions runs `sync-notion.mjs` (or run locally via `npm run notion:sync`)
 3. `sync-notion.mjs` fetches Published posts → writes `.md` files to `src/content/blog/`
-4. Astro builds static HTML from those `.md` files
-5. Push to `main` → GitHub Actions builds + deploys to Firebase
+4. **Inline images** from Notion (which use expiring S3 signed URLs) are automatically downloaded and re-uploaded to **ImageKit** (`ik.imagekit.io/mws/blog/{slug}/`) for permanent hosting
+5. Astro builds static HTML from those `.md` files
+6. GitHub Actions deploys to Firebase Hosting
 
 ### Blog URL structure
 ```
@@ -88,8 +89,8 @@ When creating or modifying a blog post page:
 # Local development
 npm run dev
 
-# Sync from Notion + build
-npm run build
+# Sync from Notion + build (local — uses .env file)
+node --env-file=.env scripts/sync-notion.mjs && astro build
 
 # Sync only (no build)
 npm run notion:sync
@@ -99,9 +100,17 @@ npx firebase deploy --only hosting
 ```
 
 ### CI/CD notes
-- `sync-notion.mjs` gracefully skips if Notion env vars are missing (CI uses committed .md files)
-- GitHub Actions only needs `FIREBASE_SERVICE_ACCOUNT` secret
-- Pushing to `main` auto-deploys via GitHub Actions
+- **All secrets are stored as GitHub Actions secrets** and passed as env vars in `deploy.yml`
+- Pushing to `main` auto-deploys via GitHub Actions (sync + build + deploy)
+- `sync-notion.mjs` gracefully skips if Notion env vars are missing
+
+### Required GitHub Actions secrets
+| Secret                   | Purpose                                    |
+|--------------------------|--------------------------------------------|
+| `NOTION_API_KEY`         | Notion API integration token               |
+| `NOTION_DATABASE_ID`     | Notion blog database ID                    |
+| `IMAGEKIT_PRIVATE_KEY`   | Upload inline images to ImageKit           |
+| `FIREBASE_SERVICE_ACCOUNT` | Firebase Hosting deploy credentials      |
 
 ---
 

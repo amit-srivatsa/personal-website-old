@@ -13,11 +13,87 @@ const notion = new Client({ auth: process.env.NOTION_API_KEY });
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
 const DATABASE_ID = process.env.NOTION_DATABASE_ID;
+const IMAGEKIT_PRIVATE_KEY = process.env.IMAGEKIT_PRIVATE_KEY;
 const OUTPUT_DIR = path.resolve('./src/content/blog');
+
+// Regex to match Notion's temporary S3 signed image URLs
+const NOTION_S3_RE = /https:\/\/prod-files-secure\.s3\.us-west-2\.amazonaws\.com\/[^\s)]+/g;
 
 if (!process.env.NOTION_API_KEY || !DATABASE_ID) {
   console.log('ℹ️  NOTION_API_KEY or NOTION_DATABASE_ID not set — skipping sync (using committed .md files)');
   process.exit(0);
+}
+
+/**
+ * Upload an image from a URL to ImageKit and return the permanent URL.
+ * Falls back to the original URL if upload fails or key is missing.
+ */
+async function uploadToImageKit(imageUrl, slug, index) {
+  if (!IMAGEKIT_PRIVATE_KEY) return imageUrl;
+
+  try {
+    // Download the image from Notion's S3
+    const res = await fetch(imageUrl);
+    if (!res.ok) throw new Error(`Download failed: ${res.status}`);
+    const buffer = Buffer.from(await res.arrayBuffer());
+    const base64 = buffer.toString('base64');
+
+    // Determine file extension from content-type
+    const contentType = res.headers.get('content-type') || 'image/png';
+    const ext = contentType.split('/')[1]?.replace('jpeg', 'jpg') || 'png';
+    const fileName = `image-${index + 1}.${ext}`;
+
+    // Upload to ImageKit via their Upload API
+    const authHeader = 'Basic ' + Buffer.from(IMAGEKIT_PRIVATE_KEY + ':').toString('base64');
+
+    const form = new FormData();
+    form.append('file', base64);
+    form.append('fileName', fileName);
+    form.append('folder', `/blog/${slug}/`);
+    form.append('useUniqueFileName', 'false');
+
+    const uploadRes = await fetch('https://upload.imagekit.io/api/v1/files/upload', {
+      method: 'POST',
+      headers: { Authorization: authHeader },
+      body: form,
+    });
+
+    if (!uploadRes.ok) {
+      const errText = await uploadRes.text();
+      throw new Error(`ImageKit upload failed (${uploadRes.status}): ${errText}`);
+    }
+
+    const data = await uploadRes.json();
+    console.log(`      📸  Uploaded ${fileName} → ${data.url}`);
+    return data.url;
+  } catch (err) {
+    console.warn(`      ⚠️  Image upload failed (keeping original URL): ${err.message}`);
+    return imageUrl;
+  }
+}
+
+/**
+ * Replace all Notion S3 signed URLs in a markdown string with permanent ImageKit URLs.
+ */
+async function replaceNotionImages(markdown, slug) {
+  const matches = [...markdown.matchAll(NOTION_S3_RE)];
+  if (matches.length === 0) return markdown;
+
+  if (!IMAGEKIT_PRIVATE_KEY) {
+    console.warn(`      ⚠️  Found ${matches.length} Notion image(s) but IMAGEKIT_PRIVATE_KEY not set — URLs will expire!`);
+    return markdown;
+  }
+
+  console.log(`      🖼️  Found ${matches.length} inline image(s) to upload...`);
+  let result = markdown;
+
+  for (let i = 0; i < matches.length; i++) {
+    const originalUrl = matches[i][0];
+    const permanentUrl = await uploadToImageKit(originalUrl, slug, i);
+    result = result.replace(originalUrl, permanentUrl);
+  }
+
+  return result;
 }
 
 console.log('📥  Syncing posts from Notion...\n');
@@ -72,7 +148,10 @@ for (const page of results) {
 
   // Fetch body as markdown
   const mdBlocks = await n2m.pageToMarkdown(page.id);
-  const body = n2m.toMarkdownString(mdBlocks).parent ?? '';
+  let body = n2m.toMarkdownString(mdBlocks).parent ?? '';
+
+  // Upload inline Notion images to ImageKit (replace expiring S3 URLs)
+  body = await replaceNotionImages(body, slug);
 
   // Build frontmatter
   const lines = [
