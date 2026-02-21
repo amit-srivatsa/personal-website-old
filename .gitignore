@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Firebase cache
+.firebase/
+
 # Astro generated
 .astro/
 
