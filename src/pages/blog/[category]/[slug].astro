@@ -1,11 +1,14 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map(post => ({
-    params: { slug: post.id.replace(/\.md$/, '') },
+    params: {
+      category: post.data.category.toLowerCase().replace(/\s+/g, '-'),
+      slug: post.id.replace(/\.md$/, ''),
+    },
     props: { post },
   }));
 }
@@ -19,12 +22,23 @@ const readTime = `${Math.max(1, Math.ceil(words / 200))} min read`;
 function formatDate(date: Date): string {
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
+
+// SEO metadata — derived from post frontmatter, falls back to site defaults
+const seoTitle = `${post.data.title} - Amit Srivatsa`;
+const seoDescription = post.data.excerpt || (post.body || '').substring(0, 155).trim();
+const seoImage = post.data.image || undefined;
+const seoKeywords = [
+  post.data.category,
+  ...(post.data.tags || []),
+  'Amit Srivatsa',
+].join(', ');
 ---
 <BaseLayout
-  title={`${post.data.title} - Amit Srivatsa`}
-  description={post.data.excerpt || (post.body || '').substring(0, 150)}
-  ogImage={post.data.image}
+  title={seoTitle}
+  description={seoDescription}
+  ogImage={seoImage}
   ogType="article"
+  keywords={seoKeywords}
 >
   <article class="min-h-screen pt-32 pb-24 bg-white">
     <div class="max-w-3xl mx-auto px-6">
@@ -73,6 +87,9 @@ function formatDate(date: Date): string {
     "datePublished": post.data.date.toISOString(),
     "author": { "@type": "Person", "name": "Amit Srivatsa" },
     "image": post.data.image,
-    "description": post.data.excerpt || ""
+    "description": post.data.excerpt || "",
+    "keywords": post.data.tags?.join(', ') || post.data.category,
+    "articleSection": post.data.category,
+    "url": `https://amitsrivatsa.com/blog/${post.data.category.toLowerCase().replace(/\s+/g, '-')}/${post.id.replace(/\.md$/, '')}/`
   })} />
 </BaseLayout>

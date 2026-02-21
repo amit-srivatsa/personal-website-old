@@ -25,7 +25,7 @@ function formatDate(date: Date): string {
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
-          <a href={`/blog/${post.id.replace(/\.md$/, '')}/`} class="group cursor-pointer flex flex-col h-full">
+          <a href={`/blog/${post.data.category.toLowerCase().replace(/\s+/g, '-')}/${post.id.replace(/\.md$/, '')}/`} class="group cursor-pointer flex flex-col h-full">
             <div class="relative aspect-[4/3] overflow-hidden rounded-2xl mb-6 bg-gray-100">
               {post.data.image
                 ? <img src={post.data.image} alt={post.data.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />

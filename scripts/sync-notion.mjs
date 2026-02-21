@@ -16,8 +16,8 @@ const DATABASE_ID = process.env.NOTION_DATABASE_ID;
 const OUTPUT_DIR = path.resolve('./src/content/blog');
 
 if (!process.env.NOTION_API_KEY || !DATABASE_ID) {
-  console.error('❌  Missing NOTION_API_KEY or NOTION_DATABASE_ID in .env');
-  process.exit(1);
+  console.log('ℹ️  NOTION_API_KEY or NOTION_DATABASE_ID not set — skipping sync (using committed .md files)');
+  process.exit(0);
 }
 
 console.log('📥  Syncing posts from Notion...\n');
@@ -88,7 +88,7 @@ for (const page of results) {
   lines.push('---');
 
   const content = `${lines.join('\n')}\n\n${body}`;
-  const filename = `${dateStr}-${slug}.md`;
+  const filename = `${slug}.md`;
 
   await fs.writeFile(path.join(OUTPUT_DIR, filename), content, 'utf-8');
   console.log(`  ✓  ${filename}`);
