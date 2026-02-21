@@ -41,7 +41,7 @@ async function uploadToImageKit(imageUrl, slug, index) {
     // Determine file extension from content-type
     const contentType = res.headers.get('content-type') || 'image/png';
     const ext = contentType.split('/')[1]?.replace('jpeg', 'jpg') || 'png';
-    const fileName = `image-${index + 1}.${ext}`;
+    const fileName = index === 'cover' ? `cover.${ext}` : `image-${index + 1}.${ext}`;
 
     // Upload to ImageKit via their Upload API
     const authHeader = 'Basic ' + Buffer.from(IMAGEKIT_PRIVATE_KEY + ':').toString('base64');
@@ -142,9 +142,15 @@ for (const page of results) {
   const excerpt = props['Excerpt']?.rich_text?.[0]?.plain_text ?? '';
   const dateStr = props['Published Date']?.date?.start ?? new Date().toISOString().split('T')[0];
   const category = props['Category']?.select?.name ?? 'Uncategorized';
-  const image = props['Cover Image']?.url ?? '';
+  let image = props['Cover Image']?.url ?? '';
   const featured = props['Featured']?.checkbox ?? false;
   const tags = (props['Tags']?.multi_select ?? []).map(t => t.name);
+
+  // If the cover image is an expiring Notion S3 URL, upload it to ImageKit
+  if (image && image.match(NOTION_S3_RE)) {
+    console.log(`      🖼️  Found cover image to upload...`);
+    image = await uploadToImageKit(image, slug, 'cover');
+  }
 
   // Fetch body as markdown
   const mdBlocks = await n2m.pageToMarkdown(page.id);

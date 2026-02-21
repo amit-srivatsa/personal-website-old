@@ -30,7 +30,7 @@
 ### Blog Posts
 - ✅ **DO** set all required Notion fields: Name, Slug, Published Date, Status, Category
 - ✅ **DO** include SEO metadata on every blog page (title, description, OG tags, JSON-LD)
-- ✅ **DO** use inline images freely in Notion — they're auto-uploaded to ImageKit during sync
+- ✅ **DO** add cover images and inline images freely in Notion — both are auto-uploaded to ImageKit
 - ❌ **DON'T** hardcode image URLs from Notion (`prod-files-secure.s3...`) — they expire in 1 hour
 - ❌ **DON'T** prefix slugs with dates — URL structure is `/blog/{category}/{slug}/`
 
@@ -67,7 +67,7 @@ Notion DB → sync-notion.mjs → .md files → Astro build → Firebase deploy
 | Status          | Select       | ✅       | "Draft" or "Published"          |
 | Category        | Select       | ✅       | Used in URL path                |
 | Excerpt         | Rich text    | —        | Meta description / preview text |
-| Cover Image     | URL          | —        | OG image and hero               |
+| Cover Image     | URL          | —        | OG image and hero (auto-uploaded to ImageKit) |
 | Tags            | Multi-select | —        | For keywords meta tag           |
 | Featured        | Checkbox     | —        | Highlight in featured sections  |
 
