@@ -125,3 +125,12 @@ npx firebase deploy --only hosting  # Deploy locally
 - **Layouts**: `BaseLayout.astro` for all pages
 - **Styling**: Tailwind utility classes; globals in `src/styles/global.css`
 - **Content**: Blog `.md` files in `src/content/blog/` (auto-generated, don't edit manually)
+
+---
+
+## Legal / Compliance
+
+- **Cookie consent** is stored in `localStorage` key `cookieConsent` (`'granted'` | `'denied'`)
+- **GA4 uses Consent Mode v2** — defaults to `analytics_storage: 'denied'` on every page load; only upgrades to `'granted'` when the user has accepted. **Never remove this default.**
+- `CookieConsentIsland` is mounted in `BaseLayout.astro` and must stay there — removing it breaks GDPR compliance
+- Privacy policy lives at `/privacy` (`src/pages/privacy.astro`) — update it if new data collection is added
