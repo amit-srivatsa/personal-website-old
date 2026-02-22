@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import HeaderIsland from '../components/islands/HeaderIsland';
 import Footer from '../components/Footer.astro';
+import CookieConsentIsland from '../components/islands/CookieConsentIsland';
 
 interface Props {
   title: string;
@@ -76,15 +77,19 @@ const GA_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     ]
   })} />
 
-  <!-- Google Analytics 4 -->
+  <!-- Google Analytics 4 with Consent Mode v2 -->
   {GA_ID && (
     <>
       <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
       <script is:inline define:vars={{ GA_ID }}>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', { analytics_storage: 'denied' });
         gtag('js', new Date());
         gtag('config', GA_ID);
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('cookieConsent') === 'granted') {
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+        }
       </script>
     </>
   )}
@@ -106,5 +111,6 @@ const GA_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
   <div class="print:hidden">
     <Footer />
   </div>
+  <CookieConsentIsland client:load />
 </body>
 </html>
