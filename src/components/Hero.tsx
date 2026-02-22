@@ -74,8 +74,8 @@ export const Hero: React.FC = () => {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-12 transition-all duration-500">
             {/* Logos */}
-            <img src="/adobe.svg" alt="Adobe" className="h-8 w-auto object-contain hover:scale-105 transition-transform opacity-60 grayscale hover:grayscale-0 hover:opacity-100" />
-            <img src="/netapp.svg" alt="NetApp" className="h-8 w-auto object-contain hover:scale-105 transition-transform opacity-60 grayscale hover:grayscale-0 hover:opacity-100" />
+            <img src="https://www.adobe.com/federal/assets/svgs/adobe-logo.svg" alt="Adobe" className="h-10 max-w-[140px] w-auto object-contain" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/NetApp_%282020%29.svg" alt="NetApp" className="h-8 max-w-[160px] w-auto object-contain" />
           </div>
         </div>
 
