@@ -1,6 +1,11 @@
+---
+name: writing-skill
+description: This document is a living reference. It captures how Amit actually writes — derived from real samples that performed well — and what that means for writing blogs, LinkedIn posts, and newsletters that sound like him.
+---
+
 # Blog Writing Skill — Amit Srivatsa
 
-> This document is a living reference. It captures how Amit actually writes — derived from real samples that performed well — and what that means for writing blogs, LinkedIn posts, and newsletters that sound like him.
+Can be invoked by asking the agent to "write like amit / write like me / in my voice " etc. 
 
 ---
 
@@ -135,25 +140,6 @@ Amit admits when he failed, stopped, got comfortable, made mistakes.
 > "I had 11 goals. I am picking only 3 of them."
 
 This is what makes the writing trustworthy. It's not performance — it reads as actual reflection.
-
----
-
-## What goes wrong when AI assists
-
-The blog "The real difference between people who learn fast vs. those who don't" illustrates the gap clearly.
-
-The ideas are solid. But the writing doesn't sound like Amit.
-
-| What went wrong | Why it matters |
-|---|---|
-| Decorative emojis (🏗️ 🧠 🔁 ⚙️) used throughout | Dilutes calm, honest tone — feels like LinkedIn content creation |
-| No personal story or real moment | Missing the hook that makes readers trust the framing |
-| Academic-style section headers | Signals "article template," not natural thinking |
-| Generic closing CTA | "I'd love to know" — impersonal, formulaic |
-| Institutional critique section too thin | Adds length without insight — the weakest part |
-| No tension or personal cost | States the three levers confidently but doesn't show what running them actually feels like |
-
-**The 60-second test section** was the closest to Amit's real voice — personal, specific, honest about discomfort. That's the register the whole piece should have been written in.
 
 ---
 
