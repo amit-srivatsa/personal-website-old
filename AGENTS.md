@@ -40,6 +40,10 @@
 - ✅ **DO** add new secrets to both `.env.example` and `deploy.yml`
 - ❌ **DON'T** use `--env-file=.env` in the `build` script (breaks CI)
 
+### Env Vars
+- ✅ **DO** prefix client-side env vars with `PUBLIC_` — Astro only exposes `PUBLIC_*` vars to the browser; unprefixed vars are server/build-time only
+- ✅ **DO** note that `PUBLIC_GA_MEASUREMENT_ID` is optional — analytics load conditionally, so missing it never breaks the build or site
+
 ---
 
 ## Blog Pipeline
