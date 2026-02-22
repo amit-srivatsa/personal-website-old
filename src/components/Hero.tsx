@@ -52,7 +52,7 @@ export const Hero: React.FC = () => {
             {/* Main Image */}
             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700 ease-out bg-gray-200">
               <img
-                src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?q=80&w=2070&auto=format&fit=crop"
+                src="https://ik.imagekit.io/mws/main-site/amit-photo-1.jpg"
                 alt="Amit Srivatsa"
                 className="w-full h-auto object-cover scale-105"
               />

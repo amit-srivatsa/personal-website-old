@@ -7,19 +7,19 @@ export const AboutPreview: React.FC = () => {
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-          
+
           {/* Image Side */}
           <div className="w-full lg:w-1/2 relative">
-             <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 shadow-2xl relative z-10">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1287&auto=format&fit=crop" 
-                  alt="Amit Srivatsa Portrait" 
-                  className="w-full h-full object-cover"
-                />
-             </div>
-             {/* Decorative Elements */}
-             <div className="absolute -bottom-12 -right-12 w-64 h-64 bg-purple-50 rounded-full blur-3xl -z-10" />
-             <div className="absolute -top-12 -left-12 w-64 h-64 bg-blue-50 rounded-full blur-3xl -z-10" />
+            <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 shadow-2xl relative z-10">
+              <img
+                src="https://ik.imagekit.io/mws/main-site/amit-photo-2.jpeg"
+                alt="Amit Srivatsa Portrait"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Decorative Elements */}
+            <div className="absolute -bottom-12 -right-12 w-64 h-64 bg-purple-50 rounded-full blur-3xl -z-10" />
+            <div className="absolute -top-12 -left-12 w-64 h-64 bg-blue-50 rounded-full blur-3xl -z-10" />
           </div>
 
           {/* Content Side */}
@@ -59,7 +59,7 @@ export const AboutPreview: React.FC = () => {
               </div>
             </div>
 
-            <Link 
+            <Link
               to="/cv"
               className="inline-flex items-center text-base font-bold text-black hover:text-orange-600 transition-colors group"
             >
