@@ -13,6 +13,7 @@
 | Hosting    | Firebase Hosting                                   |
 | CMS        | Notion → `scripts/sync-notion.mjs` → Astro content collections |
 | Images     | ImageKit (`ik.imagekit.io/mws`)                    |
+| Analytics  | Google Analytics 4 (`PUBLIC_GA_MEASUREMENT_ID`)    |
 | CI/CD      | GitHub Actions → `.github/workflows/deploy.yml`   |
 | Domain     | https://amitsrivatsa.com                           |
 
@@ -95,10 +96,11 @@ Default fallback description:
 
 | Secret                     | Where          | Purpose                          |
 |----------------------------|----------------|----------------------------------|
-| `NOTION_API_KEY`           | `.env` + GitHub | Notion API integration token     |
-| `NOTION_DATABASE_ID`       | `.env` + GitHub | Notion blog database ID          |
-| `IMAGEKIT_PRIVATE_KEY`     | `.env` + GitHub | Upload inline images to ImageKit |
-| `FIREBASE_SERVICE_ACCOUNT` | GitHub only     | Firebase Hosting deploy creds    |
+| `NOTION_API_KEY`            | `.env` + GitHub | Notion API integration token     |
+| `NOTION_DATABASE_ID`        | `.env` + GitHub | Notion blog database ID          |
+| `IMAGEKIT_PRIVATE_KEY`      | `.env` + GitHub | Upload inline images to ImageKit |
+| `PUBLIC_GA_MEASUREMENT_ID`  | `.env` + GitHub | Google Analytics 4 Measurement ID (baked in at build time) |
+| `FIREBASE_SERVICE_ACCOUNT`  | GitHub only     | Firebase Hosting deploy creds    |
 
 ---
 
