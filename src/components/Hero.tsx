@@ -6,7 +6,7 @@ import { BookButton } from './BookButton';
 export const Hero: React.FC = () => {
   return (
     <section className="relative bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 pt-32 pb-16 lg:pt-48 lg:pb-24">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 pt-32 pb-8 lg:pt-48 lg:pb-12">
 
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
@@ -68,14 +68,14 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Trusted By Section */}
-        <div className="mt-24 pt-12 border-t border-gray-200/60">
+        <div className="mt-16 pt-8 border-t border-gray-200/60">
           <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-8">
             I've built Content Strategy pipelines for Fortune 100 companies
           </p>
           <div className="flex flex-wrap justify-center items-center gap-12 transition-all duration-500">
             {/* Logos */}
-            <img src="https://www.adobe.com/federal/assets/svgs/adobe-logo.svg" alt="Adobe" className="h-10 max-w-[140px] w-auto object-contain" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/NetApp_%282020%29.svg" alt="NetApp" className="h-8 max-w-[160px] w-auto object-contain" />
+            <img src="https://www.adobe.com/federal/assets/svgs/adobe-logo.svg" alt="Adobe" className="h-10 max-w-[120px] w-auto object-contain" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/NetApp_%282020%29.svg" alt="NetApp" className="h-7 max-w-[130px] w-auto object-contain" />
           </div>
         </div>
 
