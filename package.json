@@ -13,7 +13,6 @@
   "dependencies": {
     "@astrojs/react": "^4.4.2",
     "@astrojs/rss": "^4.0.15",
-    "@astrojs/sitemap": "^3.7.0",
     "@astrojs/tailwind": "^6.0.2",
     "@notionhq/client": "^2.2.14",
     "astro": "^5.17.3",
@@ -27,6 +26,7 @@
     "tailwind-merge": "2.2.1"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "^3.7.0",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^22.14.0",
     "@types/react": "^19.2.8",

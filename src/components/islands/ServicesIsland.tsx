@@ -116,9 +116,8 @@ const ResourcesModal: React.FC<ResourcesModalProps> = ({ isOpen, onClose }) => {
           <button
             type="submit"
             disabled={status === 'loading' || status === 'success'}
-            className={`w-full py-4 rounded-xl font-bold text-white flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg shadow-amber-500/20 ${
-              status === 'success' ? 'bg-green-500' : 'bg-amber-600 hover:bg-amber-700'
-            }`}
+            className={`w-full py-4 rounded-xl font-bold text-white flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg shadow-amber-500/20 ${status === 'success' ? 'bg-green-500' : 'bg-amber-600 hover:bg-amber-700'
+              }`}
           >
             {status === 'loading' ? (
               <Loader2 className="animate-spin" />
@@ -211,30 +210,30 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
         <p className="text-xs text-gray-400 italic mb-8 flex-grow">{extraText}</p>
       )}
 
-      <div className="mt-auto pt-6 border-t border-gray-100">
+      <div className="mt-auto pt-6 border-t border-gray-100 flex justify-center w-full">
         {onClick ? (
           <button
             onClick={onClick}
-            className={`block w-full text-center py-4 rounded-xl font-bold transition-all hover:brightness-110 active:scale-95 shadow-sm ${t.buttonBg} ${t.buttonText}`}
+            className="inline-flex items-center justify-center font-bold text-white rounded-full border border-transparent hover:brightness-110 transition-all duration-200 hover:scale-105 shadow-sm group px-6 py-3 text-sm"
+            style={{ backgroundColor: t.buttonColorHex }}
           >
             {buttonText}
           </button>
         ) : link === '/book' ? (
-          <div className="flex justify-center w-full">
-            <a
-              href="https://calendar.app.google/jcY3JgK9YACJ3SA5A"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center font-bold text-white rounded-full border border-transparent hover:brightness-110 transition-all duration-200 hover:scale-105 shadow-sm group px-6 py-3 text-sm"
-              style={{ backgroundColor: t.buttonColorHex }}
-            >
-              {buttonText}
-            </a>
-          </div>
+          <a
+            href="https://calendar.app.google/jcY3JgK9YACJ3SA5A"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center font-bold text-white rounded-full border border-transparent hover:brightness-110 transition-all duration-200 hover:scale-105 shadow-sm group px-6 py-3 text-sm"
+            style={{ backgroundColor: t.buttonColorHex }}
+          >
+            {buttonText}
+          </a>
         ) : (
           <a
             href={link!}
-            className={`block w-full text-center py-4 rounded-xl font-bold transition-all hover:brightness-110 active:scale-95 shadow-sm ${t.buttonBg} ${t.buttonText}`}
+            className="inline-flex items-center justify-center font-bold text-white rounded-full border border-transparent hover:brightness-110 transition-all duration-200 hover:scale-105 shadow-sm group px-6 py-3 text-sm"
+            style={{ backgroundColor: t.buttonColorHex }}
           >
             {buttonText}
           </a>

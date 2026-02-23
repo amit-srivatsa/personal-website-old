@@ -3,37 +3,73 @@ const currentYear = new Date().getFullYear();
 ---
 <footer class="bg-gray-50 border-t border-gray-200 mt-24">
   <div class="max-w-7xl mx-auto px-6 py-12 sm:px-8 lg:py-16">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-      <div class="col-span-1 md:col-span-2">
-        <span class="text-lg font-bold tracking-tight text-gray-900">Amit Srivatsa</span>
-        <p class="mt-4 text-base text-gray-500 max-w-sm leading-relaxed">
-          <b>Enterprise-level thinking. <br />Built for small, focused teams.</b><br /><br />
-          I help founders and B2B teams replace noise with clarity. Using AI, strategy, and systems that scale without bloat.
-        </p>
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-8 md:gap-12">
+
+      {/* Brand blurb — spans 2 cols */}
+      <div class="col-span-2 md:col-span-2 flex flex-col items-start -ml-2">
+        <a href="/" class="inline-block transition-transform hover:scale-105 active:scale-95 mb-4">
+          <img src="https://ik.imagekit.io/mws/main-site/Signature%20YT%20Vector-01.png?updatedAt=1771872266297" alt="Amit Srivatsa" class="w-44 md:w-52 h-auto opacity-90 drop-shadow-sm -mt-2" loading="lazy" />
+        </a>
       </div>
-      <div>
-        <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Directory</h3>
-        <ul class="mt-4 space-y-3">
-          <li><a href="/" class="text-base text-gray-500 hover:text-black transition-colors">Overview</a></li>
-          <li><a href="/services" class="text-base text-gray-500 hover:text-black transition-colors">Services</a></li>
-          <li><a href="/portfolio" class="text-base text-gray-500 hover:text-black transition-colors">Portfolio</a></li>
-          <li><a href="/cv" class="text-base text-gray-500 hover:text-black transition-colors">CV</a></li>
-          <li><a href="/blog" class="text-base text-gray-500 hover:text-black transition-colors">Writing</a></li>
-          <li><a href="/contact" class="text-base text-gray-500 hover:text-black transition-colors">Book a consultation</a></li>
-          <li><a href="/privacy" class="text-base text-gray-500 hover:text-black transition-colors">Privacy Policy</a></li>
+
+      {/* About links */}
+      <div class="col-span-1">
+        <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">About</h3>
+        <ul class="mt-4 flex flex-col space-y-3">
+          <li><a href="/" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">Home</a></li>
+          <li><a href="/cv" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">CV</a></li>
+          <li><a href="/blog" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">Writing</a></li>
+          <li><a href="/#newsletter" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">Newsletter</a></li>
+          <li><a href="/contact" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">Contact</a></li>
         </ul>
       </div>
-      <div>
+
+      {/* Work links */}
+      <div class="col-span-1">
+        <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Work</h3>
+        <ul class="mt-4 flex flex-col space-y-3">
+          <li><a href="/services" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">Services</a></li>
+          <li><a href="/portfolio" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">Portfolio</a></li>
+          <li><a href="/resources" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">Resources</a></li>
+        </ul>
+      </div>
+
+      {/* Connect */}
+      <div class="col-span-1">
         <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Connect</h3>
         <div class="mt-4 flex flex-col space-y-3">
-          <a href="https://www.linkedin.com/in/amit-srivatsa/" target="_blank" rel="noreferrer" class="text-gray-500 hover:text-black transition-colors text-sm">LinkedIn</a>
-          <a href="/rss.xml" class="text-gray-500 hover:text-black transition-colors text-sm">RSS Feed</a>
+          <a href="https://www.linkedin.com/in/amit-srivatsa/" target="_blank" rel="noreferrer" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">LinkedIn</a>
+          <a href="https://twitter.com/amitsrivatsa" target="_blank" rel="noreferrer" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">Twitter</a>
+          <a href="https://www.youtube.com/channel/UCmv8PppyF7R7F4OTOeEs14g" target="_blank" rel="noreferrer" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">YouTube</a>
         </div>
       </div>
+
+      {/* Resources links */}
+      <div class="col-span-1">
+        <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Resources</h3>
+        <div class="mt-4 flex flex-col space-y-3">
+          <a href="/sitemap-index.xml" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">Sitemap</a>
+          <a href="/rss.xml" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">RSS Feed</a>
+          <hr class="border-gray-200 my-1" />
+          <a href="https://github.com/amit-srivatsa/personal-website" target="_blank" rel="noreferrer" class="text-gray-500 hover:text-blue-600 transition-colors text-sm">View this site's repository on GitHub</a>
+        </div>
+      </div>
+
     </div>
-    <div class="mt-12 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-sm text-gray-400">&copy; {currentYear} Amit Srivatsa. All rights reserved.</p>
-      <p class="text-sm text-gray-400 mt-2 md:mt-0">Designed with <span class="text-black">Precision</span>.</p>
+
+    {/* Bottom bar */}
+    <div class="mt-12 border-t border-gray-200 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-4">
+        <div class="flex flex-col gap-1 text-center md:text-left mx-auto md:mx-0">
+          <p class="text-sm text-gray-400">&copy; {currentYear} Amit Srivatsa. All rights reserved.</p>
+          <a href="/privacy" class="text-sm text-gray-400 hover:text-blue-600 transition-colors">Privacy Policy</a>
+        </div>
+        <p class="text-sm text-gray-400 text-center md:text-right mx-auto md:mx-0">
+          Made with ♥️ in the Netherlands.<br />
+          Site designed and run by <a href="https://magicwand.site" target="_blank" rel="noopener noreferrer" class="text-black hover:underline font-semibold">Magic Wand Solutions</a>
+        </p>
+      </div>
     </div>
+
   </div>
 </footer>

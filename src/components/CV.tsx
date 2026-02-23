@@ -15,7 +15,7 @@ interface TabItem {
 
 export const CV: React.FC = () => {
   const [greeting, setGreeting] = useState('About Me 👋');
-  
+
   const [activeExp, setActiveExp] = useState('solid');
   const [activeEnt, setActiveEnt] = useState('magic');
   const [activeEdu, setActiveEdu] = useState('tias');
@@ -164,58 +164,61 @@ export const CV: React.FC = () => {
   };
 
   /* --- DATA: EDUCATION --- */
-  const education: Record<string, TabItem> = {
+  const education: Record<string, TabItem & { link: string }> = {
     tias: {
       id: 'tias',
       label: 'MBA',
-      company: 'TIAS School for Business',
+      company: 'TIAS School for Business and Society',
       role: 'Full-time MBA',
       summary: 'Awarded Scholarship for Future Leaders.',
       icon: '🇳🇱',
       period: '2023 - 2024',
+      link: 'https://www.tias.edu',
       content: ['Awarded Scholarship for Future Leaders.']
     },
     tse: {
       id: 'tse',
       label: 'Masters (1) Econ',
-      company: 'Toulouse School of Econ',
+      company: 'Toulouse School of Economics',
       role: 'Masters in Economics',
       summary: 'Founding member of the TSEconomist Student Magazine.',
       icon: '🇫🇷',
       period: '2013 - 2015',
+      link: 'https://www.tse-fr.eu',
       content: ['Founding member of the TSEconomist Student Magazine.']
     },
     sssihl: {
       id: 'sssihl',
       label: 'BSc (Hons) Econ',
-      company: 'SSSIHL',
+      company: 'Sri Sathya Sai Institute of Higher Learning',
       role: 'BSc (Hons) Economics',
       summary: 'Graduated with Distinction and Honors.',
       icon: '🇮🇳',
       period: '2008 - 2011',
+      link: 'https://www.sssihl.edu.in',
       content: ['Graduated with Distinction and Honors.']
     }
   };
 
   return (
     <div className="min-h-screen pt-20 pb-8 transition-colors duration-300 bg-[#f5f5f7] text-[#1d1d1f] dark:bg-black dark:text-gray-100">
-      
+
       <div className="max-w-5xl mx-auto">
 
         <div className="px-5 py-8 md:py-12 flex flex-col items-center text-center relative">
           <div className="absolute right-0 top-2 flex gap-2">
-             <button 
-               onClick={handleShare}
-               className="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
-               title="Share"
-             >
-               <Share2 size={14} />
+            <button
+              onClick={handleShare}
+              className="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+              title="Share"
+            >
+              <Share2 size={14} />
             </button>
-             <button 
-                onClick={handleDownload}
-               className="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
-               title="Download CV"
-             >
+            <button
+              onClick={handleDownload}
+              className="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+              title="Download CV"
+            >
               <Download size={14} />
             </button>
           </div>
@@ -263,163 +266,170 @@ export const CV: React.FC = () => {
             <div className="col-span-1 md:col-span-12 mt-14">
               <h2 className="text-3xl font-bold tracking-tight mb-5 px-1 flex items-center gap-3">Experience <Briefcase size={28} className="text-blue-600" /></h2>
               <div className={`rounded-[32px] border p-6 md:p-8 ${cardBaseStyle}`}>
-                
+
                 <div className="relative mb-8 pt-2">
-                   <div className="hidden md:block absolute bottom-3 left-0 w-full h-px bg-gray-200 dark:bg-white/10 z-0"></div>
+                  <div className="hidden md:block absolute bottom-3 left-0 w-full h-px bg-gray-200 dark:bg-white/10 z-0"></div>
 
-                   <div className="flex justify-between items-end w-full overflow-x-auto md:overflow-visible gap-4 no-scrollbar relative z-10">
-                      {Object.values(experiences).map(exp => (
-                        <button 
-                           key={exp.id}
-                           onClick={() => setActiveExp(exp.id)}
-                           className="flex flex-col items-center group min-w-[140px] md:min-w-0 flex-1"
-                        >
-                           <div className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all border shadow-sm mb-4 whitespace-nowrap ${
-                              activeExp === exp.id 
-                                ? 'bg-black text-white dark:bg-white dark:text-black border-transparent scale-105'
-                                : 'bg-white dark:bg-[#2c2c2e] text-gray-500 border-gray-200 dark:border-white/10 hover:border-gray-400'
-                           }`}>
-                              {exp.label}
-                           </div>
-                           
-                           <div className={`flex items-center gap-2 px-2 py-1 bg-white dark:bg-[#1c1c1e] rounded-md transition-opacity border border-gray-100 dark:border-white/5 ${activeExp === exp.id ? 'opacity-100 ring-2 ring-blue-100 dark:ring-blue-900' : 'opacity-60 grayscale'}`}>
-                              <span className="text-base">{exp.icon}</span>
-                              <span className="text-xs font-semibold text-gray-500">{exp.period}</span>
-                           </div>
-                        </button>
-                      ))}
-                   </div>
+                  <div className="flex justify-between items-end w-full overflow-x-auto md:overflow-visible gap-4 no-scrollbar relative z-10">
+                    {Object.values(experiences).map(exp => (
+                      <button
+                        key={exp.id}
+                        onClick={() => setActiveExp(exp.id)}
+                        className="flex flex-col items-center group min-w-[140px] md:min-w-0 flex-1"
+                      >
+                        <div className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all border shadow-sm mb-4 whitespace-nowrap ${activeExp === exp.id
+                          ? 'bg-black text-white dark:bg-white dark:text-black border-transparent scale-105'
+                          : 'bg-white dark:bg-[#2c2c2e] text-gray-500 border-gray-200 dark:border-white/10 hover:border-gray-400'
+                          }`}>
+                          {exp.label}
+                        </div>
+
+                        <div className={`flex items-center gap-2 px-2 py-1 bg-white dark:bg-[#1c1c1e] rounded-md transition-opacity border border-gray-100 dark:border-white/5 ${activeExp === exp.id ? 'opacity-100 ring-2 ring-blue-100 dark:ring-blue-900' : 'opacity-60 grayscale'}`}>
+                          <span className="text-base">{exp.icon}</span>
+                          <span className="text-xs font-semibold text-gray-500">{exp.period}</span>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                
-                <div className="animate-in fade-in duration-300">
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">
-                        {experiences[activeExp].role}
-                    </h3>
-                    
-                    <div className="text-lg mb-6 leading-relaxed text-gray-600 dark:text-gray-300">
-                      <span className="font-bold text-[#0071e3]">{experiences[activeExp].company}</span> is a {experiences[activeExp].summary}
-                    </div>
 
-                    <ul className="space-y-4">
-                      {experiences[activeExp].content.map((bullet, idx) => (
-                        <li key={idx} className="flex items-center gap-4 text-base leading-relaxed group">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#0071e3] flex-shrink-0" />
-                          <div className="text-gray-700 dark:text-gray-300 whitespace-nowrap overflow-hidden text-ellipsis w-full font-medium">
-                            {bullet}
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
+                <div className="animate-in fade-in duration-300">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">
+                    {experiences[activeExp].role}
+                  </h3>
+
+                  <div className="text-lg mb-6 leading-relaxed text-gray-600 dark:text-gray-300">
+                    <span className="font-bold text-[#0071e3]">{experiences[activeExp].company}</span> is a {experiences[activeExp].summary}
+                  </div>
+
+                  <ul className="space-y-4">
+                    {experiences[activeExp].content.map((bullet, idx) => (
+                      <li key={idx} className="flex items-center gap-4 text-base leading-relaxed group">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#0071e3] flex-shrink-0" />
+                        <div className="text-gray-700 dark:text-gray-300 whitespace-nowrap overflow-hidden text-ellipsis w-full font-medium">
+                          {bullet}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
 
             <div className="col-span-1 md:col-span-12 mt-14">
-               <div className="flex justify-between items-end mb-5 px-1">
-                  <h2 className="text-3xl font-bold tracking-tight flex items-center gap-3">Entrepreneurship <Rocket size={28} className="text-purple-600" /></h2>
-               </div>
-               
-               <div className={`rounded-[32px] border overflow-hidden ${cardBaseStyle}`}>
-                  <div className="grid grid-cols-1 lg:grid-cols-12 h-full">
+              <div className="flex justify-between items-end mb-5 px-1">
+                <h2 className="text-3xl font-bold tracking-tight flex items-center gap-3">Entrepreneurship <Rocket size={28} className="text-purple-600" /></h2>
+              </div>
 
-                    <div className={`lg:col-span-4 p-6 md:p-8 border-r flex flex-col bg-purple-50/20 border-gray-100 dark:bg-black/20 dark:border-white/5`}>
-                      <div className="flex flex-col gap-3">
-                        {Object.values(entrepreneurship).map((ent) => (
-                          <button
-                            key={ent.id}
-                            onClick={() => setActiveEnt(ent.id)}
-                            className={`flex items-center gap-4 p-4 rounded-[20px] transition-all text-left ${
-                              activeEnt === ent.id
-                                ? 'bg-white dark:bg-[#2c2c2e] shadow-md border border-purple-100 dark:border-purple-500/20 translate-x-1'
-                                : 'hover:bg-black/5 dark:hover:bg-white/5 opacity-60'
+              <div className={`rounded-[32px] border overflow-hidden ${cardBaseStyle}`}>
+                <div className="grid grid-cols-1 lg:grid-cols-12 h-full">
+
+                  <div className={`lg:col-span-4 p-6 md:p-8 border-r flex flex-col bg-purple-50/20 border-gray-100 dark:bg-black/20 dark:border-white/5`}>
+                    <div className="flex flex-col gap-3">
+                      {Object.values(entrepreneurship).map((ent) => (
+                        <button
+                          key={ent.id}
+                          onClick={() => setActiveEnt(ent.id)}
+                          className={`flex items-center gap-4 p-4 rounded-[20px] transition-all text-left ${activeEnt === ent.id
+                            ? 'bg-white dark:bg-[#2c2c2e] shadow-md border border-purple-100 dark:border-purple-500/20 translate-x-1'
+                            : 'hover:bg-black/5 dark:hover:bg-white/5 opacity-60'
                             }`}
-                          >
-                            <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl transition-all ${
-                              activeEnt === ent.id ? 'bg-purple-600 text-white shadow-md' : 'bg-gray-100 dark:bg-white/10'
+                        >
+                          <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl transition-all ${activeEnt === ent.id ? 'bg-purple-600 text-white shadow-md' : 'bg-gray-100 dark:bg-white/10'
                             }`}>
-                              {ent.icon}
+                            {ent.icon}
+                          </div>
+                          <div>
+                            <div className={`font-bold text-base leading-tight ${activeEnt === ent.id ? 'text-purple-600 dark:text-purple-400' : 'text-gray-500'}`}>
+                              {ent.label}
                             </div>
-                            <div>
-                              <div className={`font-bold text-base leading-tight ${activeEnt === ent.id ? 'text-purple-600 dark:text-purple-400' : 'text-gray-500'}`}>
-                                {ent.label}
-                              </div>
-                              <div className="text-[10px] font-semibold text-gray-500 mt-0.5">
-                                {ent.period}
-                              </div>
+                            <div className="text-[10px] font-semibold text-gray-500 mt-0.5">
+                              {ent.period}
                             </div>
-                          </button>
-                        ))}
-                      </div>
-
-                      <div className="mt-8 pt-6 border-t border-purple-100 dark:border-white/5">
-                           <a href="/contact" className="flex items-center gap-2 text-sm font-bold text-purple-600 hover:text-purple-700 group transition-colors px-4">
-                             Partner with me <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                           </a>
-                      </div>
+                          </div>
+                        </button>
+                      ))}
                     </div>
 
-                    <div className="lg:col-span-8 p-6 md:p-10 flex flex-col justify-center">
-                      <div className="mb-6">
-                         <h3 className="text-3xl font-bold mb-3 tracking-tight">{entrepreneurship[activeEnt].company}</h3>
-                         <div className="h-1.5 w-16 bg-purple-600 rounded-full mb-4"></div>
-                         <p className="text-lg text-gray-600 font-medium italic">"{entrepreneurship[activeEnt].summary}"</p>
-                      </div>
-                      <ul className="space-y-4 flex-grow">
-                          {entrepreneurship[activeEnt].content.map((item, i) => (
-                             <li key={i} className="flex items-start gap-3">
-                                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-purple-400 flex-shrink-0" />
-                                <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300 font-medium">{item}</p>
-                             </li>
-                          ))}
-                      </ul>
+                    <div className="mt-8 pt-6 border-t border-purple-100 dark:border-white/5">
+                      <a href="/contact" className="flex items-center gap-2 text-sm font-bold text-purple-600 hover:text-purple-700 group transition-colors px-4">
+                        Partner with me <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      </a>
                     </div>
                   </div>
-               </div>
+
+                  <div className="lg:col-span-8 p-6 md:p-10 flex flex-col justify-center">
+                    <div className="mb-6">
+                      <h3 className="text-3xl font-bold mb-3 tracking-tight">{entrepreneurship[activeEnt].company}</h3>
+                      <div className="h-1.5 w-16 bg-purple-600 rounded-full mb-4"></div>
+                      <p className="text-lg text-gray-600 font-medium italic">"{entrepreneurship[activeEnt].summary}"</p>
+                    </div>
+                    <ul className="space-y-4 flex-grow">
+                      {entrepreneurship[activeEnt].content.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <div className="mt-2 w-1.5 h-1.5 rounded-full bg-purple-400 flex-shrink-0" />
+                          <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300 font-medium">{item}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="col-span-1 md:col-span-8 mt-14">
               <h2 className="text-3xl font-bold tracking-tight mb-5 px-1 flex items-center gap-3">Education <GraduationCap size={28} className="text-purple-600" /></h2>
               <div className={`p-6 md:p-8 rounded-[32px] border ${cardBaseStyle}`}>
-                
+
                 <div className="flex gap-3 overflow-x-auto no-scrollbar pb-6 mb-6 border-b border-gray-100 dark:border-white/5 items-start -mx-2 px-2">
-                   {Object.values(education).map(edu => (
-                     <div key={edu.id} className="flex flex-col items-center flex-shrink-0 group">
-                        <button 
-                          onClick={() => setActiveEdu(edu.id)}
-                          className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all border shadow-sm whitespace-nowrap ${
-                            activeEdu === edu.id 
-                            ? 'bg-black text-white dark:bg-white dark:text-black border-transparent shadow-md scale-105' 
-                            : 'bg-transparent text-gray-400 border-gray-200 hover:border-gray-400'
+                  {Object.values(education).map(edu => (
+                    <div key={edu.id} className="flex flex-col items-center flex-shrink-0 group">
+                      <button
+                        onClick={() => setActiveEdu(edu.id)}
+                        className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all border shadow-sm whitespace-nowrap ${activeEdu === edu.id
+                          ? 'bg-black text-white dark:bg-white dark:text-black border-transparent shadow-md scale-105'
+                          : 'bg-transparent text-gray-400 border-gray-200 hover:border-gray-400'
                           }`}
-                        >
-                          {edu.label}
-                        </button>
-                        <div className={`mt-3 flex items-center gap-2 transition-all duration-300 ${activeEdu === edu.id ? 'opacity-100' : 'opacity-40 group-hover:opacity-70'}`}>
-                           <span className="text-lg leading-none">{edu.icon}</span>
-                           <span className="text-xs font-semibold text-gray-600 dark:text-gray-400">{edu.period}</span>
-                        </div>
-                     </div>
-                   ))}
+                      >
+                        {edu.label}
+                      </button>
+                      <div className={`mt-3 flex items-center gap-2 transition-all duration-300 ${activeEdu === edu.id ? 'opacity-100' : 'opacity-40 group-hover:opacity-70'}`}>
+                        <span className="text-lg leading-none">{edu.icon}</span>
+                        <span className="text-xs font-semibold text-gray-600 dark:text-gray-400">{edu.period}</span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
 
                 <div className="animate-in fade-in duration-300">
-                   <div className="mb-4">
-                      <h3 className="text-2xl font-bold mb-1 tracking-tight">{education[activeEdu].company}</h3>
-                      <p className="text-purple-600 font-bold text-base">{education[activeEdu].role}</p>
-                   </div>
-                   <ul className="space-y-4">
-                      {education[activeEdu].content.map((item, i) => (
-                        <li key={i} className="text-gray-600 dark:text-gray-300 text-base flex gap-3 font-medium">
-                           <span className="text-purple-600 font-bold text-lg leading-none">•</span> {item}
-                        </li>
-                      ))}
-                   </ul>
+                  <div className="mb-4">
+                    <h3 className="text-2xl font-bold mb-1 tracking-tight flex items-center gap-2 flex-wrap">
+                      {education[activeEdu].company}
+                      <a
+                        href={education[activeEdu].link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex text-purple-400 hover:text-purple-600 transition-colors"
+                        title={`Visit ${education[activeEdu].company}`}
+                      >
+                        <ExternalLink size={16} />
+                      </a>
+                    </h3>
+                    <p className="text-purple-600 font-bold text-base">{education[activeEdu].role}</p>
+                  </div>
+                  <ul className="space-y-4">
+                    {education[activeEdu].content.map((item, i) => (
+                      <li key={i} className="text-gray-600 dark:text-gray-300 text-base flex gap-3 font-medium">
+                        <span className="text-purple-600 font-bold text-lg leading-none">•</span> {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
 
             <div className="col-span-1 md:col-span-4 flex flex-col mt-14">
-              <div className="h-[60px] hidden md:block" /> 
+              <div className="h-[60px] hidden md:block" />
               <div className={`p-6 md:p-8 rounded-[32px] border flex-grow ${cardBaseStyle}`}>
                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">Certifications <ScrollText size={20} className="text-orange-500" /></h2>
                 <ul className="space-y-5">
