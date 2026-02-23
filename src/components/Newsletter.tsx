@@ -51,7 +51,7 @@ export const Newsletter: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-500 leading-relaxed mb-8 font-medium">
               A weekly distillation of marketing strategy, AI trends, and career acceleration tips. 
-              Read by over 10,000 industry leaders. No spam. Just signal.
+              No spam. Just signal.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
               <div className="flex -space-x-3 overflow-hidden p-1">
