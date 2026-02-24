@@ -60,7 +60,15 @@ const GA_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
         "description": "Personal website of Amit Srivatsa, an AI and marketing consultant helping B2B teams build clarity, better decisions, and scalable systems.",
         "inLanguage": "en",
         "publisher": { "@id": "https://amitsrivatsa.com/#person" },
-        "keywords": ["AI consultant", "AI in marketing", "AI adoption", "marketing strategy", "B2B marketing", "content systems", "workflow automation", "AI workflows", "AI for small teams", "AI strategy consultant", "decision making systems", "Netherlands"]
+        "keywords": ["AI consultant", "AI in marketing", "AI adoption", "marketing strategy", "B2B marketing", "content systems", "workflow automation", "AI workflows", "AI for small teams", "AI strategy consultant", "decision making systems", "Netherlands"],
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://amitsrivatsa.com/blog?search={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@type": "Person",

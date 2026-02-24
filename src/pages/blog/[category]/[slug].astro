@@ -82,14 +82,47 @@ const seoKeywords = [
 
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": post.data.title,
-    "datePublished": post.data.date.toISOString(),
-    "author": { "@type": "Person", "name": "Amit Srivatsa" },
-    "image": post.data.image,
-    "description": post.data.excerpt || "",
-    "keywords": post.data.tags?.join(', ') || post.data.category,
-    "articleSection": post.data.category,
-    "url": `https://amitsrivatsa.com/blog/${post.data.category.toLowerCase().replace(/\s+/g, '-')}/${post.id.replace(/\.md$/, '')}/`
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://amitsrivatsa.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://amitsrivatsa.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": post.data.category,
+            "item": `https://amitsrivatsa.com/blog/${post.data.category.toLowerCase().replace(/\s+/g, '-')}/`
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": post.data.title,
+            "item": `https://amitsrivatsa.com/blog/${post.data.category.toLowerCase().replace(/\s+/g, '-')}/${post.id.replace(/\.md$/, '')}/`
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": post.data.title,
+        "datePublished": post.data.date.toISOString(),
+        "author": { "@type": "Person", "name": "Amit Srivatsa" },
+        "image": post.data.image,
+        "description": post.data.excerpt || "",
+        "keywords": post.data.tags?.join(', ') || post.data.category,
+        "articleSection": post.data.category,
+        "url": `https://amitsrivatsa.com/blog/${post.data.category.toLowerCase().replace(/\s+/g, '-')}/${post.id.replace(/\.md$/, '')}/`
+      }
+    ]
   })} />
 </BaseLayout>
