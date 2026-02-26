@@ -4,6 +4,11 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Required for Workload Identity Federation (eliminates long-lived JSON key)
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -20,8 +25,18 @@ jobs:
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
           IMAGEKIT_PRIVATE_KEY: ${{ secrets.IMAGEKIT_PRIVATE_KEY }}
           PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.PUBLIC_GA_MEASUREMENT_ID }}
+
+      # Authenticate to Google Cloud via Workload Identity Federation.
+      # This short-lived OIDC token replaces the FIREBASE_SERVICE_ACCOUNT JSON key.
+      # Setup instructions: https://github.com/google-github-actions/auth#workload-identity-federation-through-a-service-account
+      - uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.WIF_PROVIDER }}
+          service_account: ${{ secrets.WIF_SERVICE_ACCOUNT }}
+
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           channelId: live
+          # firebaseServiceAccount is intentionally omitted; google-github-actions/auth
+          # above sets GOOGLE_APPLICATION_CREDENTIALS automatically.
