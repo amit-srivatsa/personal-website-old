@@ -47,8 +47,10 @@ export const getSubscribers = functions.https.onRequest(async (req, res) => {
       return;
     }
 
-    const apiKey = req.headers['x-admin-key'];
-    if (!apiKey || apiKey !== functions.config().admin?.key) {
+    const providedKey = req.headers['x-admin-key'];
+    const adminKey = functions.config().admin?.key;
+
+    if (!providedKey || !adminKey || providedKey !== adminKey) {
       res.status(401).json({ message: "Unauthorized" });
       return;
     }
@@ -65,4 +67,3 @@ export const getSubscribers = functions.https.onRequest(async (req, res) => {
     }
   });
 });
-

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Lock, User, Calendar, ShieldCheck } from 'lucide-react';
 
 interface Subscriber {
@@ -18,30 +18,33 @@ export const Subscribers: React.FC = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-    const handleLogin = (e: React.FormEvent) => {
+    // Sends the password directly to the server in an Authorization header.
+    // The server fetches the real secret from Secret Manager and compares.
+    // The key is never stored in or compared within client-side code.
+    const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
-        const adminKey = import.meta.env.VITE_ADMIN_KEY;
-        if (!adminKey) {
-            setError('Admin key not configured. Set VITE_ADMIN_KEY in your .env file.');
-            return;
-        }
-        if (password === adminKey) {
-            setIsAuthenticated(true);
-            fetchSubscribers();
-        } else {
-            setError('Invalid password');
-        }
-    };
-
-    const fetchSubscribers = async () => {
         setLoading(true);
+        setError(null);
+
         try {
-            const response = await fetch('/api/subscribers');
-            if (!response.ok) throw new Error('Failed to fetch subscribers');
+            const response = await fetch('/api/subscribers', {
+                headers: { 'x-admin-key': password },
+            });
+
+            if (response.status === 401) {
+                setError('Invalid password');
+                return;
+            }
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch subscribers');
+            }
+
             const data = await response.json();
             setSubscribers(data);
+            setIsAuthenticated(true);
         } catch (err) {
-            setError('Failed to load subscribers. Ensure the backend is running.');
+            setError('Failed to authenticate. Please check your connection and try again.');
         } finally {
             setLoading(false);
         }
@@ -80,9 +83,10 @@ export const Subscribers: React.FC = () => {
                         {error && <p className="text-red-500 text-sm text-center">{error}</p>}
                         <button
                             type="submit"
-                            className="w-full py-3 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors"
+                            disabled={loading}
+                            className="w-full py-3 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors disabled:opacity-50"
                         >
-                            Access Dashboard
+                            {loading ? 'Verifying...' : 'Access Dashboard'}
                         </button>
                     </form>
                 </div>
