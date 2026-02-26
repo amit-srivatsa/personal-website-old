@@ -26,7 +26,8 @@ function formatDate(date: Date): string {
 // SEO metadata — derived from post frontmatter, falls back to site defaults
 const seoTitle = `${post.data.title} - Amit Srivatsa`;
 const seoDescription = post.data.excerpt || (post.body || '').substring(0, 155).trim();
-const seoImage = post.data.image || undefined;
+const DEFAULT_OG_IMAGE = 'https://ik.imagekit.io/mws/main-site/Memoji%20DP.png';
+const seoImage = post.data.image || DEFAULT_OG_IMAGE;
 const seoKeywords = [
   post.data.category,
   ...(post.data.tags || []),
