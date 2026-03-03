@@ -48,7 +48,12 @@ export const CV: React.FC = () => {
   };
 
   const handleDownload = () => {
-    window.print();
+    const link = document.createElement('a');
+    link.href = '/Amit Srivatsa Gorti — Resume.pdf';
+    link.download = 'Amit Srivatsa Gorti — Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const cardBaseStyle = 'bg-white border-black/5 shadow-sm text-gray-700 dark:bg-[#1c1c1e] dark:border-white/10 dark:shadow-black/40 dark:text-gray-200';
