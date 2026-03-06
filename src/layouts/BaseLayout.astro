@@ -10,9 +10,10 @@ interface Props {
   keywords?: string;
   ogImage?: string;
   ogType?: string;
+  noindex?: boolean;
 }
 
-const { title, description, keywords = '', ogImage, ogType = 'website' } = Astro.props;
+const { title, description, keywords = '', ogImage, ogType = 'website', noindex = false } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPath = Astro.url.pathname;
 const GA_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
@@ -28,6 +29,7 @@ const GA_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
   <meta name="description" content={description} />
   {keywords && <meta name="keywords" content={keywords} />}
   <link rel="canonical" href={canonicalURL} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
 
   <!-- OG Tags -->
   <meta property="og:title" content={title} />

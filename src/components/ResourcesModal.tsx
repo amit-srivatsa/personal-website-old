@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { X, Lock, ArrowRight, Loader2 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 
 interface ResourcesModalProps {
   isOpen: boolean;
@@ -11,7 +10,6 @@ export const ResourcesModal: React.FC<ResourcesModalProps> = ({ isOpen, onClose 
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
-  const navigate = useNavigate();
 
   if (!isOpen) return null;
 
@@ -32,7 +30,7 @@ export const ResourcesModal: React.FC<ResourcesModalProps> = ({ isOpen, onClose 
         // Small delay to show success state before redirecting
         setTimeout(() => {
           onClose();
-          navigate('/resources');
+          window.location.href = '/resources';
         }, 1500);
       } else {
         const data = await response.json();
