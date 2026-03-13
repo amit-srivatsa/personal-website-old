@@ -4,6 +4,13 @@
 
 ---
 
+## Git Configuration
+To prevent Vercel Hobby deployment blocks (which occur when commits are made by unverified collaborators or bots), all commits must be authored by Amit Srivatsa.
+- **Correct ID:** `Amit Srivatsa <amitsrivatsa@outlook.com>`
+- **Workflow:** Always ensure `git config user.email` is `amitsrivatsa@outlook.com` before pushing.
+
+---
+
 ## Stack
 
 | Layer      | Tech                                              |
