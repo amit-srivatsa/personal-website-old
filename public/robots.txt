@@ -1,3 +1,21 @@
+# Allow all crawlers by default
 User-agent: *
 Allow: /
+
+# Explicitly allow AI chatbot crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Perplexitybot
+Allow: /
+
+User-agent: Anthropic-Web-Crawler
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://amitsrivatsa.com/sitemap.xml
