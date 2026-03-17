@@ -2,7 +2,13 @@
 User-agent: *
 Allow: /
 
-# Explicitly allow AI chatbot crawlers
+# Explicitly allow major search engines and AI chatbot crawlers
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
