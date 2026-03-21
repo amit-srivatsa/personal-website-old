@@ -146,9 +146,9 @@ for (const page of results) {
   const featured = props['Featured']?.checkbox ?? false;
   const tags = (props['Tags']?.multi_select ?? []).map(t => t.name);
 
-  // If the cover image is an expiring Notion S3 URL, upload it to ImageKit
-  if (image && image.match(NOTION_S3_RE)) {
-    console.log(`      🖼️  Found cover image to upload...`);
+  // Always download and re-upload cover image to ImageKit for permanent hosting
+  if (image) {
+    console.log(`      🖼️  Uploading cover image to ImageKit...`);
     image = await uploadToImageKit(image, slug, 'cover');
   }
 
