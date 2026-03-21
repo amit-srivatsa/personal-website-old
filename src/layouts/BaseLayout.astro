@@ -110,6 +110,28 @@ const GA_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
       window.location.replace(window.location.hash.slice(1));
     }
   </script>
+
+  <!-- Visitor Analytics Tracking -->
+  <script is:inline define:vars={{ currentPath }}>
+    async function trackPageVisit() {
+      try {
+        await fetch('https://us-central1-amit-srivatsa---strategic-consultant.cloudfunctions.net/trackPageVisit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            path: currentPath,
+            referrer: document.referrer,
+            userAgent: navigator.userAgent,
+          }),
+        });
+      } catch (error) {
+        console.error('Analytics tracking failed:', error);
+      }
+    }
+    trackPageVisit();
+  </script>
 </head>
 <body class="min-h-screen flex flex-col bg-white selection:bg-orange-200 selection:text-orange-900">
   <div class="print:hidden">
