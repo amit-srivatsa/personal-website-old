@@ -3,7 +3,7 @@ title: "Stop cooking dinner with a hammer"
 date: 2026-02-23
 category: "Career"
 excerpt: "If you feel stuck at work, it’s probably your systems, rather than the job. "
-image: "https://ik.imagekit.io/mws/dont-make-dinner-with-hammer.jpg"
+image: "https://ik.imagekit.io/mws/blog/stop-cooking-dinner-with-hammer/cover.jpg"
 tags: ["Productivity", "Career"]
 ---
 

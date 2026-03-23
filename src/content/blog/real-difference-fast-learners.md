@@ -3,7 +3,7 @@ title: "The real difference between people who learn fast vs. those who don't"
 date: 2026-02-21
 category: "Career"
 excerpt: "It's not talent, IQ, or discipline. The fastest learners run a different system. Here are the three levers that actually separate them."
-image: "https://ik.imagekit.io/mws/slow-vs-fast-learners-amit-srivatsa-blog.jpg"
+image: "https://ik.imagekit.io/mws/blog/real-difference-fast-learners/cover.jpg"
 tags: ["Productivity", "Strategy"]
 ---
 
