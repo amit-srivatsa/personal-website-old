@@ -56,10 +56,12 @@ To prevent Vercel Hobby deployment blocks (which occur when commits are made by 
 ## Blog Pipeline
 
 ```
-Notion DB → sync-notion.mjs → .md files → Astro build → Firebase deploy
-                  ↓
-         Inline images downloaded
-         and uploaded to ImageKit
+Notion DB → notion-sync.yml (hourly CI) → sync-notion.mjs → .md files committed to main
+                                                ↓
+                                     Cover + inline images uploaded to ImageKit
+                                     (all cover images, not just Notion S3 URLs)
+
+main branch → deploy.yml (on push) → astro build → Firebase deploy
 ```
 
 ### URL structure
@@ -120,7 +122,7 @@ Default fallback description:
 ```bash
 npm run dev              # Dev server
 npm run notion:sync      # Sync from Notion (uses .env)
-npm run build            # Sync + Astro build (CI-compatible, no .env needed)
+npm run build            # Astro build only (no Notion sync — CI uses committed .md files)
 npx firebase deploy --only hosting  # Deploy locally
 ```
 
