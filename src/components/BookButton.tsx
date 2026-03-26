@@ -18,7 +18,7 @@ export const BookButton: React.FC<BookButtonProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             className={twMerge(
-                "inline-flex items-center justify-center font-bold text-white bg-black rounded-full border border-transparent hover:bg-gray-800 transition-all duration-200 hover:scale-105 shadow-sm group px-6 py-3 text-sm",
+                "inline-flex items-center justify-center font-bold text-white dark:text-black bg-black dark:bg-white rounded-full border border-transparent hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-200 hover:scale-105 shadow-sm group px-6 py-3 text-sm",
                 className
             )}
             style={color ? { backgroundColor: color } : undefined}

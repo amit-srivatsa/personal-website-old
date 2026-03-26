@@ -304,13 +304,13 @@ export const CV: React.FC = () => {
                   </h3>
 
                   <div className="text-lg mb-6 leading-relaxed text-gray-600 dark:text-gray-300">
-                    <span className="font-bold text-[#0071e3]">{experiences[activeExp].company}</span> is a {experiences[activeExp].summary}
+                    <span className="font-bold text-[#0071e3] dark:text-blue-400">{experiences[activeExp].company}</span> is a {experiences[activeExp].summary}
                   </div>
 
                   <ul className="space-y-4">
                     {experiences[activeExp].content.map((bullet, idx) => (
                       <li key={idx} className="flex items-center gap-4 text-base leading-relaxed group">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#0071e3] flex-shrink-0" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#0071e3] dark:bg-blue-400 flex-shrink-0" />
                         <div className="text-gray-700 dark:text-gray-300 whitespace-nowrap overflow-hidden text-ellipsis w-full font-medium">
                           {bullet}
                         </div>
@@ -345,7 +345,7 @@ export const CV: React.FC = () => {
                             {ent.icon}
                           </div>
                           <div>
-                            <div className={`font-bold text-base leading-tight ${activeEnt === ent.id ? 'text-purple-600 dark:text-purple-400' : 'text-gray-500'}`}>
+                            <div className={`font-bold text-base leading-tight ${activeEnt === ent.id ? 'text-purple-600 dark:text-purple-400' : 'text-gray-500 dark:text-gray-400'}`}>
                               {ent.label}
                             </div>
                             <div className="text-[10px] font-semibold text-gray-500 mt-0.5">
@@ -357,7 +357,7 @@ export const CV: React.FC = () => {
                     </div>
 
                     <div className="mt-8 pt-6 border-t border-purple-100 dark:border-white/5">
-                      <a href="/contact" className="flex items-center gap-2 text-sm font-bold text-purple-600 hover:text-purple-700 group transition-colors px-4">
+                      <a href="/contact" className="flex items-center gap-2 text-sm font-bold text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 group transition-colors px-4">
                         Partner with me <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                       </a>
                     </div>
@@ -372,7 +372,7 @@ export const CV: React.FC = () => {
                     <ul className="space-y-4 flex-grow">
                       {entrepreneurship[activeEnt].content.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <div className="mt-2 w-1.5 h-1.5 rounded-full bg-purple-400 flex-shrink-0" />
+                          <div className="mt-2 w-1.5 h-1.5 rounded-full bg-purple-400 dark:bg-purple-500 flex-shrink-0" />
                           <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300 font-medium">{item}</p>
                         </li>
                       ))}
@@ -414,13 +414,13 @@ export const CV: React.FC = () => {
                         href={education[activeEdu].link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex text-purple-400 hover:text-purple-600 transition-colors"
+                        className="inline-flex text-purple-400 dark:text-purple-500 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                         title={`Visit ${education[activeEdu].company}`}
                       >
                         <ExternalLink size={16} />
                       </a>
                     </h3>
-                    <p className="text-purple-600 font-bold text-base">{education[activeEdu].role}</p>
+                    <p className="text-purple-600 dark:text-purple-400 font-bold text-base">{education[activeEdu].role}</p>
                   </div>
                   <ul className="space-y-4">
                     {education[activeEdu].content.map((item, i) => (

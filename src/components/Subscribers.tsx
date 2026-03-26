@@ -59,15 +59,15 @@ export const Subscribers: React.FC = () => {
 
     if (!isAuthenticated) {
         return (
-            <div className="min-h-screen pt-32 pb-24 flex flex-col items-center justify-center bg-gray-50 px-6">
-                <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-xl">
+            <div className="min-h-screen pt-32 pb-24 flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-950 px-6">
+                <div className="w-full max-w-md bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl">
                     <div className="flex justify-center mb-6">
-                        <div className="p-3 bg-black text-white rounded-full">
+                        <div className="p-3 bg-black dark:bg-white text-white dark:text-black rounded-full">
                             <Lock size={24} />
                         </div>
                     </div>
-                    <h1 className="text-2xl font-bold text-center text-gray-900 mb-2">Admin Access</h1>
-                    <p className="text-gray-500 text-center mb-8">Enter password to view subscribers.</p>
+                    <h1 className="text-2xl font-bold text-center text-gray-900 dark:text-gray-100 mb-2">Admin Access</h1>
+                    <p className="text-gray-500 dark:text-gray-400 text-center mb-8">Enter password to view subscribers.</p>
 
                     <form onSubmit={handleLogin} className="space-y-4">
                         <div>
@@ -76,15 +76,15 @@ export const Subscribers: React.FC = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 placeholder="Password"
-                                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent outline-none transition-all"
+                                className="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-xl focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent outline-none transition-all"
                                 autoFocus
                             />
                         </div>
-                        {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+                        {error && <p className="text-red-500 dark:text-red-400 text-sm text-center">{error}</p>}
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full py-3 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors disabled:opacity-50"
+                            className="w-full py-3 bg-black dark:bg-white text-white dark:text-black font-bold rounded-xl hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors disabled:opacity-50"
                         >
                             {loading ? 'Verifying...' : 'Access Dashboard'}
                         </button>
@@ -95,54 +95,54 @@ export const Subscribers: React.FC = () => {
     }
 
     return (
-        <div className="min-h-screen pt-32 pb-24 bg-gray-50">
+        <div className="min-h-screen pt-32 pb-24 bg-gray-50 dark:bg-gray-950">
             <div className="max-w-5xl mx-auto px-6 sm:px-8">
                 <div className="flex items-center justify-between mb-8">
                     <div>
-                        <h1 className="text-3xl font-bold text-gray-900">Subscribers</h1>
-                        <p className="text-gray-500 mt-1">Manage newsletter audience</p>
+                        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Subscribers</h1>
+                        <p className="text-gray-500 dark:text-gray-400 mt-1">Manage newsletter audience</p>
                     </div>
-                    <div className="bg-white px-4 py-2 rounded-lg shadow-sm font-mono text-sm border border-gray-100">
+                    <div className="bg-white dark:bg-gray-900 px-4 py-2 rounded-lg shadow-sm font-mono text-sm border border-gray-100 dark:border-gray-800 text-gray-900 dark:text-gray-100">
                         Total: {subscribers.length}
                     </div>
                 </div>
 
                 {loading ? (
-                    <div className="text-center py-12 text-gray-500">Loading data...</div>
+                    <div className="text-center py-12 text-gray-500 dark:text-gray-400">Loading data...</div>
                 ) : (
-                    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
                         <div className="overflow-x-auto">
                             <table className="w-full text-left">
                                 <thead>
-                                    <tr className="bg-gray-50/50 border-b border-gray-100">
-                                        <th className="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Email</th>
-                                        <th className="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Date</th>
-                                        <th className="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Source</th>
-                                        <th className="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Status</th>
+                                    <tr className="bg-gray-50/50 dark:bg-gray-800/50 border-b border-gray-100 dark:border-gray-800">
+                                        <th className="px-6 py-4 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Email</th>
+                                        <th className="px-6 py-4 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Date</th>
+                                        <th className="px-6 py-4 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Source</th>
+                                        <th className="px-6 py-4 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Status</th>
                                     </tr>
                                 </thead>
-                                <tbody className="divide-y divide-gray-50">
+                                <tbody className="divide-y divide-gray-50 dark:divide-gray-800">
                                     {subscribers.map((sub) => (
-                                        <tr key={sub.id} className="hover:bg-gray-50 transition-colors">
+                                        <tr key={sub.id} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
                                             <td className="px-6 py-4">
                                                 <div className="flex items-center">
-                                                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center mr-3 text-blue-600">
+                                                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/40 dark:to-purple-900/40 flex items-center justify-center mr-3 text-blue-600 dark:text-blue-400">
                                                         <User size={14} />
                                                     </div>
-                                                    <span className="font-medium text-gray-900">{sub.email}</span>
+                                                    <span className="font-medium text-gray-900 dark:text-gray-100">{sub.email}</span>
                                                 </div>
                                             </td>
-                                            <td className="px-6 py-4 text-gray-500 text-sm">
+                                            <td className="px-6 py-4 text-gray-500 dark:text-gray-400 text-sm">
                                                 <div className="flex items-center">
-                                                    <Calendar size={14} className="mr-2 text-gray-400" />
+                                                    <Calendar size={14} className="mr-2 text-gray-400 dark:text-gray-500" />
                                                     {formatDate(sub.subscribedAt)}
                                                 </div>
                                             </td>
-                                            <td className="px-6 py-4 text-gray-500 text-sm">
+                                            <td className="px-6 py-4 text-gray-500 dark:text-gray-400 text-sm">
                                                 <span className="capitalize">{sub.source || 'newsletter'}</span>
                                             </td>
                                             <td className="px-6 py-4">
-                                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400">
                                                     <ShieldCheck size={12} className="mr-1" />
                                                     Active
                                                 </span>
@@ -151,7 +151,7 @@ export const Subscribers: React.FC = () => {
                                     ))}
                                     {subscribers.length === 0 && (
                                         <tr>
-                                            <td colSpan={4} className="px-6 py-12 text-center text-gray-400">
+                                            <td colSpan={4} className="px-6 py-12 text-center text-gray-400 dark:text-gray-500">
                                                 No subscribers found.
                                             </td>
                                         </tr>
