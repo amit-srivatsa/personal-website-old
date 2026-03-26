@@ -161,17 +161,17 @@ const categoryColors: Record<Category, string> = {
 };
 
 const categoryPill: Record<Category, string> = {
-  'All': 'bg-gray-100 text-gray-700 hover:bg-gray-200',
-  'AI & Strategy': 'bg-blue-50 text-blue-700 hover:bg-blue-100',
-  'Content Systems': 'bg-purple-50 text-purple-700 hover:bg-purple-100',
-  'No-code & Automation': 'bg-orange-50 text-orange-700 hover:bg-orange-100',
-  'Research': 'bg-green-50 text-green-700 hover:bg-green-100',
+  'All': 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700',
+  'AI & Strategy': 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/50',
+  'Content Systems': 'bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 hover:bg-purple-100 dark:hover:bg-purple-900/50',
+  'No-code & Automation': 'bg-orange-50 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 hover:bg-orange-100 dark:hover:bg-orange-900/50',
+  'Research': 'bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-900/50',
 };
 
 const statusConfig = {
-  'Case Study': { dot: 'bg-green-500', label: 'text-green-700 bg-green-50' },
-  'Coming Soon': { dot: 'bg-gray-400', label: 'text-gray-500 bg-gray-100' },
-  'In Progress': { dot: 'bg-amber-400', label: 'text-amber-700 bg-amber-50' },
+  'Case Study': { dot: 'bg-green-500', label: 'text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/30' },
+  'Coming Soon': { dot: 'bg-gray-400 dark:bg-gray-600', label: 'text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800' },
+  'In Progress': { dot: 'bg-amber-400 dark:bg-amber-500', label: 'text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/30' },
 };
 
 // ─── Component ───────────────────────────────────────────────────────────────
@@ -185,21 +185,21 @@ export const Portfolio: React.FC = () => {
       : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <div className="min-h-screen pt-32 pb-24 bg-[#f5f5f7]">
+    <div className="min-h-screen pt-32 pb-24 bg-[#f5f5f7] dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
 
         {/* ── Header ─────────────────────────────────────────────── */}
         <div className="mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-gray-200 shadow-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-sm mb-6">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-xs font-bold uppercase tracking-wide text-gray-600">
+            <span className="text-xs font-bold uppercase tracking-wide text-gray-600 dark:text-gray-400">
               Selected work
             </span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-3 tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] dark:text-gray-100 mb-3 tracking-tight">
             Projects &amp; case studies
           </h1>
-          <p className="text-lg text-gray-500 font-medium max-w-xl">
+          <p className="text-lg text-gray-500 dark:text-gray-400 font-medium max-w-xl">
             Organised by theme — because patterns matter more than timelines.
           </p>
         </div>
@@ -218,16 +218,16 @@ export const Portfolio: React.FC = () => {
               {cat}
             </button>
           ))}
-          <span className="ml-auto flex items-center text-sm text-gray-400 font-medium">
+          <span className="ml-auto flex items-center text-sm text-gray-400 dark:text-gray-500 font-medium">
             {filtered.length} {filtered.length === 1 ? 'project' : 'projects'}
           </span>
         </div>
 
         {/* ── Project grid ───────────────────────────────────────── */}
         {filtered.length === 0 ? (
-          <div className="bg-white rounded-[32px] p-16 text-center border border-gray-100 shadow-sm">
+          <div className="bg-white dark:bg-gray-900 rounded-[32px] p-16 text-center border border-gray-100 dark:border-gray-800 shadow-sm">
             <p className="text-2xl mb-2">🔍</p>
-            <p className="text-gray-500 font-medium">No projects in this category yet.</p>
+            <p className="text-gray-500 dark:text-gray-400 font-medium">No projects in this category yet.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
@@ -238,10 +238,10 @@ export const Portfolio: React.FC = () => {
         )}
 
         {/* ── Bottom note ────────────────────────────────────────── */}
-        <div className="mt-14 bg-white rounded-[32px] p-8 md:p-12 border border-gray-100 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="mt-14 bg-white dark:bg-gray-900 rounded-[32px] p-8 md:p-12 border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Want to see more?</h3>
-            <p className="text-gray-500 leading-relaxed max-w-lg">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">Want to see more?</h3>
+            <p className="text-gray-500 dark:text-gray-400 leading-relaxed max-w-lg">
               Most work is confidential by nature. If you're considering working together,
               I'm happy to walk you through relevant projects in a conversation.
             </p>
@@ -250,7 +250,7 @@ export const Portfolio: React.FC = () => {
             href="https://calendar.app.google/jcY3JgK9YACJ3SA5A"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-black text-white font-bold rounded-full hover:bg-gray-800 transition-all duration-200 hover:scale-105 shadow-sm text-sm whitespace-nowrap"
+            className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-black dark:bg-white text-white dark:text-black font-bold rounded-full hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-200 hover:scale-105 shadow-sm text-sm whitespace-nowrap"
           >
             Book a conversation
             <ArrowUpRight size={16} />
@@ -268,7 +268,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const status = statusConfig[project.status];
 
   return (
-    <div className="group bg-white rounded-[28px] p-6 shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full">
+    <div className="group bg-white dark:bg-gray-900 rounded-[28px] p-6 shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md dark:hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full">
 
       {/* Top row */}
       <div className="flex items-start justify-between mb-5">
@@ -277,7 +277,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         </div>
         <div className="flex items-center gap-2">
           {/* Year */}
-          <span className="flex items-center gap-1 text-xs text-gray-400 font-semibold">
+          <span className="flex items-center gap-1 text-xs text-gray-400 dark:text-gray-500 font-semibold">
             <Clock size={11} />
             {project.year}
           </span>
@@ -295,25 +295,25 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       </span>
 
       {/* Title */}
-      <h3 className="text-lg font-bold text-gray-900 mb-2 leading-snug tracking-tight">
+      <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 leading-snug tracking-tight">
         {project.title}
       </h3>
 
       {/* Description */}
-      <p className="text-sm text-gray-500 leading-relaxed mb-5 flex-grow">
+      <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-5 flex-grow">
         {project.description}
       </p>
 
       {/* Outcomes (only for case studies with data) */}
       {project.outcomes.length > 0 && (
-        <div className="bg-gray-50 rounded-2xl px-4 py-3 mb-5">
-          <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-2 flex items-center gap-1">
+        <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl px-4 py-3 mb-5">
+          <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2 flex items-center gap-1">
             <Tag size={10} /> Key outcomes
           </p>
           <ul className="space-y-1">
             {project.outcomes.map((o, i) => (
-              <li key={i} className="text-xs font-semibold text-gray-700 flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-gray-400 flex-shrink-0" />
+              <li key={i} className="text-xs font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                <span className="w-1 h-1 rounded-full bg-gray-400 dark:bg-gray-600 flex-shrink-0" />
                 {o}
               </li>
             ))}
@@ -324,7 +324,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       {/* Tags */}
       <div className="flex flex-wrap gap-1.5 mb-5">
         {project.tags.map((tag) => (
-          <span key={tag} className="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">
+          <span key={tag} className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-xs font-medium rounded-md">
             {tag}
           </span>
         ))}
