@@ -46,22 +46,22 @@ const ResourcesModal: React.FC<ResourcesModalProps> = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
       <div
-        className="bg-white rounded-[2rem] w-full max-w-md p-8 shadow-2xl relative animate-in zoom-in-95 duration-200"
+        className="bg-white dark:bg-gray-900 rounded-[2rem] w-full max-w-md p-8 shadow-2xl relative animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors"
+          className="absolute top-4 right-4 p-2 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
         >
           <X size={20} />
         </button>
 
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center mx-auto mb-6 text-violet-600">
+          <div className="w-16 h-16 bg-violet-100 dark:bg-violet-900/30 rounded-2xl flex items-center justify-center mx-auto mb-6 text-violet-600 dark:text-violet-400">
             <Lock size={28} />
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Unlock the Builder's Vault</h2>
-          <p className="text-gray-500">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">Unlock the Builder's Vault</h2>
+          <p className="text-gray-500 dark:text-gray-400">
             Get instant access to my curated library of tools, templates, and frameworks.
           </p>
         </div>
@@ -76,12 +76,12 @@ const ResourcesModal: React.FC<ResourcesModalProps> = ({ isOpen, onClose }) => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your best email..."
-              className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-violet-500 focus:border-transparent focus:bg-white transition-all outline-none"
+              className="w-full px-5 py-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-violet-500 focus:border-transparent focus:bg-white dark:focus:bg-gray-700 transition-all outline-none"
             />
           </div>
 
           {status === 'error' && (
-            <p className="text-red-500 text-sm text-center font-medium">{errorMessage}</p>
+            <p className="text-red-500 dark:text-red-400 text-sm text-center font-medium">{errorMessage}</p>
           )}
 
           <button
@@ -101,7 +101,7 @@ const ResourcesModal: React.FC<ResourcesModalProps> = ({ isOpen, onClose }) => {
           </button>
         </form>
 
-        <p className="text-xs text-center text-gray-400 mt-6">
+        <p className="text-xs text-center text-gray-400 dark:text-gray-500 mt-6">
           I respect your inbox. No spam, ever.
         </p>
       </div>
@@ -111,57 +111,64 @@ const ResourcesModal: React.FC<ResourcesModalProps> = ({ isOpen, onClose }) => {
 
 // ── Animated card visuals ────────────────────────────────────────────────────
 
-const ConsultingVisual = () => (
+const ConsultingVisual = () => {
+  const isDark = typeof window !== 'undefined' && document.documentElement.classList.contains('dark');
+
+  return (
   <div
     className="aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-6 relative flex items-center justify-center"
-    style={{ background: 'linear-gradient(145deg, #F5F3FF, #EDE9FE)' }}
+    style={{ background: isDark ? 'linear-gradient(145deg, #1f1535, #2d1b4e)' : 'linear-gradient(145deg, #F5F3FF, #EDE9FE)' }}
   >
     <div className="relative w-[80%]" style={{ height: '72%' }}>
       {/* Card 3 – back, sky blue */}
       <div
         className="absolute svc-card-3 rounded-2xl px-4 py-3 shadow-sm"
-        style={{ top: '54%', left: '12%', width: '74%', opacity: 0.6, zIndex: 1, background: '#F0F9FF', border: '1px solid #BAE6FD' }}
+        style={{ top: '54%', left: '12%', width: '74%', opacity: 0.6, zIndex: 1, background: isDark ? '#1e3a4c' : '#F0F9FF', border: isDark ? '1px solid #0a3a52' : '1px solid #BAE6FD' }}
       >
         <div className="flex items-center gap-2 mb-2">
-          <span className="w-1.5 h-1.5 rounded-full" style={{ background: '#0EA5E9' }} />
-          <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: '#0EA5E9' }}>AI Tools</span>
+          <span className="w-1.5 h-1.5 rounded-full" style={{ background: isDark ? '#22d3ee' : '#0EA5E9' }} />
+          <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: isDark ? '#22d3ee' : '#0EA5E9' }}>AI Tools</span>
         </div>
-        <div className="h-1.5 rounded-full w-3/4 mb-1" style={{ background: '#BAE6FD' }} />
-        <div className="h-1.5 rounded-full w-1/2" style={{ background: '#E0F2FE' }} />
+        <div className="h-1.5 rounded-full w-3/4 mb-1" style={{ background: isDark ? '#0a3a52' : '#BAE6FD' }} />
+        <div className="h-1.5 rounded-full w-1/2" style={{ background: isDark ? '#164e63' : '#E0F2FE' }} />
       </div>
       {/* Card 2 – mid, indigo */}
       <div
         className="absolute svc-card-2 rounded-2xl px-4 py-3 shadow-sm"
-        style={{ top: '27%', right: 0, width: '74%', zIndex: 2, background: '#EEF2FF', border: '1px solid #C7D2FE' }}
+        style={{ top: '27%', right: 0, width: '74%', zIndex: 2, background: isDark ? '#1f2464' : '#EEF2FF', border: isDark ? '1px solid #3730a3' : '1px solid #C7D2FE' }}
       >
         <div className="flex items-center gap-2 mb-2">
-          <span className="w-1.5 h-1.5 rounded-full" style={{ background: '#6366F1' }} />
-          <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: '#6366F1' }}>Content plan</span>
+          <span className="w-1.5 h-1.5 rounded-full" style={{ background: isDark ? '#818cf8' : '#6366F1' }} />
+          <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: isDark ? '#818cf8' : '#6366F1' }}>Content plan</span>
         </div>
-        <div className="h-1.5 rounded-full w-full mb-1" style={{ background: '#C7D2FE' }} />
-        <div className="h-1.5 rounded-full w-2/3" style={{ background: '#E0E7FF' }} />
+        <div className="h-1.5 rounded-full w-full mb-1" style={{ background: isDark ? '#3730a3' : '#C7D2FE' }} />
+        <div className="h-1.5 rounded-full w-2/3" style={{ background: isDark ? '#312e81' : '#E0E7FF' }} />
       </div>
       {/* Card 1 – front, violet/priority */}
       <div
         className="absolute svc-card-1 rounded-2xl px-4 py-3 shadow-lg"
-        style={{ top: 0, left: 0, width: '74%', zIndex: 3, background: '#F5F3FF', border: '1px solid #C4B5FD' }}
+        style={{ top: 0, left: 0, width: '74%', zIndex: 3, background: isDark ? '#22133d' : '#F5F3FF', border: isDark ? '1px solid #4c1d95' : '1px solid #C4B5FD' }}
       >
         <div className="flex items-center gap-2 mb-2">
-          <span className="w-1.5 h-1.5 rounded-full" style={{ background: '#7C3AED' }} />
-          <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: '#7C3AED' }}>Positioning</span>
+          <span className="w-1.5 h-1.5 rounded-full" style={{ background: isDark ? '#c084fc' : '#7C3AED' }} />
+          <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: isDark ? '#c084fc' : '#7C3AED' }}>Positioning</span>
         </div>
-        <div className="h-1.5 rounded-full w-4/5 mb-1" style={{ background: '#C4B5FD' }} />
-        <div className="h-1.5 rounded-full w-3/5" style={{ background: '#DDD6FE' }} />
+        <div className="h-1.5 rounded-full w-4/5 mb-1" style={{ background: isDark ? '#4c1d95' : '#C4B5FD' }} />
+        <div className="h-1.5 rounded-full w-3/5" style={{ background: isDark ? '#552d94' : '#DDD6FE' }} />
       </div>
     </div>
   </div>
 );
+};
 
 
-const SystemsVisual = () => (
+const SystemsVisual = () => {
+  const isDark = typeof window !== 'undefined' && document.documentElement.classList.contains('dark');
+
+  return (
   <div
     className="aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-6 relative flex items-center justify-center"
-    style={{ background: 'linear-gradient(145deg, #EFF6FF, #DBEAFE)' }}
+    style={{ background: isDark ? 'linear-gradient(145deg, #1e2460, #2d3a8a)' : 'linear-gradient(145deg, #EFF6FF, #DBEAFE)' }}
   >
     <div className="w-[82%]">
       {/* Layer 1 - indigo */}
@@ -217,11 +224,15 @@ const SystemsVisual = () => (
     </div>
   </div>
 );
+};
 
-const CareerVisual = () => (
+const CareerVisual = () => {
+  const isDark = typeof window !== 'undefined' && document.documentElement.classList.contains('dark');
+
+  return (
   <div
     className="aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-6 relative flex items-center justify-center"
-    style={{ background: 'linear-gradient(145deg, #FFF7ED, #FED7AA)' }}
+    style={{ background: isDark ? 'linear-gradient(145deg, #3d2817, #5c4033)' : 'linear-gradient(145deg, #FFF7ED, #FED7AA)' }}
   >
     <div className="w-[80%]">
       {/* Compass / direction visual */}
@@ -261,6 +272,7 @@ const CareerVisual = () => (
     </div>
   </div>
 );
+};
 
 // ── ServiceCard ───────────────────────────────────────────────────────────────
 
@@ -289,7 +301,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   details, detailColor, extraText, tags, tagBg, tagColor,
   buttonText, buttonBg, link, onClick,
 }) => (
-  <div className="bg-white rounded-[2rem] p-4 pb-8 shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col h-full">
+  <div className="bg-white dark:bg-gray-900 rounded-[2rem] p-4 pb-8 shadow-sm dark:shadow-lg border border-gray-100 dark:border-gray-800 transition-all duration-300 hover:shadow-xl dark:hover:shadow-xl hover:-translate-y-1 flex flex-col h-full">
     {visual}
 
     <div className="px-3 flex-grow flex flex-col">
@@ -302,34 +314,34 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </div>
 
       {/* Title */}
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">{title}</h3>
+      <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3 leading-tight">{title}</h3>
 
       {/* Tags */}
       <div className="flex flex-wrap gap-2 mb-4">
         {tags.map((tag) => (
-          <span key={tag} className="px-2.5 py-1 rounded-lg text-xs font-bold" style={{ background: tagBg, color: tagColor }}>
+          <span key={tag} className="px-2.5 py-1 rounded-lg text-xs font-bold transition-colors" style={{ background: tagBg, color: tagColor }}>
             {tag}
           </span>
         ))}
       </div>
 
       {/* Description */}
-      <p className="text-sm text-gray-500 leading-relaxed mb-4">{description}</p>
+      <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4">{description}</p>
 
       {/* Bullets */}
       <ul className="mb-4 space-y-2">
         {details.map((d, i) => (
-          <li key={i} className="text-sm font-semibold text-gray-700 flex items-center gap-2">
+          <li key={i} className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: detailColor }} />
             {d}
           </li>
         ))}
       </ul>
 
-      {extraText && <p className="text-xs text-gray-400 italic mb-4 flex-grow">{extraText}</p>}
+      {extraText && <p className="text-xs text-gray-400 dark:text-gray-500 italic mb-4 flex-grow">{extraText}</p>}
 
       {/* CTA */}
-      <div className="mt-auto pt-5 border-t border-gray-100 flex justify-center">
+      <div className="mt-auto pt-5 border-t border-gray-100 dark:border-gray-800 flex justify-center">
         {onClick ? (
           <button
             onClick={onClick}
@@ -369,21 +381,21 @@ export default function ServicesIsland() {
 
   return (
     <>
-      <div className="min-h-screen pt-32 pb-24" style={{ background: '#f9fafb' }}>
+      <div className="min-h-screen pt-32 pb-24 bg-white dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
 
           {/* Header */}
           <div className="max-w-2xl mb-16">
-            <h2 className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: '#7C3AED' }}>
+            <h2 className="text-sm font-bold uppercase tracking-widest mb-3 text-violet-600 dark:text-violet-400">
               services
             </h2>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4 tracking-tight leading-tight">
               Here's how I work<br />with you.
             </h1>
-            <p className="text-lg text-gray-500 font-medium mb-2">
+            <p className="text-lg text-gray-500 dark:text-gray-400 font-medium mb-2">
               My services are designed to create clarity. Not dependency.
             </p>
-            <p className="text-base text-gray-400">
+            <p className="text-base text-gray-400 dark:text-gray-500">
               Each service exists for a specific stage and a specific kind of problem.
             </p>
           </div>
