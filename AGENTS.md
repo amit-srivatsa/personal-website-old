@@ -5,9 +5,11 @@
 ---
 
 ## Git Configuration
-To prevent Vercel Hobby deployment blocks (which occur when commits are made by unverified collaborators or bots), all commits must be authored by Amit Srivatsa.
-- **Correct ID:** `Amit Srivatsa <amitsrivatsa@outlook.com>`
-- **Workflow:** Always ensure `git config user.email` is `amitsrivatsa@outlook.com` before pushing.
+To prevent Vercel Hobby deployment blocks (unverified collaborators) and adhere to GitHub privacy settings, all commits must be authored using the **Authorized Git Identity**.
+- **Rule:** Agents MUST NOT hardcode email addresses in the repo.
+- **Workflow:** Retrieve the authorized email/name from the local `.env` file (`AUTHORIZED_GIT_EMAIL` and `AUTHORIZED_GIT_NAME`). Run `git config user.email` and `git config user.name` with these values before every push. 
+
+
 
 ---
 
