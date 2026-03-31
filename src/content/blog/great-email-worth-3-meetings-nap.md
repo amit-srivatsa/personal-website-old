@@ -3,7 +3,7 @@ title: "A great email is worth 3 meetings and a nap"
 date: 2025-03-17
 category: "Marketing"
 excerpt: "Most meetings are just group procrastination in disguise. Here's why writing one good email beats three syncs — and the burrito that proves it."
-image: "https://ik.imagekit.io/mws/blog/great-email-worth-3-meetings-nap/cover.jpg"
+image: "https://ik.imagekit.io/mws/email-is-better-than-meeting.jpg"
 tags: ["Marketing", "Productivity"]
 ---
 
