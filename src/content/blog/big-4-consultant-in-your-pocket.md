@@ -1,5 +1,5 @@
 ---
-title: "The marketing consultant in your browser"
+title: "Big-4 level consultants are now in your pocket"
 date: 2026-04-04
 category: "Marketing"
 excerpt: "AI has made strategic marketing advice accessible to small businesses at a fraction of the cost. But most SMEs are using it for the wrong thing."
@@ -49,6 +49,9 @@ But it can get you to 80 or 85% of that quality. At maybe 1% of the cost.
 For a small business, 80% of a real strategy is infinitely better than 0% of one.
 
 
+![image.png](https://ik.imagekit.io/mws/blog/big-4-consultant-in-your-pocket/image-1.png)
+
+
 ## Where most businesses get this wrong
 
 
@@ -88,6 +91,9 @@ Here is a simple version of what strategic marketing work involves, and what AI 
 **Retention over acquisition.** Most small businesses spend 90% of their marketing energy trying to find new customers. AI-assisted strategy work often reveals that the bigger opportunity is keeping existing customers longer and converting them into advocates. This is cheaper and more effective.
 
 
+![image.png](https://ik.imagekit.io/mws/blog/big-4-consultant-in-your-pocket/image-2.png)
+
+
 ## How I have seen this work in practice
 
 
@@ -104,6 +110,9 @@ A café client had a similar story. They were spending energy on promotions. But
 
 
 Neither of these insights required a consultancy. They required good strategic questions, answered honestly. AI made that accessible.
+
+
+![image.png](https://ik.imagekit.io/mws/blog/big-4-consultant-in-your-pocket/image-3.png)
 
 
 ## What this means for you
