@@ -3,6 +3,7 @@ title: "Big-4 level consultants are now in your pocket"
 date: 2026-04-04
 category: "Marketing"
 excerpt: "AI has made strategic marketing advice accessible to small businesses at a fraction of the cost. But most SMEs are using it for the wrong thing."
+image: "https://ik.imagekit.io/mws/blog/big-4-consultant-in-your-pocket/cover.jpg"
 tags: ["AI", "Marketing", "Strategy"]
 ---
 
