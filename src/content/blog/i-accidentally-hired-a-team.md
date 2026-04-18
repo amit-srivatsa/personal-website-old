@@ -3,7 +3,7 @@ title: "I Accidentally Hired a Team"
 date: 2026-03-20
 category: "AI"
 excerpt: "I wasn't trying to build a system. But once I gave each AI tool its own job — writing, code, ops — the quality of my work got cleaner and faster."
-image: "https://ik.imagekit.io/mws/blog/i-accidentally-hired-a-team/cover.jpg"
+image: "https://ik.imagekit.io/mws/accidently-hired-a-team-claude.jpeg?updatedAt=1774808838338"
 tags: ["AI", "Productivity"]
 ---
 
@@ -23,7 +23,7 @@ It was not efficient.
 The deeper into a conversation you go, the more context the model is carrying. And at some point, the quality quietly starts to slip. It doesn’t crash. It just gets a little woollier. Responses feel slightly off. Things you established earlier get fuzzy. You can feel it, even if you can’t name it.
 
 
-![image.png](https://ik.imagekit.io/mws/blog/i-accidentally-hired-a-team/image-1.png)
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/8303741a-b1a3-4bef-bb1c-e97229237bc9/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466SCABVTFH%2F20260418%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260418T163248Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECgaCXVzLXdlc3QtMiJHMEUCIQC%2FAJNyORXunJ%2BgvjhDtbmZ7NMncUsODXQoSD9Tkgmu%2FwIgHrg8RbWPC90aod1%2Fjnn5kXzNmS3KG71F80F%2F5oKalIsqiAQI8f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKgSYOPYtgso%2Fw22DyrcA54c5SIAsG34QMhMRcxm0cfrk7i6ypp2JYOqlF6XSIwI3zAM6IGWR92cnHEvTFfisCt6%2FYRjI5qF1YuXIGHrYZW2PmlhOoYO1yGT%2BX0gpB0snczBRiLbi0GFVUAX0FEql8Fei9RXg6x6bcNAWIr%2BqtjYfor5LdiqbaoRbl%2FL0rd%2FOkqJ4jMKSBTw%2BccjrKxeT5BVva35OsN4Erg%2F4Bs7TjzzWiOqa7BAknQIpPdAfdBBM9XDBHwq5CFKdM4L%2BlbYnGVwATlYLlSgynxI3RE7KlIbC%2FpnEDoUWGCz0Ki%2BsmUEwno3mogZO1NPnNkUtXj48HnX3exGakQfdPDjs6D0x3a8bRo8ZMJQ%2BcmnZkqTBM90dhgBUAl7vQa%2FrTxXQtHJbQ%2FqqS26p%2FkEvGzm6CN4UJJZY9p0UpxE87ZF%2FoEJRjwf0aYwInkKLPVppriBGVnhrgUaCsmGcUCxnoioJKMERbk2ZLBDVDp1R5YvBr4ORVIF7uLPbJ3Q1v2LEsR63t3Zw7kCk7mQSgLHN2cQ3%2Bv%2Bx9i3tQJzqygtgw%2BKG2Xio6z8XeTxeGtiT0WnbxoNuE39aA1Thg0bAwS%2BD0Rg3gl7nC3JimPOIFo1ytBMgZMsGlD6UZW0j8ulhNhSCiHcMJXEjs8GOqUBMh1rQmb%2FlKj%2FvfVmzmUphb%2ByxGUOKEP1i5jEN%2FtelqTOAnMQ3ulHnOq%2B86utfzDYFhJHVlQayN8SWrMBhqK%2Fg5ss9HdKCFRauerafXsP0fAWapjCdfTUXfHoi8iChVI6eUHOXu3uT4MKQCxlSNcbRdPonBdmZ7eGfh4LHjw%2F8Np%2F7vKNdisYLsyZ%2FJmWQXhJrKxsrVh95GXyxHpOEfqz3UMOa%2BnJ&X-Amz-Signature=16674328f548a0992a7a826ad72d908579408413be21e16a05de00060746b81c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 I kept blaming myself. Not specific enough with my prompts. Not clear enough about what I wanted.
@@ -89,7 +89,7 @@ Each tool now does one job. Each conversation stays clean. The context problem d
 My developer doesn’t need to know about my content strategy. My content thinking doesn’t need to live alongside debugging sessions. When everything is separate, everything gets better.
 
 
-![image.png](https://ik.imagekit.io/mws/blog/i-accidentally-hired-a-team/image-2.png)
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/2d57839d-2772-40d4-b67e-983b852816ff/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466SCABVTFH%2F20260418%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260418T163249Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECgaCXVzLXdlc3QtMiJHMEUCIQC%2FAJNyORXunJ%2BgvjhDtbmZ7NMncUsODXQoSD9Tkgmu%2FwIgHrg8RbWPC90aod1%2Fjnn5kXzNmS3KG71F80F%2F5oKalIsqiAQI8f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKgSYOPYtgso%2Fw22DyrcA54c5SIAsG34QMhMRcxm0cfrk7i6ypp2JYOqlF6XSIwI3zAM6IGWR92cnHEvTFfisCt6%2FYRjI5qF1YuXIGHrYZW2PmlhOoYO1yGT%2BX0gpB0snczBRiLbi0GFVUAX0FEql8Fei9RXg6x6bcNAWIr%2BqtjYfor5LdiqbaoRbl%2FL0rd%2FOkqJ4jMKSBTw%2BccjrKxeT5BVva35OsN4Erg%2F4Bs7TjzzWiOqa7BAknQIpPdAfdBBM9XDBHwq5CFKdM4L%2BlbYnGVwATlYLlSgynxI3RE7KlIbC%2FpnEDoUWGCz0Ki%2BsmUEwno3mogZO1NPnNkUtXj48HnX3exGakQfdPDjs6D0x3a8bRo8ZMJQ%2BcmnZkqTBM90dhgBUAl7vQa%2FrTxXQtHJbQ%2FqqS26p%2FkEvGzm6CN4UJJZY9p0UpxE87ZF%2FoEJRjwf0aYwInkKLPVppriBGVnhrgUaCsmGcUCxnoioJKMERbk2ZLBDVDp1R5YvBr4ORVIF7uLPbJ3Q1v2LEsR63t3Zw7kCk7mQSgLHN2cQ3%2Bv%2Bx9i3tQJzqygtgw%2BKG2Xio6z8XeTxeGtiT0WnbxoNuE39aA1Thg0bAwS%2BD0Rg3gl7nC3JimPOIFo1ytBMgZMsGlD6UZW0j8ulhNhSCiHcMJXEjs8GOqUBMh1rQmb%2FlKj%2FvfVmzmUphb%2ByxGUOKEP1i5jEN%2FtelqTOAnMQ3ulHnOq%2B86utfzDYFhJHVlQayN8SWrMBhqK%2Fg5ss9HdKCFRauerafXsP0fAWapjCdfTUXfHoi8iChVI6eUHOXu3uT4MKQCxlSNcbRdPonBdmZ7eGfh4LHjw%2F8Np%2F7vKNdisYLsyZ%2FJmWQXhJrKxsrVh95GXyxHpOEfqz3UMOa%2BnJ&X-Amz-Signature=9d9719e0edb3cd9bdeed952bea083619f8bcb06fb4ed7c07344b9e41f4191416&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 It’s the same reason good teams work. Specialization isn’t about having more people. It’s about not asking one person to context-switch constantly and still produce their best work.
@@ -116,7 +116,7 @@ Tools have shapes. When you use them in ways that match their shape, the work ge
 I run a one-person business. But I don’t work alone anymore. Not because I outsourced anything. Because I stopped asking one tool to be everything.
 
 
-![image.png](https://ik.imagekit.io/mws/blog/i-accidentally-hired-a-team/image-3.png)
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/040841e9-555c-43a7-b5a3-3a9c5351b2b9/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466SCABVTFH%2F20260418%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260418T163249Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECgaCXVzLXdlc3QtMiJHMEUCIQC%2FAJNyORXunJ%2BgvjhDtbmZ7NMncUsODXQoSD9Tkgmu%2FwIgHrg8RbWPC90aod1%2Fjnn5kXzNmS3KG71F80F%2F5oKalIsqiAQI8f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKgSYOPYtgso%2Fw22DyrcA54c5SIAsG34QMhMRcxm0cfrk7i6ypp2JYOqlF6XSIwI3zAM6IGWR92cnHEvTFfisCt6%2FYRjI5qF1YuXIGHrYZW2PmlhOoYO1yGT%2BX0gpB0snczBRiLbi0GFVUAX0FEql8Fei9RXg6x6bcNAWIr%2BqtjYfor5LdiqbaoRbl%2FL0rd%2FOkqJ4jMKSBTw%2BccjrKxeT5BVva35OsN4Erg%2F4Bs7TjzzWiOqa7BAknQIpPdAfdBBM9XDBHwq5CFKdM4L%2BlbYnGVwATlYLlSgynxI3RE7KlIbC%2FpnEDoUWGCz0Ki%2BsmUEwno3mogZO1NPnNkUtXj48HnX3exGakQfdPDjs6D0x3a8bRo8ZMJQ%2BcmnZkqTBM90dhgBUAl7vQa%2FrTxXQtHJbQ%2FqqS26p%2FkEvGzm6CN4UJJZY9p0UpxE87ZF%2FoEJRjwf0aYwInkKLPVppriBGVnhrgUaCsmGcUCxnoioJKMERbk2ZLBDVDp1R5YvBr4ORVIF7uLPbJ3Q1v2LEsR63t3Zw7kCk7mQSgLHN2cQ3%2Bv%2Bx9i3tQJzqygtgw%2BKG2Xio6z8XeTxeGtiT0WnbxoNuE39aA1Thg0bAwS%2BD0Rg3gl7nC3JimPOIFo1ytBMgZMsGlD6UZW0j8ulhNhSCiHcMJXEjs8GOqUBMh1rQmb%2FlKj%2FvfVmzmUphb%2ByxGUOKEP1i5jEN%2FtelqTOAnMQ3ulHnOq%2B86utfzDYFhJHVlQayN8SWrMBhqK%2Fg5ss9HdKCFRauerafXsP0fAWapjCdfTUXfHoi8iChVI6eUHOXu3uT4MKQCxlSNcbRdPonBdmZ7eGfh4LHjw%2F8Np%2F7vKNdisYLsyZ%2FJmWQXhJrKxsrVh95GXyxHpOEfqz3UMOa%2BnJ&X-Amz-Signature=b653f3a54b894e38480e2b88ff0e5e0bc591da455b389ecaf99639d657fe3855&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 That shift cost me nothing except the habit of defaulting to whatever was already open.

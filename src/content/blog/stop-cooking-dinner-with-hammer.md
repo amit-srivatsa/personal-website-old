@@ -3,7 +3,7 @@ title: "Stop cooking dinner with a hammer"
 date: 2026-02-23
 category: "Career"
 excerpt: "If you feel stuck at work, it’s probably your systems, rather than the job. "
-image: "https://ik.imagekit.io/mws/blog/stop-cooking-dinner-with-hammer/cover.jpg"
+image: "https://ik.imagekit.io/mws/dont-make-dinner-with-hammer.jpg"
 tags: ["Productivity", "Career"]
 ---
 
@@ -71,7 +71,7 @@ If I want to write about a weird lunch I had or a book I hated, I just do it. It
 You need both.
 
 
-![image.png](https://ik.imagekit.io/mws/blog/stop-cooking-dinner-with-hammer/image-1.png)
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/aa7901a9-d062-4b2d-a322-fbc55da595ed/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4667X6SE3IZ%2F20260418%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260418T163249Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECgaCXVzLXdlc3QtMiJGMEQCIEpe2MF8N9tuQJV28fR%2FMK1iOnDO05pfzVFkEwBzkNYxAiBSh4PA7ad0wHXkDWMcVMl6pBzsEIpNCgcp8rlNyULRxCqIBAjw%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMpbNYpCMAsC82aM11KtwDfiFg%2Bf990Uk5vWKrL9IHyUttM4WSxqaabqOMHGqmr4CgkusUVb9LNmazbxUjFKFxUlHKYcEd3TLYX9qc2AJnr9fdjHYJK8tu%2F1n5P%2F%2B17BNHuNF7nYDdkJ9Gga0AJu1aGTVlEXyJLeqQ83Yu%2BDe3kGJVeLR1zBDA3mnA%2Bw4tsGcYZAa405FandtFCXHf6KIlHYyO9q9do8k%2BxBmVbaP1umk5LOrUvPbNu3w%2FnEL6C1DjlXCGFDU6qnmPhoAQNQCK9%2FT%2BO3q%2FZf2ZHQGXGF4v9xkNWOcvgBR1a6u%2B061h9awXwRkIoml89sevr5rvbkSYVv0rRVEg5wou5poAnruMEK2AZoAl6MN7CtgD67VCJYn%2FYpOUg%2BqkciIMHsoGVZKOYrDEGjBByiLd2aqA0EMU0jyjjq%2Bcu8%2F6ejVlSojMv8Bq8UjPKZM4FBRJ%2BsJ2wE%2BNgnydfFOJVagnXbHVVpk6HGn69vZYhdwr3BrrkSuj51YIzy1ZT3ZgcnqWh3XLImEmGG0A8vm6evMUHJthforYjxlJOihBaSpPwRc59pM5NIkwUdeK1pqK4Jp%2BT74EB1EmSxJL%2BjRpsiGRGEwVgWtHFIVkW4xGlE86eyfEwcV8vbLr4roZl7tKRRcailQwxcSOzwY6pgHoOdAjPv8ropwGI8HZ8YLUO1yn5tkLt%2BQ%2BafMsUEF%2ByOKOh%2BnTZFrqskSmh6unz7cJN3Xoy7xypKn52M0D4yIQlGj%2BDNbu%2Foq028WbqcO65clgemJbsPehIw%2BV79rh3L1DDW%2FG21rnYjJ6m8kae0j1CNXhrXu65MT7OB4OC%2BGyUf9G77SVTSEMPX6JAd34WtKCa5aQxdZ%2FFnCTuJoNyyJcp2RV7ARY&X-Amz-Signature=46d3edd44aef720e8527fb4f40b4459b85d06b968852f52b250096109508ef01&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 ## **2. Learn things that have zero ROI**
@@ -92,7 +92,7 @@ I spend at least an hour every day getting my head handed to me by strangers onl
 It’s frustrating. It’s difficult. But when I sit back down at my desk to write for a client, my brain feels awake. Those unrelated skills spark ideas that a marketing textbook never could.
 
 
-![image.png](https://ik.imagekit.io/mws/blog/stop-cooking-dinner-with-hammer/image-2.png)
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/7a553cb5-ed14-4e7c-97d4-2d98d1a64188/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4667X6SE3IZ%2F20260418%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260418T163250Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECgaCXVzLXdlc3QtMiJGMEQCIEpe2MF8N9tuQJV28fR%2FMK1iOnDO05pfzVFkEwBzkNYxAiBSh4PA7ad0wHXkDWMcVMl6pBzsEIpNCgcp8rlNyULRxCqIBAjw%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMpbNYpCMAsC82aM11KtwDfiFg%2Bf990Uk5vWKrL9IHyUttM4WSxqaabqOMHGqmr4CgkusUVb9LNmazbxUjFKFxUlHKYcEd3TLYX9qc2AJnr9fdjHYJK8tu%2F1n5P%2F%2B17BNHuNF7nYDdkJ9Gga0AJu1aGTVlEXyJLeqQ83Yu%2BDe3kGJVeLR1zBDA3mnA%2Bw4tsGcYZAa405FandtFCXHf6KIlHYyO9q9do8k%2BxBmVbaP1umk5LOrUvPbNu3w%2FnEL6C1DjlXCGFDU6qnmPhoAQNQCK9%2FT%2BO3q%2FZf2ZHQGXGF4v9xkNWOcvgBR1a6u%2B061h9awXwRkIoml89sevr5rvbkSYVv0rRVEg5wou5poAnruMEK2AZoAl6MN7CtgD67VCJYn%2FYpOUg%2BqkciIMHsoGVZKOYrDEGjBByiLd2aqA0EMU0jyjjq%2Bcu8%2F6ejVlSojMv8Bq8UjPKZM4FBRJ%2BsJ2wE%2BNgnydfFOJVagnXbHVVpk6HGn69vZYhdwr3BrrkSuj51YIzy1ZT3ZgcnqWh3XLImEmGG0A8vm6evMUHJthforYjxlJOihBaSpPwRc59pM5NIkwUdeK1pqK4Jp%2BT74EB1EmSxJL%2BjRpsiGRGEwVgWtHFIVkW4xGlE86eyfEwcV8vbLr4roZl7tKRRcailQwxcSOzwY6pgHoOdAjPv8ropwGI8HZ8YLUO1yn5tkLt%2BQ%2BafMsUEF%2ByOKOh%2BnTZFrqskSmh6unz7cJN3Xoy7xypKn52M0D4yIQlGj%2BDNbu%2Foq028WbqcO65clgemJbsPehIw%2BV79rh3L1DDW%2FG21rnYjJ6m8kae0j1CNXhrXu65MT7OB4OC%2BGyUf9G77SVTSEMPX6JAd34WtKCa5aQxdZ%2FFnCTuJoNyyJcp2RV7ARY&X-Amz-Signature=c2a0e3fefb80e72869a3d63ff70b666f7f821184127d689f83f361574f12d342&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 ## **3. Protect the time in your calendar**
@@ -112,7 +112,7 @@ Treat these activities like meetings. With yourself. For yourself.
 The most creative people I know have rich lives outside their titles. That richness is what makes them better at the work itself.
 
 
-![image.png](https://ik.imagekit.io/mws/blog/stop-cooking-dinner-with-hammer/image-3.png)
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/d0f3e0c5-cebc-4712-9fef-a0a3409ac394/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4667X6SE3IZ%2F20260418%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260418T163250Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECgaCXVzLXdlc3QtMiJGMEQCIEpe2MF8N9tuQJV28fR%2FMK1iOnDO05pfzVFkEwBzkNYxAiBSh4PA7ad0wHXkDWMcVMl6pBzsEIpNCgcp8rlNyULRxCqIBAjw%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMpbNYpCMAsC82aM11KtwDfiFg%2Bf990Uk5vWKrL9IHyUttM4WSxqaabqOMHGqmr4CgkusUVb9LNmazbxUjFKFxUlHKYcEd3TLYX9qc2AJnr9fdjHYJK8tu%2F1n5P%2F%2B17BNHuNF7nYDdkJ9Gga0AJu1aGTVlEXyJLeqQ83Yu%2BDe3kGJVeLR1zBDA3mnA%2Bw4tsGcYZAa405FandtFCXHf6KIlHYyO9q9do8k%2BxBmVbaP1umk5LOrUvPbNu3w%2FnEL6C1DjlXCGFDU6qnmPhoAQNQCK9%2FT%2BO3q%2FZf2ZHQGXGF4v9xkNWOcvgBR1a6u%2B061h9awXwRkIoml89sevr5rvbkSYVv0rRVEg5wou5poAnruMEK2AZoAl6MN7CtgD67VCJYn%2FYpOUg%2BqkciIMHsoGVZKOYrDEGjBByiLd2aqA0EMU0jyjjq%2Bcu8%2F6ejVlSojMv8Bq8UjPKZM4FBRJ%2BsJ2wE%2BNgnydfFOJVagnXbHVVpk6HGn69vZYhdwr3BrrkSuj51YIzy1ZT3ZgcnqWh3XLImEmGG0A8vm6evMUHJthforYjxlJOihBaSpPwRc59pM5NIkwUdeK1pqK4Jp%2BT74EB1EmSxJL%2BjRpsiGRGEwVgWtHFIVkW4xGlE86eyfEwcV8vbLr4roZl7tKRRcailQwxcSOzwY6pgHoOdAjPv8ropwGI8HZ8YLUO1yn5tkLt%2BQ%2BafMsUEF%2ByOKOh%2BnTZFrqskSmh6unz7cJN3Xoy7xypKn52M0D4yIQlGj%2BDNbu%2Foq028WbqcO65clgemJbsPehIw%2BV79rh3L1DDW%2FG21rnYjJ6m8kae0j1CNXhrXu65MT7OB4OC%2BGyUf9G77SVTSEMPX6JAd34WtKCa5aQxdZ%2FFnCTuJoNyyJcp2RV7ARY&X-Amz-Signature=53acafd83ec806250c0c88be8ee97aae3974f60526208d6cc541954938fe2ef7&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 ---

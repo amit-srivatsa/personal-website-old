@@ -3,7 +3,7 @@ title: "A great email is worth 3 meetings and a nap"
 date: 2025-03-17
 category: "Marketing"
 excerpt: "Most meetings are just group procrastination in disguise. Here's why writing one good email beats three syncs — and the burrito that proves it."
-image: "https://ik.imagekit.io/mws/blog/great-email-worth-3-meetings-nap/cover.jpg"
+image: "https://ik.imagekit.io/mws/email-is-better-than-meeting.jpg"
 tags: ["Marketing", "Productivity"]
 ---
 
@@ -40,7 +40,7 @@ A good email says what it needs to. Quickly. Clearly. It shows up in someone's i
 
 > Less "can you hop on a call?" More "here's everything you need."
 
-![image.png](https://ik.imagekit.io/mws/blog/great-email-worth-3-meetings-nap/image-1.png)
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/3844810c-e6b4-496c-ba2e-966a1c5b83ae/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466S2B4L3QI%2F20260418%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260418T163301Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECgaCXVzLXdlc3QtMiJHMEUCIQD8DB5wX0MiLLCCftpyzFTr9kY5ELoSwDwvZwJUhCgT3wIgCX38TH9WlWqcqrB0Gwu4xqmoQ7GoeBk7LDqxfNDDIBYqiAQI8f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDJMdBQIsuanqEwvvdSrcA3XGdWdOR2OtI0IsBGF0q%2FyVyL6ZYv2oh0k8O51XVtO4YfkDHAbDYaQqwhh619BwSwsK9ibcgUHv%2BiBdGfF1OIcmmkURkX1yqkJCjYHNqtSIyE%2BALxWA51YVZr0s6XLmy4JThBmmWbl60sMaJCUY5QfWo%2BQ4IcXnF8XGZRSnl4GQj%2FCxnU8rl85889MwV3KuxiSk1%2BnQpPUPP0TjpWSKOD3boNtii9QdTt9MjxMZ7isWaINqoTeHWzStyln%2Fy9SyKmj%2FQBPlgQJOWytSLq5xG3A3QQ%2BZjJn3qmvLm3JGnIOClwoH5FVd0lbm4M0NZaSfAoQBgJmA6Kr9N%2FgXUtbnKkF%2BsHi9VCt%2F5YdcuXGRLEVFk%2BzKGp8RcOREm4tNWz9tCjXU%2B1hQfuN0XHwGntcauUoR9MnqX%2F5UDAQYZyQRBttAwJoT3opp9rF0%2F5l09XX1haAzBzsL6y%2Fh15V2kE%2BC9e0BJXSge4xLeBkED56ka3STj1%2FUQ8FXxZeruob8INzDi7nOpFb%2F3sZfCU9muXmVC%2BRGd41Rq8ya%2FP73xfJh1Nr%2Bov032IZcqg0jFVHKjDSwLotc3eyaPmaxbLu5zkg7wlqV4NfRcrq9CVqUTnvvHtbiZ8%2FgnbSBmbCnu6%2F6MKbEjs8GOqUBFr75gftBgxXY9RS5pB9AG4jsJOFWaSE8nZNukPNx6tjXp%2B3mEVJq8YTLSpMrmiH6FXCemJYFuZHjRhVp3NMDEBF%2Fq99N4l07VRdn5eFL8sdWUiTgILwc2jshbzO%2BqdI2RPAacMjmXN8zpNzBtNdu75iNms1jietJ9SwnD58A91xPN64lUn7h50VEGStdW5gf6z2Lysxfa5WMq56VIpQWSOdlukG5&X-Amz-Signature=d588973878848518ce5f6fca9c1a55223be8cf12d00cc0cd1ee7132a7a9a5deb&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 ---
@@ -62,7 +62,7 @@ And you didn't say "per my last email" like a passive-aggressive spreadsheet.
 
 > You took the time to think. Rewrite. Add structure. Remove fluff.
 
-![image.png](https://ik.imagekit.io/mws/blog/great-email-worth-3-meetings-nap/image-2.png)
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/fce49efd-5066-4499-810a-9a98983ee245/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466S2B4L3QI%2F20260418%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260418T163301Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECgaCXVzLXdlc3QtMiJHMEUCIQD8DB5wX0MiLLCCftpyzFTr9kY5ELoSwDwvZwJUhCgT3wIgCX38TH9WlWqcqrB0Gwu4xqmoQ7GoeBk7LDqxfNDDIBYqiAQI8f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDJMdBQIsuanqEwvvdSrcA3XGdWdOR2OtI0IsBGF0q%2FyVyL6ZYv2oh0k8O51XVtO4YfkDHAbDYaQqwhh619BwSwsK9ibcgUHv%2BiBdGfF1OIcmmkURkX1yqkJCjYHNqtSIyE%2BALxWA51YVZr0s6XLmy4JThBmmWbl60sMaJCUY5QfWo%2BQ4IcXnF8XGZRSnl4GQj%2FCxnU8rl85889MwV3KuxiSk1%2BnQpPUPP0TjpWSKOD3boNtii9QdTt9MjxMZ7isWaINqoTeHWzStyln%2Fy9SyKmj%2FQBPlgQJOWytSLq5xG3A3QQ%2BZjJn3qmvLm3JGnIOClwoH5FVd0lbm4M0NZaSfAoQBgJmA6Kr9N%2FgXUtbnKkF%2BsHi9VCt%2F5YdcuXGRLEVFk%2BzKGp8RcOREm4tNWz9tCjXU%2B1hQfuN0XHwGntcauUoR9MnqX%2F5UDAQYZyQRBttAwJoT3opp9rF0%2F5l09XX1haAzBzsL6y%2Fh15V2kE%2BC9e0BJXSge4xLeBkED56ka3STj1%2FUQ8FXxZeruob8INzDi7nOpFb%2F3sZfCU9muXmVC%2BRGd41Rq8ya%2FP73xfJh1Nr%2Bov032IZcqg0jFVHKjDSwLotc3eyaPmaxbLu5zkg7wlqV4NfRcrq9CVqUTnvvHtbiZ8%2FgnbSBmbCnu6%2F6MKbEjs8GOqUBFr75gftBgxXY9RS5pB9AG4jsJOFWaSE8nZNukPNx6tjXp%2B3mEVJq8YTLSpMrmiH6FXCemJYFuZHjRhVp3NMDEBF%2Fq99N4l07VRdn5eFL8sdWUiTgILwc2jshbzO%2BqdI2RPAacMjmXN8zpNzBtNdu75iNms1jietJ9SwnD58A91xPN64lUn7h50VEGStdW5gf6z2Lysxfa5WMq56VIpQWSOdlukG5&X-Amz-Signature=8c81b269d6c71d6f4415e465963c16b0b4345a1897f23c001841b25ca697c21b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 ---
@@ -86,7 +86,7 @@ When someone reads it and knows exactly what to do next, that's the email workin
 
 > You don't need five people to align in real time. You just need to spell it out clearly.
 
-![image.png](https://ik.imagekit.io/mws/blog/great-email-worth-3-meetings-nap/image-3.png)
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/2407fb9d-d8c8-45f4-a1d4-bf7b7f8ef193/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466S2B4L3QI%2F20260418%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260418T163301Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECgaCXVzLXdlc3QtMiJHMEUCIQD8DB5wX0MiLLCCftpyzFTr9kY5ELoSwDwvZwJUhCgT3wIgCX38TH9WlWqcqrB0Gwu4xqmoQ7GoeBk7LDqxfNDDIBYqiAQI8f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDJMdBQIsuanqEwvvdSrcA3XGdWdOR2OtI0IsBGF0q%2FyVyL6ZYv2oh0k8O51XVtO4YfkDHAbDYaQqwhh619BwSwsK9ibcgUHv%2BiBdGfF1OIcmmkURkX1yqkJCjYHNqtSIyE%2BALxWA51YVZr0s6XLmy4JThBmmWbl60sMaJCUY5QfWo%2BQ4IcXnF8XGZRSnl4GQj%2FCxnU8rl85889MwV3KuxiSk1%2BnQpPUPP0TjpWSKOD3boNtii9QdTt9MjxMZ7isWaINqoTeHWzStyln%2Fy9SyKmj%2FQBPlgQJOWytSLq5xG3A3QQ%2BZjJn3qmvLm3JGnIOClwoH5FVd0lbm4M0NZaSfAoQBgJmA6Kr9N%2FgXUtbnKkF%2BsHi9VCt%2F5YdcuXGRLEVFk%2BzKGp8RcOREm4tNWz9tCjXU%2B1hQfuN0XHwGntcauUoR9MnqX%2F5UDAQYZyQRBttAwJoT3opp9rF0%2F5l09XX1haAzBzsL6y%2Fh15V2kE%2BC9e0BJXSge4xLeBkED56ka3STj1%2FUQ8FXxZeruob8INzDi7nOpFb%2F3sZfCU9muXmVC%2BRGd41Rq8ya%2FP73xfJh1Nr%2Bov032IZcqg0jFVHKjDSwLotc3eyaPmaxbLu5zkg7wlqV4NfRcrq9CVqUTnvvHtbiZ8%2FgnbSBmbCnu6%2F6MKbEjs8GOqUBFr75gftBgxXY9RS5pB9AG4jsJOFWaSE8nZNukPNx6tjXp%2B3mEVJq8YTLSpMrmiH6FXCemJYFuZHjRhVp3NMDEBF%2Fq99N4l07VRdn5eFL8sdWUiTgILwc2jshbzO%2BqdI2RPAacMjmXN8zpNzBtNdu75iNms1jietJ9SwnD58A91xPN64lUn7h50VEGStdW5gf6z2Lysxfa5WMq56VIpQWSOdlukG5&X-Amz-Signature=eb54b3221434c4401f416f86945896a6fbcb63d8ff57b756b8df7f81831be83d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 ---
