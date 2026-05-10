@@ -3,7 +3,7 @@ title: "Big-4 level consultants are now in your pocket"
 date: 2026-04-04
 category: "Marketing"
 excerpt: "AI has made strategic marketing advice accessible to small businesses at a fraction of the cost. But most SMEs are using it for the wrong thing."
-image: "https://ik.imagekit.io/mws/blog/big-4-consultant-in-your-pocket/cover.jpg"
+image: "https://ik.imagekit.io/mws/blog/big-4-consultant-in-your-pocket/cover.png"
 tags: ["AI", "Marketing", "Strategy"]
 ---
 
@@ -50,7 +50,7 @@ But it can get you to 80 or 85% of that quality. At maybe 1% of the cost.
 For a small business, 80% of a real strategy is infinitely better than 0% of one.
 
 
-![image.png](https://ik.imagekit.io/mws/blog/big-4-consultant-in-your-pocket/image-1.png)
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/d85921d2-7755-4b86-826a-92506da10479/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YRKDYZLQ%2F20260510%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260510T204202Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED0aCXVzLXdlc3QtMiJIMEYCIQCTlMCyCEBZbah1SbNImT9rnLb2kZkTonNf%2FaZ9E8XP9QIhAMreqWbXdafKXcnfiN28Z2hO9y%2Bvs1KLxz4C0TyPV%2BuDKv8DCAYQABoMNjM3NDIzMTgzODA1Igzpl4Kq7v%2BcyQHjIiEq3AOigQWBv89j7luSPeMiLIbH9McTIDBuUpPbbFAGpW%2Ft7xaoTQsDZlN71Ia8dpywswNRi%2FicOeGJhDbXQ%2F1Ati%2BA1HKFWLD2vu%2BzmGV%2FHaIJ6wI3c9oGSF6C1fTuBaJQGxrtctiCnl%2BFRxhTk0pd%2Bjgo%2FVJimJBNg4ciBhP8Ry37vSdwclXD3Hn7oqDbAiYsb8TX6emSE1rBwvb8o0rNejrNVSCY39GJjjFjus9t51Ic7R22WSQ4G77M1uqAf3fU1CRbHBl36nENcfiaSjbqpmSYmGJF1lG8O64GxZWpfK%2BA5LnoEwIIYCsezJgW%2B9im6fXgulmTm7bVQPs10Wp9Eu4zkt8kucys2zStkynCuLsdz2t4US9HoV2buKBLoa0q34KZPhmrWJQQwBL%2FqYWCWkVy4SrKnIoFntt1bCe9tBSBmHnD1prxcX2MpF22RQfD2NG8gN7Vyg268OtXp7l2A50MpK0NKsr0tFVMM9UhcsSvi2L5a4m%2BDq6XHK8sLtEZ9ZKhIyRgRbfwjesVQ15Hw7onbEdcGLq9FmDq18oU6YY3b%2FPqz3wSSmd9%2FgNrL%2FcBggolx%2BDDIOGp7A8XHm5SHclTC5%2BhhSB4tLz3oQMGNmTn0dNLSnlrTlc2QWT0OjDp1YPQBjqkAUXpxvp7vPS0x94FlvT7GX7%2BsSH1rhgEEz6iW8zYMjV8BfVaUDwuKEK5AGp04rrH9D8kolkBJAYUrzunP2taD3F%2BL3I50yES409jVf54zCLr8s1Mhco2uST9H5ycJaqr4M%2FexvUZvjlwLMfwjnhFxHQUyimGxs6VuK1V28K9xxHw%2BxqzLFqf3YOAwiI8jM3MpS0Q5Sj1YnBTlc4MUNj1FMMCri2E&X-Amz-Signature=10cdb0c01023b26406788bd2820b1ff49f7bdba75dbc323e9e6437cc38bf25da&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 ## Where most businesses get this wrong
@@ -92,7 +92,7 @@ Here is a simple version of what strategic marketing work involves, and what AI 
 **Retention over acquisition.** Most small businesses spend 90% of their marketing energy trying to find new customers. AI-assisted strategy work often reveals that the bigger opportunity is keeping existing customers longer and converting them into advocates. This is cheaper and more effective.
 
 
-![image.png](https://ik.imagekit.io/mws/blog/big-4-consultant-in-your-pocket/image-2.png)
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/7006db12-2bc4-4b15-a59c-d4205fdbf7a3/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YRKDYZLQ%2F20260510%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260510T204202Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED0aCXVzLXdlc3QtMiJIMEYCIQCTlMCyCEBZbah1SbNImT9rnLb2kZkTonNf%2FaZ9E8XP9QIhAMreqWbXdafKXcnfiN28Z2hO9y%2Bvs1KLxz4C0TyPV%2BuDKv8DCAYQABoMNjM3NDIzMTgzODA1Igzpl4Kq7v%2BcyQHjIiEq3AOigQWBv89j7luSPeMiLIbH9McTIDBuUpPbbFAGpW%2Ft7xaoTQsDZlN71Ia8dpywswNRi%2FicOeGJhDbXQ%2F1Ati%2BA1HKFWLD2vu%2BzmGV%2FHaIJ6wI3c9oGSF6C1fTuBaJQGxrtctiCnl%2BFRxhTk0pd%2Bjgo%2FVJimJBNg4ciBhP8Ry37vSdwclXD3Hn7oqDbAiYsb8TX6emSE1rBwvb8o0rNejrNVSCY39GJjjFjus9t51Ic7R22WSQ4G77M1uqAf3fU1CRbHBl36nENcfiaSjbqpmSYmGJF1lG8O64GxZWpfK%2BA5LnoEwIIYCsezJgW%2B9im6fXgulmTm7bVQPs10Wp9Eu4zkt8kucys2zStkynCuLsdz2t4US9HoV2buKBLoa0q34KZPhmrWJQQwBL%2FqYWCWkVy4SrKnIoFntt1bCe9tBSBmHnD1prxcX2MpF22RQfD2NG8gN7Vyg268OtXp7l2A50MpK0NKsr0tFVMM9UhcsSvi2L5a4m%2BDq6XHK8sLtEZ9ZKhIyRgRbfwjesVQ15Hw7onbEdcGLq9FmDq18oU6YY3b%2FPqz3wSSmd9%2FgNrL%2FcBggolx%2BDDIOGp7A8XHm5SHclTC5%2BhhSB4tLz3oQMGNmTn0dNLSnlrTlc2QWT0OjDp1YPQBjqkAUXpxvp7vPS0x94FlvT7GX7%2BsSH1rhgEEz6iW8zYMjV8BfVaUDwuKEK5AGp04rrH9D8kolkBJAYUrzunP2taD3F%2BL3I50yES409jVf54zCLr8s1Mhco2uST9H5ycJaqr4M%2FexvUZvjlwLMfwjnhFxHQUyimGxs6VuK1V28K9xxHw%2BxqzLFqf3YOAwiI8jM3MpS0Q5Sj1YnBTlc4MUNj1FMMCri2E&X-Amz-Signature=6b07f851930a12e551bc12682c0dd0aab37fed229e2d243d335186ac5e96aefd&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 ## How I have seen this work in practice
@@ -113,7 +113,7 @@ A café client had a similar story. They were spending energy on promotions. But
 Neither of these insights required a consultancy. They required good strategic questions, answered honestly. AI made that accessible.
 
 
-![image.png](https://ik.imagekit.io/mws/blog/big-4-consultant-in-your-pocket/image-3.png)
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/8c378551-588e-4aae-96c3-d2a0320fd648/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YRKDYZLQ%2F20260510%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260510T204202Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED0aCXVzLXdlc3QtMiJIMEYCIQCTlMCyCEBZbah1SbNImT9rnLb2kZkTonNf%2FaZ9E8XP9QIhAMreqWbXdafKXcnfiN28Z2hO9y%2Bvs1KLxz4C0TyPV%2BuDKv8DCAYQABoMNjM3NDIzMTgzODA1Igzpl4Kq7v%2BcyQHjIiEq3AOigQWBv89j7luSPeMiLIbH9McTIDBuUpPbbFAGpW%2Ft7xaoTQsDZlN71Ia8dpywswNRi%2FicOeGJhDbXQ%2F1Ati%2BA1HKFWLD2vu%2BzmGV%2FHaIJ6wI3c9oGSF6C1fTuBaJQGxrtctiCnl%2BFRxhTk0pd%2Bjgo%2FVJimJBNg4ciBhP8Ry37vSdwclXD3Hn7oqDbAiYsb8TX6emSE1rBwvb8o0rNejrNVSCY39GJjjFjus9t51Ic7R22WSQ4G77M1uqAf3fU1CRbHBl36nENcfiaSjbqpmSYmGJF1lG8O64GxZWpfK%2BA5LnoEwIIYCsezJgW%2B9im6fXgulmTm7bVQPs10Wp9Eu4zkt8kucys2zStkynCuLsdz2t4US9HoV2buKBLoa0q34KZPhmrWJQQwBL%2FqYWCWkVy4SrKnIoFntt1bCe9tBSBmHnD1prxcX2MpF22RQfD2NG8gN7Vyg268OtXp7l2A50MpK0NKsr0tFVMM9UhcsSvi2L5a4m%2BDq6XHK8sLtEZ9ZKhIyRgRbfwjesVQ15Hw7onbEdcGLq9FmDq18oU6YY3b%2FPqz3wSSmd9%2FgNrL%2FcBggolx%2BDDIOGp7A8XHm5SHclTC5%2BhhSB4tLz3oQMGNmTn0dNLSnlrTlc2QWT0OjDp1YPQBjqkAUXpxvp7vPS0x94FlvT7GX7%2BsSH1rhgEEz6iW8zYMjV8BfVaUDwuKEK5AGp04rrH9D8kolkBJAYUrzunP2taD3F%2BL3I50yES409jVf54zCLr8s1Mhco2uST9H5ycJaqr4M%2FexvUZvjlwLMfwjnhFxHQUyimGxs6VuK1V28K9xxHw%2BxqzLFqf3YOAwiI8jM3MpS0Q5Sj1YnBTlc4MUNj1FMMCri2E&X-Amz-Signature=98e8bff37c5f4ace0774cd8c9b000e2c53949574e975e6aabf6dc610d24356b9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 ## What this means for you

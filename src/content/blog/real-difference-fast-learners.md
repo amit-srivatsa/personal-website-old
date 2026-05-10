@@ -3,7 +3,7 @@ title: "The real difference between people who learn fast vs. those who don't"
 date: 2026-02-21
 category: "Career"
 excerpt: "It's not talent, IQ, or discipline. The fastest learners run a different system. Here are the three levers that actually separate them."
-image: "https://ik.imagekit.io/mws/blog/real-difference-fast-learners/cover.jpg"
+image: "https://ik.imagekit.io/mws/slow-vs-fast-learners-amit-srivatsa-blog.jpg"
 tags: ["Productivity", "Strategy"]
 ---
 
@@ -56,7 +56,7 @@ Slow learners accumulate facts. Fast learners extract patterns. That's not a sma
 **The model:**
 
 
-![learning_01.jpg](https://ik.imagekit.io/mws/blog/real-difference-fast-learners/image-1.jpg)
+![learning_01.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/8b2bb0c5-7ab1-4a8c-aa5c-08773fa1b5ce/learning_01.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466SZPPQBU2%2F20260510%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260510T204209Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED0aCXVzLXdlc3QtMiJGMEQCIA%2F6Bwda0d0WK3QEXyv7j9LJbVH14oqatp3GguFuFGAWAiAIt7Ud6Pkj%2F%2FDlOMrhd6rR6XBfGNfTrcYeDn9SimQyRir%2FAwgGEAAaDDYzNzQyMzE4MzgwNSIMDyrZ1KFiYkTY4u7DKtwDEhGe0Eg6qP8w5pAyJwfQlG%2FI0XglsnIIHpZIWeLYUD7up1HvmQLHXp70q1nZ2WigqomnAU2W7RTAjzQU3fPjOefLM%2FRnapl%2FXsrF9k1EQwtPdORgDZEzkoM3ouVvrM0uaefzoKtsXpzLRcWhWG393ZlSXlwly80xFoIXOHOOvC3RfEiI6rLL%2BjkR%2BvVKYc2t9ts1yBe%2BBDM2E54WY42KsvAKy8JS9d%2ByLft%2BuNjMdE5TwnIc1rxHGk2hW%2BZZXD%2BNjW9a2dire7RnkNk7STfs5zXi2NvnYY%2B4UjJx052rG1ocVNOzJ0O562eBHnrtBS89xjyV6fkd8Mc%2B4%2FPIw8FOBEziXs1OjFaYZJhxcCjmYrOvaP%2FXMO5bOd%2Fr21NNQx9jaWFJar2ZaKiwyIrTSxpkMhY1hXaZO4NAnpSaJptyREty5CodFrfyuB8Q1R9R7wAAlIHUXWpjS8v66fVaOE4%2Fm26iv8JUFTYF0DSs%2BMTGMLPyfRDKCHIB9S4N4jJOF98kVNxR8jR71kHyXRzaFjIIw2iRcEli7lX1YgTnpcUpXQlwPmSe5WMBRSeWS8XmBL19Sy%2BEVhU5A3rB5rUbrfCUMNuhWkfCLNALmti64%2FefTQl2F3VopyKMLA24yFEwrNaD0AY6pgE3rb8GocpNVyHe8jFXdiOHaXwJJirvMu3btDoaEFUUMlz3FTwuH7nlYDDcbOaew0TDsgqrfrV280sYQ5LymDkKhGoy7LgKmTdE6gPk4KpHUuVV2a36vYIKBjZOhoXU0BjphnSno5W5f3WXiNCrdDS9%2BQhaX6q%2F6Wt%2F8jakVpXrnY5qP0SNPMGvk%2B1PxAIi5TZXWrbbv%2BwNGe15d1p%2FXkxy27ijuGFF&X-Amz-Signature=0bb01c81cb6e7849d21b5075e04c92bf98ae8984d9bd382c2355ad5b75e2a183&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 > The compression ratio is the skill. The better you get at it, the faster everything else becomes.
 
@@ -78,7 +78,7 @@ They don't treat output as proof of mastery. They treat it as the engine of unde
 **The model:**
 
 
-![learning_02.jpg](https://ik.imagekit.io/mws/blog/real-difference-fast-learners/image-2.jpg)
+![learning_02.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/b96ac511-d2af-4473-9b94-ae14d190fd3c/learning_02.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466SZPPQBU2%2F20260510%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260510T204209Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED0aCXVzLXdlc3QtMiJGMEQCIA%2F6Bwda0d0WK3QEXyv7j9LJbVH14oqatp3GguFuFGAWAiAIt7Ud6Pkj%2F%2FDlOMrhd6rR6XBfGNfTrcYeDn9SimQyRir%2FAwgGEAAaDDYzNzQyMzE4MzgwNSIMDyrZ1KFiYkTY4u7DKtwDEhGe0Eg6qP8w5pAyJwfQlG%2FI0XglsnIIHpZIWeLYUD7up1HvmQLHXp70q1nZ2WigqomnAU2W7RTAjzQU3fPjOefLM%2FRnapl%2FXsrF9k1EQwtPdORgDZEzkoM3ouVvrM0uaefzoKtsXpzLRcWhWG393ZlSXlwly80xFoIXOHOOvC3RfEiI6rLL%2BjkR%2BvVKYc2t9ts1yBe%2BBDM2E54WY42KsvAKy8JS9d%2ByLft%2BuNjMdE5TwnIc1rxHGk2hW%2BZZXD%2BNjW9a2dire7RnkNk7STfs5zXi2NvnYY%2B4UjJx052rG1ocVNOzJ0O562eBHnrtBS89xjyV6fkd8Mc%2B4%2FPIw8FOBEziXs1OjFaYZJhxcCjmYrOvaP%2FXMO5bOd%2Fr21NNQx9jaWFJar2ZaKiwyIrTSxpkMhY1hXaZO4NAnpSaJptyREty5CodFrfyuB8Q1R9R7wAAlIHUXWpjS8v66fVaOE4%2Fm26iv8JUFTYF0DSs%2BMTGMLPyfRDKCHIB9S4N4jJOF98kVNxR8jR71kHyXRzaFjIIw2iRcEli7lX1YgTnpcUpXQlwPmSe5WMBRSeWS8XmBL19Sy%2BEVhU5A3rB5rUbrfCUMNuhWkfCLNALmti64%2FefTQl2F3VopyKMLA24yFEwrNaD0AY6pgE3rb8GocpNVyHe8jFXdiOHaXwJJirvMu3btDoaEFUUMlz3FTwuH7nlYDDcbOaew0TDsgqrfrV280sYQ5LymDkKhGoy7LgKmTdE6gPk4KpHUuVV2a36vYIKBjZOhoXU0BjphnSno5W5f3WXiNCrdDS9%2BQhaX6q%2F6Wt%2F8jakVpXrnY5qP0SNPMGvk%2B1PxAIi5TZXWrbbv%2BwNGe15d1p%2FXkxy27ijuGFF&X-Amz-Signature=f5e379c6f14403d7a9681680d45b78e0d91a3440c73f4f2cb3004220dc346d6b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 > The feedback loop is tighter. That's why the curve is steeper.
 
@@ -100,7 +100,7 @@ These aren't study hacks. They're diagnostic tools. Constraints expose gaps in u
 **The model:**
 
 
-![learning_03.jpg](https://ik.imagekit.io/mws/blog/real-difference-fast-learners/image-3.jpg)
+![learning_03.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/d391e256-0d91-41cb-bc3f-a243fbb7a475/learning_03.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466SZPPQBU2%2F20260510%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260510T204209Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED0aCXVzLXdlc3QtMiJGMEQCIA%2F6Bwda0d0WK3QEXyv7j9LJbVH14oqatp3GguFuFGAWAiAIt7Ud6Pkj%2F%2FDlOMrhd6rR6XBfGNfTrcYeDn9SimQyRir%2FAwgGEAAaDDYzNzQyMzE4MzgwNSIMDyrZ1KFiYkTY4u7DKtwDEhGe0Eg6qP8w5pAyJwfQlG%2FI0XglsnIIHpZIWeLYUD7up1HvmQLHXp70q1nZ2WigqomnAU2W7RTAjzQU3fPjOefLM%2FRnapl%2FXsrF9k1EQwtPdORgDZEzkoM3ouVvrM0uaefzoKtsXpzLRcWhWG393ZlSXlwly80xFoIXOHOOvC3RfEiI6rLL%2BjkR%2BvVKYc2t9ts1yBe%2BBDM2E54WY42KsvAKy8JS9d%2ByLft%2BuNjMdE5TwnIc1rxHGk2hW%2BZZXD%2BNjW9a2dire7RnkNk7STfs5zXi2NvnYY%2B4UjJx052rG1ocVNOzJ0O562eBHnrtBS89xjyV6fkd8Mc%2B4%2FPIw8FOBEziXs1OjFaYZJhxcCjmYrOvaP%2FXMO5bOd%2Fr21NNQx9jaWFJar2ZaKiwyIrTSxpkMhY1hXaZO4NAnpSaJptyREty5CodFrfyuB8Q1R9R7wAAlIHUXWpjS8v66fVaOE4%2Fm26iv8JUFTYF0DSs%2BMTGMLPyfRDKCHIB9S4N4jJOF98kVNxR8jR71kHyXRzaFjIIw2iRcEli7lX1YgTnpcUpXQlwPmSe5WMBRSeWS8XmBL19Sy%2BEVhU5A3rB5rUbrfCUMNuhWkfCLNALmti64%2FefTQl2F3VopyKMLA24yFEwrNaD0AY6pgE3rb8GocpNVyHe8jFXdiOHaXwJJirvMu3btDoaEFUUMlz3FTwuH7nlYDDcbOaew0TDsgqrfrV280sYQ5LymDkKhGoy7LgKmTdE6gPk4KpHUuVV2a36vYIKBjZOhoXU0BjphnSno5W5f3WXiNCrdDS9%2BQhaX6q%2F6Wt%2F8jakVpXrnY5qP0SNPMGvk%2B1PxAIi5TZXWrbbv%2BwNGe15d1p%2FXkxy27ijuGFF&X-Amz-Signature=8cacf882bba2cd51357f1e089d7b014e0fec09cb850b7b5c4f3d5d0c2e8847fd&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 > The fast learner curve looks harder early on. It is. That's the point. Productive struggle isn't inefficiency. It's investment.
 
