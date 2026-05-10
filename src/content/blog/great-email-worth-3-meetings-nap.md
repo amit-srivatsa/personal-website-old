@@ -3,7 +3,7 @@ title: "A great email is worth 3 meetings and a nap"
 date: 2025-03-17
 category: "Marketing"
 excerpt: "Most meetings are just group procrastination in disguise. Here's why writing one good email beats three syncs — and the burrito that proves it."
-image: "https://ik.imagekit.io/mws/email-is-better-than-meeting.jpg"
+image: "https://ik.imagekit.io/mws/blog/great-email-worth-3-meetings-nap/cover.jpg"
 tags: ["Marketing", "Productivity"]
 ---
 
@@ -40,7 +40,7 @@ A good email says what it needs to. Quickly. Clearly. It shows up in someone's i
 
 > Less "can you hop on a call?" More "here's everything you need."
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/3844810c-e6b4-496c-ba2e-966a1c5b83ae/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4667Q23IRRY%2F20260510%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260510T185320Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDoaCXVzLXdlc3QtMiJHMEUCIQCIVRIDdTFUs1dL9pQEkwOkxpLMy%2BBoiL8Js1oNuPdAOgIgQELLV3A4WtCx20nu%2Fnspyo1HOG0u1lUpU9T0ps2kKIMq%2FwMIAxAAGgw2Mzc0MjMxODM4MDUiDH2alpBfohcvXjMUMyrcA2wm9k%2FtKWDZHhpYkU8ptGLWq9OlC6XuNQNgSSHHNfavUnAClSriQRA0xWY%2FXc4vbkCnxv4vwTNLZTjiz2r5D4PZbi0ZTnS0aJSqswi7rJYeW7UIHqlEQLwISVvfmkzwHivzR53ConN%2F49tDRnAHhSG8QGYIaHB8PKmK%2FXbC9LOs0RoC8kT2RQBcd0BO17kPDTW%2BruSpPn7BbDsDpr5k0Diy5XHkuWtUChiEIh2g6E7vfcY782C35hkYd4PGTyVmUXnLfYk971GwT6MfS2QhZY6F0edLvUrlUn7WeWrIh2qyvxAwMrH1a1KKdF3k1VWt7JkkLO4bigE9cF93UkC3wXsqBZSG1EndSZwvQtWkeGjm69vwFo9lMiKvzKmpY%2BvNHLIFnKHsrVawoKwoaZ3yWZA%2ByxNnznJKgvWYggwqTgXMIX1kBGZP6qHjdWdIjGmc%2Bak4wBGdAG2cfGvpVCs0N3VZ3msaJSLE%2BxAD7czkwO6u0rg6Z8aChosn6i%2F91LoOr%2ByTieq7acBRlqhK%2BNqSgDYDIDC7Mey5JhJcsfpGrSAYU6OIo8tDm%2FhqKaPHy0ZtYo4pv%2FWrMQF%2BXQF2D55n1S%2BBGLKsOnCRETU77ZqoTs04Do5TSVjkxw8XxHnAMNuUg9AGOqUBWCKY6cY6TuQljcCzHgXVsVxB8HGhD3%2FrSOYy%2FrNUcVyF1Dbm0AMBOlCLxwvc2%2FkgxyNfg74rD5gBJhpdPdvENi1LlsJu9MtqKI2%2B36PrPTiLDGUlScR%2BMbwZHpFBBLpKEmV%2Fs80dG5TL2WHiKJ4dvwFPvur%2FdkTqtfsW15RHeddABDLmWB5zqjnHuKaLYvRk2rdjeCH%2FQbgI5%2F3RGBIPFywF28i4&X-Amz-Signature=0abd865727508f00050061f34bded76b3f0bb3c12c94d161183a69d9183ee84a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![image.png](https://ik.imagekit.io/mws/blog/great-email-worth-3-meetings-nap/image-1.png)
 
 
 ---
@@ -62,7 +62,7 @@ And you didn't say "per my last email" like a passive-aggressive spreadsheet.
 
 > You took the time to think. Rewrite. Add structure. Remove fluff.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/fce49efd-5066-4499-810a-9a98983ee245/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4667Q23IRRY%2F20260510%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260510T185320Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDoaCXVzLXdlc3QtMiJHMEUCIQCIVRIDdTFUs1dL9pQEkwOkxpLMy%2BBoiL8Js1oNuPdAOgIgQELLV3A4WtCx20nu%2Fnspyo1HOG0u1lUpU9T0ps2kKIMq%2FwMIAxAAGgw2Mzc0MjMxODM4MDUiDH2alpBfohcvXjMUMyrcA2wm9k%2FtKWDZHhpYkU8ptGLWq9OlC6XuNQNgSSHHNfavUnAClSriQRA0xWY%2FXc4vbkCnxv4vwTNLZTjiz2r5D4PZbi0ZTnS0aJSqswi7rJYeW7UIHqlEQLwISVvfmkzwHivzR53ConN%2F49tDRnAHhSG8QGYIaHB8PKmK%2FXbC9LOs0RoC8kT2RQBcd0BO17kPDTW%2BruSpPn7BbDsDpr5k0Diy5XHkuWtUChiEIh2g6E7vfcY782C35hkYd4PGTyVmUXnLfYk971GwT6MfS2QhZY6F0edLvUrlUn7WeWrIh2qyvxAwMrH1a1KKdF3k1VWt7JkkLO4bigE9cF93UkC3wXsqBZSG1EndSZwvQtWkeGjm69vwFo9lMiKvzKmpY%2BvNHLIFnKHsrVawoKwoaZ3yWZA%2ByxNnznJKgvWYggwqTgXMIX1kBGZP6qHjdWdIjGmc%2Bak4wBGdAG2cfGvpVCs0N3VZ3msaJSLE%2BxAD7czkwO6u0rg6Z8aChosn6i%2F91LoOr%2ByTieq7acBRlqhK%2BNqSgDYDIDC7Mey5JhJcsfpGrSAYU6OIo8tDm%2FhqKaPHy0ZtYo4pv%2FWrMQF%2BXQF2D55n1S%2BBGLKsOnCRETU77ZqoTs04Do5TSVjkxw8XxHnAMNuUg9AGOqUBWCKY6cY6TuQljcCzHgXVsVxB8HGhD3%2FrSOYy%2FrNUcVyF1Dbm0AMBOlCLxwvc2%2FkgxyNfg74rD5gBJhpdPdvENi1LlsJu9MtqKI2%2B36PrPTiLDGUlScR%2BMbwZHpFBBLpKEmV%2Fs80dG5TL2WHiKJ4dvwFPvur%2FdkTqtfsW15RHeddABDLmWB5zqjnHuKaLYvRk2rdjeCH%2FQbgI5%2F3RGBIPFywF28i4&X-Amz-Signature=ec6701399a7f1b56cc1d102a85970d38175ffb7a97b4493f40fac5a6fc76fa06&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![image.png](https://ik.imagekit.io/mws/blog/great-email-worth-3-meetings-nap/image-2.png)
 
 
 ---
@@ -86,7 +86,7 @@ When someone reads it and knows exactly what to do next, that's the email workin
 
 > You don't need five people to align in real time. You just need to spell it out clearly.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d36db49c-a5f0-43a8-8d99-c58c1e14c515/2407fb9d-d8c8-45f4-a1d4-bf7b7f8ef193/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4667Q23IRRY%2F20260510%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260510T185320Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDoaCXVzLXdlc3QtMiJHMEUCIQCIVRIDdTFUs1dL9pQEkwOkxpLMy%2BBoiL8Js1oNuPdAOgIgQELLV3A4WtCx20nu%2Fnspyo1HOG0u1lUpU9T0ps2kKIMq%2FwMIAxAAGgw2Mzc0MjMxODM4MDUiDH2alpBfohcvXjMUMyrcA2wm9k%2FtKWDZHhpYkU8ptGLWq9OlC6XuNQNgSSHHNfavUnAClSriQRA0xWY%2FXc4vbkCnxv4vwTNLZTjiz2r5D4PZbi0ZTnS0aJSqswi7rJYeW7UIHqlEQLwISVvfmkzwHivzR53ConN%2F49tDRnAHhSG8QGYIaHB8PKmK%2FXbC9LOs0RoC8kT2RQBcd0BO17kPDTW%2BruSpPn7BbDsDpr5k0Diy5XHkuWtUChiEIh2g6E7vfcY782C35hkYd4PGTyVmUXnLfYk971GwT6MfS2QhZY6F0edLvUrlUn7WeWrIh2qyvxAwMrH1a1KKdF3k1VWt7JkkLO4bigE9cF93UkC3wXsqBZSG1EndSZwvQtWkeGjm69vwFo9lMiKvzKmpY%2BvNHLIFnKHsrVawoKwoaZ3yWZA%2ByxNnznJKgvWYggwqTgXMIX1kBGZP6qHjdWdIjGmc%2Bak4wBGdAG2cfGvpVCs0N3VZ3msaJSLE%2BxAD7czkwO6u0rg6Z8aChosn6i%2F91LoOr%2ByTieq7acBRlqhK%2BNqSgDYDIDC7Mey5JhJcsfpGrSAYU6OIo8tDm%2FhqKaPHy0ZtYo4pv%2FWrMQF%2BXQF2D55n1S%2BBGLKsOnCRETU77ZqoTs04Do5TSVjkxw8XxHnAMNuUg9AGOqUBWCKY6cY6TuQljcCzHgXVsVxB8HGhD3%2FrSOYy%2FrNUcVyF1Dbm0AMBOlCLxwvc2%2FkgxyNfg74rD5gBJhpdPdvENi1LlsJu9MtqKI2%2B36PrPTiLDGUlScR%2BMbwZHpFBBLpKEmV%2Fs80dG5TL2WHiKJ4dvwFPvur%2FdkTqtfsW15RHeddABDLmWB5zqjnHuKaLYvRk2rdjeCH%2FQbgI5%2F3RGBIPFywF28i4&X-Amz-Signature=5901387513146ce70c39349023f4228f2ee2a364321bf5349aee89586c47892a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![image.png](https://ik.imagekit.io/mws/blog/great-email-worth-3-meetings-nap/image-3.png)
 
 
 ---
